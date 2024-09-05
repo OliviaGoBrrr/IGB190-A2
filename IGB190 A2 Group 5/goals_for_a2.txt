@@ -1,0 +1,92 @@
+Things to work on for A2
+// ==============================
+// Main Changes/Additions to A2
+// ==============================
+
+ - Balance
+
+ - Changing of Default hotkeys and movement 
+
+ - Scaling enemy damage and HP ***
+
+ - Respawn at Checkpoint (statue/Stake of Marika from Elden Ring type beat)
+
+ - Level up system changes
+	- Skill tree?
+	- Extra abilities?
+	- Subclassing?
+
+ - Stat additions
+	- Lifesteal (for %X damage, heal Y health)
+	- Area of Effect changes?
+	- 
+
+ - 
+
+// ==============================
+// Balance Changes
+// ==============================
+
+// Please for the love of God, I swear, create a patch notes if you change any number
+
+	// ==============================
+	// Player Changes
+	// ==============================
+
+	// Insert below ...
+
+	// ==============================
+	// Enemy Changes
+	// ==============================
+
+	// Insert below ...
+
+	// ==============================
+	// Item Changes
+	// ==============================
+
+	// Insert below ... 
+
+	
+
+// ==============================
+// Changing Movement
+// ==============================
+
+	// ==============================
+	// Current Settings
+	// ==============================
+	Left click moves the player
+
+	Left click casts an ability
+
+	Left click moves the player to the target if out of range
+		else it stops the player when in range
+
+
+	Right click to move is a setting, default = false;
+
+	// ==============================
+	// Potential change to settings
+	// ==============================
+
+	Right click is default movement
+
+	Change right click ability to Space
+
+	Make additional option to Left Click instead (so players can choose that playstyle)
+
+	Make force move another key (like M or Tilda or something)
+
+
+// ==============================
+// Other Additions
+// ==============================
+
+ - Minimap
+
+ - Camera Zoom
+
+ - 
+
+
