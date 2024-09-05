@@ -21,7 +21,7 @@ Things to work on for A2
 	- Area of Effect changes?
 	- 
 
- - 
+ - tutorial screen
 
 // ==============================
 // Balance Changes
