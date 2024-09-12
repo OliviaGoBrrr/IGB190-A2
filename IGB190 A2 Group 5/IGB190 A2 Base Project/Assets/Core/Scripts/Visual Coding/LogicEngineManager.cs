@@ -87,20 +87,8 @@ public class LogicEngineManager : MonoBehaviour
         if (!eventLookup.ContainsKey(eventCall)) return;
         if (presets == null) presets = new Dictionary<string, object>();
 
-        /*
-        if (eventLookup.ContainsKey(eventCall))
-        {
-            foreach (LogicEngine engine in eventLookup[eventCall])
-            {
-                foreach (LogicScript script in engine.scripts)
-                {
-                    script.RunScript(presets, engine, eventCall);
-                }
-            }
-        }
-        */
-
-        foreach (LogicEngine engine in engines)
+        List<LogicEngine> copy = new List<LogicEngine>(engines);
+        foreach (LogicEngine engine in copy)
         {
             foreach (LogicScript script in engine.scripts)
             {
@@ -149,24 +137,27 @@ public class LogicEngineManager : MonoBehaviour
             GameManager.logicEngine.TriggerEventOnAllEngines(presets, "UnitFinishCast");
         });
 
-        GameManager.events.OnUnitKilled.AddListener((arg1, arg2, arg3) => {
-            Object data = arg3.GetData();
+        GameManager.events.OnUnitKilled.AddListener((arg1, arg2, arg3, arg4) => {
+            Object data = arg3 == null ? null : arg3.GetData();
             Dictionary<string, object> presets = new Dictionary<string, object>
             {
                 { LogicEngine.PRESET_KILLED_UNIT, arg1 },
                 { LogicEngine.PRESET_KILLING_UNIT, arg2 },
-                { LogicEngine.PRESET_KILLING_ABILITY, (data is Ability ? data : null) }
+                { LogicEngine.PRESET_KILLING_ABILITY, (data is Ability ? data : null) },
+                { LogicEngine.PRESET_IS_CRITICAL, arg4 },
             };
             GameManager.logicEngine.TriggerEventOnAllEngines(presets, "WhenUnitIsKilled");
         });
 
-        GameManager.events.OnUnitDamaged.AddListener((arg1, arg2, arg3, arg4) => {
-            Object data = arg4.GetData();
+        GameManager.events.OnUnitDamaged.AddListener((args) => {
+            Object data = args.damageSource == null ? null : args.damageSource.GetData();
             Dictionary<string, object> presets = new Dictionary<string, object>
             {
-                { LogicEngine.PRESET_DAMAGED_UNIT, arg1 },
-                { LogicEngine.PRESET_DAMAGING_UNIT, arg3 },
-                { LogicEngine.PRESET_DAMAGING_ABILITY, (data is Ability ? data : null) }
+                { LogicEngine.PRESET_DAMAGED_UNIT, args.damagedUnit },
+                { LogicEngine.PRESET_DAMAGING_UNIT, args.damagingUnit },
+                { LogicEngine.PRESET_DAMAGING_ABILITY, (data is Ability ? data : null) },
+                { LogicEngine.PRESET_DAMAGE_DEALT, args.damage },
+                { LogicEngine.PRESET_IS_CRITICAL, args.isCritical }, 
             };
             GameManager.logicEngine.TriggerEventOnAllEngines(presets, LogicEngine.EVENT_UNIT_DAMAGED);
         });

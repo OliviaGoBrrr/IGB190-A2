@@ -34,7 +34,7 @@ public class GameEvents
     /// <summary>
     /// Arg1: Killed Unit | Arg2: Killing Unit
     /// </summary>
-    public UnityEvent<Unit, Unit, IEngineHandler> OnUnitKilled = new UnityEvent<Unit, Unit, IEngineHandler>();
+    public UnityEvent<Unit, Unit, IEngineHandler, bool> OnUnitKilled = new UnityEvent<Unit, Unit, IEngineHandler, bool>();
 
     /// <summary>
     /// Arg1: Player | Arg2: Killing Unit
@@ -64,8 +64,26 @@ public class GameEvents
     /// <summary>
     /// Arg1: Damaged Unit | Arg2: Amount | Arg3: Damaging Unit | Arg4: Damage Source
     /// </summary>
-    public UnityEvent<Unit, float, Unit, IEngineHandler> OnUnitDamaged = new UnityEvent<Unit, float, Unit, IEngineHandler>();
+    public class OnUnitDamagedInfo
+    {
+        public Unit damagedUnit;
+        public Unit damagingUnit;
+        public float damage;
+        public IEngineHandler damageSource;
+        public bool isCritical;
 
+        public OnUnitDamagedInfo(Unit damagedUnit, float damage, Unit damagingUnit, IEngineHandler damageSource, bool isCritical)
+        {
+            this.damagedUnit = damagedUnit;
+            this.damagingUnit = damagingUnit;
+            this.damage = damage;
+            this.damageSource = damageSource;
+            this.isCritical = isCritical;
+        }
+    }
+    //public UnityEvent<Unit, float, Unit, IEngineHandler, bool> OnUnitDamaged = new UnityEvent<Unit, float, Unit, IEngineHandler, bool>();
+    public UnityEvent<OnUnitDamagedInfo> OnUnitDamaged = new UnityEvent<OnUnitDamagedInfo>();
+    
     /// <summary>
     /// Arg1: Spawned Unit | Arg2: Spawning Unit
     /// </summary>

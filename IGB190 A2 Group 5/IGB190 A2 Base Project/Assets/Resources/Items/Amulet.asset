@@ -10,38 +10,78 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Ring
+  m_Name: Amulet
   m_EditorClassIdentifier: 
-  itemName: Ring
+  itemName: Amulet
   itemDescription: 
-  randomStatCount: 0
-  itemCost: 0
-  itemIcon: {fileID: 21300000, guid: 70429bf7d5f2bf341be1c31492f4ecd0, type: 3}
-  itemType: 0
+  randomStatCount: 1
+  itemCost: 700
+  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemType: 1
   itemRarity: 0
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 134489213
+      scriptUID: 2135760491
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559489
+      - rid: 1318962329340870658
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1349268934
+      scriptUID: 139136756
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559490
+      - rid: 1318962329340870659
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
-  randomisableStats: []
+  guaranteedStats:
+  - stat: 8
+    minimum: 0.2
+    maximum: 0.2
+    isPercent: 1
+  randomisableStats:
+  - stat: 0
+    minimum: 5
+    maximum: 5
+    isPercent: 0
+  - stat: 0
+    minimum: 0.1
+    maximum: 0.1
+    isPercent: 1
+  - stat: 3
+    minimum: 0.15
+    maximum: 0.15
+    isPercent: 1
+  - stat: 11
+    minimum: 0.3
+    maximum: 0.3
+    isPercent: 0
+  - stat: 9
+    minimum: 0.2
+    maximum: 0.2
+    isPercent: 1
+  - stat: 4
+    minimum: 50
+    maximum: 50
+    isPercent: 0
+  - stat: 1
+    minimum: 100
+    maximum: 100
+    isPercent: 0
+  - stat: 6
+    minimum: 0.15
+    maximum: 0.15
+    isPercent: 1
+  - stat: 10
+    minimum: 0.1
+    maximum: 0.1
+    isPercent: 0
   references:
     version: 2
     RefIds:
-    - rid: 248813236419559489
+    - rid: 1318962329340870658
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -59,7 +99,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559490
+    - rid: 1318962329340870659
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

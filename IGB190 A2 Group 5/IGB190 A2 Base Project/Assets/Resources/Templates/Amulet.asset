@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Amulet
   itemDescription: 
-  randomStatCount: 1
-  itemCost: 700
+  randomStatCount: 0
+  itemCost: 0
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
   itemType: 1
   itemRarity: 0
@@ -35,48 +35,9 @@ MonoBehaviour:
       - rid: 248813236419559492
       conditionNodes: []
       actionNodes: []
-  guaranteedStats:
-  - stat: 8
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
-  randomisableStats:
-  - stat: 0
-    minimum: 5
-    maximum: 5
-    isPercent: 0
-  - stat: 0
-    minimum: 0.1
-    maximum: 0.1
-    isPercent: 1
-  - stat: 3
-    minimum: 0.15
-    maximum: 0.15
-    isPercent: 1
-  - stat: 11
-    minimum: 0.3
-    maximum: 0.3
-    isPercent: 0
-  - stat: 9
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
-  - stat: 4
-    minimum: 50
-    maximum: 50
-    isPercent: 0
-  - stat: 1
-    minimum: 100
-    maximum: 100
-    isPercent: 0
-  - stat: 6
-    minimum: 0.15
-    maximum: 0.15
-    isPercent: 1
-  - stat: 10
-    minimum: 0.1
-    maximum: 0.1
-    isPercent: 0
+  template: {fileID: 0}
+  guaranteedStats: []
+  randomisableStats: []
   references:
     version: 2
     RefIds:

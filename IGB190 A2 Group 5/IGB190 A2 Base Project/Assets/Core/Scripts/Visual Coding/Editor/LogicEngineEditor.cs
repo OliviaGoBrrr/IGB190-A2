@@ -47,6 +47,7 @@ public class LogicEngineEditor
 
     public static float indentWidth = 30;
 
+    private static string[] increaseDecrease = new string[] { "Increase", "Decrease" };
     private static string[] boolComparators = new string[] { "Equal To", "Not Equal To" };
     private static string[] numberComparators = new string[] { "Equal To", "Not Equal To", "Less Than",
             "Less Than or Equal To", "Greater Than", "Greater Than or Equal To" };
@@ -113,6 +114,10 @@ public class LogicEngineEditor
     {
         this.engine = engineHandler.GetEngine();
         this.engineHandler = engineHandler;
+        if (engine.scripts.Count == 0)
+        {
+            engine.scripts.Add(new LogicScript("Main"));
+        }
         engine.selectedScript = engine.scripts[0];
     }
 
@@ -189,7 +194,8 @@ public class LogicEngineEditor
             eventIcon,
             new string[] { LogicEngine.PRESET_KILLED_UNIT, 
                 LogicEngine.PRESET_KILLING_UNIT, 
-                LogicEngine.PRESET_KILLING_ABILITY }));
+                LogicEngine.PRESET_KILLING_ABILITY,
+                LogicEngine.PRESET_IS_CRITICAL})); 
 
         allNodes.Add(EventNode.Func(
             "Unit/Unit is damaged",
@@ -198,7 +204,9 @@ public class LogicEngineEditor
             eventIcon,
             new string[] { LogicEngine.PRESET_DAMAGED_UNIT,
                 LogicEngine.PRESET_DAMAGING_UNIT, 
-                LogicEngine.PRESET_DAMAGING_ABILITY}));
+                LogicEngine.PRESET_DAMAGING_ABILITY,
+                LogicEngine.PRESET_DAMAGE_DEALT,
+                LogicEngine.PRESET_IS_CRITICAL}));
 
         allNodes.Add(EventNode.Func(
             "Unit/Unit is healed",
@@ -546,7 +554,7 @@ public class LogicEngineEditor
             NumberNode.Value(1, "s")));
 
         allNodes.Add(GeneralNode.Func<ActionNode>(
-            "Unit/Enable Ability on Unit",
+            "Unit/Ability/Enable Ability on Unit",
             "Enable $ on $",
             "EnableAbility",
             unitIcon,
@@ -554,13 +562,133 @@ public class LogicEngineEditor
             UnitNode.Temp().NoValue()));
 
         allNodes.Add(GeneralNode.Func<ActionNode>(
-            "Unit/Disable Ability on Unit",
+            "Unit/Ability/Disable Ability on Unit",
             "Disable $ on $",
             "DisableAbility",
             unitIcon,
             AbilityNode.Temp().NoFunction().NoPreset(),
             UnitNode.Temp().NoValue()));
 
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Reduce Current Ability Cooldown",
+            "Reduce current cooldown of $ on $ by $",
+            "ReduceAbilityCooldown",
+            unitIcon,
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            NumberNode.Value(1, "s")));
+
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Ability",
+            "Add $ to $",
+            "AddAbilityToUnit",
+            unitIcon,
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue()));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Remove Ability",
+            "Remove $ from $",
+            "RemoveAbilityFromUnit",
+            unitIcon,
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue()));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Replace Ability",
+            "Replace $ with $ on $",
+            "ReplaceAbilityOnUnit",
+            unitIcon,
+            AbilityNode.Temp().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue()));
+
+
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Damage Modifier to Ability",
+            "$ damage of $ on $ by $ (Buff Name: $ | Max Stacks: $)",
+            "AddAbilityDamageModifierToUnit",
+            unitIcon,
+            StringNode.Value(increaseDecrease[0], increaseDecrease).NoPreset().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(), 
+            NumberNode.Value(50, "%"),
+            StringNode.Value("None"),
+            NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Cooldown Modifier to Ability",
+            "$ cooldown of $ on $ by $ (Buff Name: $ | Max Stacks: $)",
+            "AddAbilityCooldownModifierToUnit",
+            unitIcon,
+            StringNode.Value(increaseDecrease[0], increaseDecrease).NoPreset().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            NumberNode.Value(50, "%"),
+            StringNode.Value("None"),
+            NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Cost Modifier to Ability",
+            "$ cost of $ on $ by $ (Buff Name: $ | Max Stacks: $)",
+            "AddAbilityCostModifierToUnit",
+            unitIcon,
+            StringNode.Value(increaseDecrease[0], increaseDecrease).NoPreset().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            NumberNode.Value(50, "%"),
+            StringNode.Value("None"),
+            NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Timed Damage Modifier to Ability",
+            "$ damage of $ on $ by $ for $ (Buff Name: $ | Max Stacks: $)",
+            "AddTimedAbilityDamageModifierToUnit",
+            unitIcon,
+            StringNode.Value(increaseDecrease[0], increaseDecrease).NoPreset().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            NumberNode.Value(50, "%"),
+            NumberNode.Value(5, "s"),
+            StringNode.Value("None"),
+            NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Timed Cooldown Modifier to Ability",
+            "$ cooldown of $ on $ by $ for $ (Buff Name: $ | Max Stacks: $)",
+            "AddTimedAbilityCooldownModifierToUnit",
+            unitIcon,
+            StringNode.Value(increaseDecrease[0], increaseDecrease).NoPreset().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            NumberNode.Value(50, "%"),
+            NumberNode.Value(5, "s"),
+            StringNode.Value("None"),
+            NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Add Timed Cost Modifier to Ability",
+            "$ cost of $ on $ by $ for $ (Buff Name: $ | Max Stacks: $)",
+            "AddTimedAbilityCostModifierToUnit",
+            unitIcon,
+            StringNode.Value(increaseDecrease[0], increaseDecrease).NoPreset().NoFunction(),
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            NumberNode.Value(50, "%"),
+            NumberNode.Value(5, "s"),
+            StringNode.Value("None"),
+            NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Ability/Remove Ability Modifier",
+            "Remove buffs for $ on $ named $",
+            "RemoveAbilityModifier", 
+            unitIcon,
+            AbilityNode.Temp().NoFunction(),
+            UnitNode.Temp().NoValue(),
+            StringNode.Temp()));
 
         Stat[] allStats = (Stat[])Enum.GetValues(typeof(Stat));
         string[] statModifiers = new string[allStats.Length];
@@ -844,6 +972,19 @@ public class LogicEngineEditor
             "RemoveLevels",
             unitIcon,
             NumberNode.Value(1)));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Player/Delete Equipment",
+            "Remove all equipment on the player",
+            "RemoveEquipment",
+            unitIcon));
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Player/Equip Item",
+            "Have the player equip $",
+            "EquipItem",
+            unitIcon,
+            ItemNode.Temp()));
 
         allNodes.Add(GeneralNode.Func<ActionNode>(
             "Player/Add Item",
@@ -1547,6 +1688,13 @@ public class LogicEngineEditor
             conditionIcon,
             UnitNode.Temp().NoValue(),
             StringNode.Temp("Label")));
+
+        allNodes.Add(GeneralNode.Func<BoolNode>(
+            "Input/Key is Held",
+            "$ is Held",
+            "KeyIsHeld",
+            inputIcon,
+            StringNode.Temp("Key")));
 
         allNodes.Add(GeneralNode.Func<BoolNode>(
             "Variable/Bool Variable",

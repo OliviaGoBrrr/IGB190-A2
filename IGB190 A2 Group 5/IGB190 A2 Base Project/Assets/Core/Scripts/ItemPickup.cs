@@ -143,6 +143,7 @@ public class ItemPickup : Interactable
     /// </summary>
     public static void Spawn(Vector3 position, Item item)
     {
+        if (item == null) return;
         ItemPickup itemPickup = ObjectPooler.InstantiatePooled(GameManager.assets.itemPickup.gameObject, 
             position, Quaternion.identity).GetComponent<ItemPickup>();
         itemPickup.item = item;
@@ -155,6 +156,7 @@ public class ItemPickup : Interactable
     /// </summary>
     public static void Spawn(Vector3 position, Item.ItemRarity rarity)
     {
-        Spawn(position, Item.GetRandomItemOfRarity(rarity));
+        Item item = Item.GetRandomItemOfRarity(rarity);
+        Spawn(position, item);
     }
 }

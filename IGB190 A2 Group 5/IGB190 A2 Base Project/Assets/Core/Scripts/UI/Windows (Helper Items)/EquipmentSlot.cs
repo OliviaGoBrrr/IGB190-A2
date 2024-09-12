@@ -115,11 +115,16 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (!isDraggingItem) return;
 
         Item.ItemType type = attachedItem.itemType;
-
+         
         EquipmentSlot closestSlot = FindClosestValidSlot();
+
         if (closestSlot != null)
         {
-            SwapItemsWith(closestSlot);
+            if ((closestSlot.allowedItemTypes == attachedItem.itemType || !closestSlot.applyFilter) &&
+            (closestSlot.attachedItem == null || allowedItemTypes == closestSlot.attachedItem.itemType || !applyFilter))
+            {
+                SwapItemsWith(closestSlot);
+            }
         }
 
         ResetDraggingState();
@@ -153,9 +158,13 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void SwapItemsWith(EquipmentSlot otherSlot)
     {
         Item itemInOtherSlot = otherSlot.inventory.GetItemAtID(otherSlot.inventorySlotID);
-        otherSlot.inventory.AddItemAtID(attachedItem, otherSlot.inventorySlotID);
+        Item inThisSlot = inventory.GetItemAtID(inventorySlotID);
+
+        // Add the items to their new slots
+        otherSlot.inventory.AddItemAtID(inThisSlot, otherSlot.inventorySlotID);
         inventory.AddItemAtID(itemInOtherSlot, inventorySlotID);
 
+        // Redraw the slots to reflect the change
         otherSlot.Redraw();
         Redraw();
     }

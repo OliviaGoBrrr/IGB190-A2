@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Playables;
 using UnityEngine;
 
 public class GeneralScriptEditor : EditorWindow
@@ -183,6 +184,9 @@ public class GeneralScriptEditor : EditorWindow
 
         // If no script is found - return.
         if (engineEditor == null) return;
+
+        // Record the state before any changes
+        Undo.RecordObject(selectedLogicBlock, "Changed Ability Block " + selectedLogicBlock.name);
 
         // Set up initial positions.
         float posX = spacer;

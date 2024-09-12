@@ -174,7 +174,8 @@ public class SetValueEditor : EditorWindow
                 (node is ProjectileNode && LogicEngine.PROJECTILE_PRESETS.Contains(preset)) ||
                 (node is ItemNode && LogicEngine.ITEM_PRESETS.Contains(preset)) ||
                 (node is AbilityNode && LogicEngine.ABILITY_PRESETS.Contains(preset)) ||
-                (node is VectorNode && LogicEngine.VECTOR_PRESETS.Contains(preset)))
+                (node is VectorNode && LogicEngine.VECTOR_PRESETS.Contains(preset)) ||
+                (node is BoolNode && LogicEngine.BOOL_PRESETS.Contains(preset)))
             {
                 presetNodeStringsList.Add(preset);
             }
@@ -196,7 +197,7 @@ public class SetValueEditor : EditorWindow
         }
         if (parentWindow is AbilityEditor)
         {
-            if (node is UnitNode)
+            if (node is UnitNode) 
             {
                 presetNodeStringsList.Add(LogicEngine.PRESET_ABILITY_OWNER);
             }

@@ -30,7 +30,6 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         FollowTarget();
-        if (Input.GetKeyDown(KeyCode.M)) SetTarget(GameObject.FindObjectOfType<Monster>().gameObject);
     }
 
     /// <summary>

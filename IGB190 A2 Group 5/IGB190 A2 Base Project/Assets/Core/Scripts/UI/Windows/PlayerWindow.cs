@@ -30,6 +30,21 @@ public class PlayerWindow : UIWindow
         InitializePlayerStats();
     }
 
+    public void RedrawChacterHUD ()
+    {
+        for (int i = abilityContainer.transform.childCount - 1; i > 0; i--)
+        {
+            Destroy(abilityContainer.transform.GetChild(i).gameObject);
+        }
+        GameObject template = abilityContainer.GetChild(0).gameObject;
+        foreach (var ability in GameManager.player.abilities)
+        {
+            AbilitySlotUI slot = Instantiate(template, abilityContainer).GetComponent<AbilitySlotUI>();
+            slot.Setup(ability, GameManager.settings.keybindings[GameManager.player.abilities.IndexOf(ability)].ToString());
+            slot.gameObject.SetActive(true);
+        }
+    }
+
     /// <summary>
     /// Initializes ability slots in the player window.
     /// </summary>
@@ -42,6 +57,7 @@ public class PlayerWindow : UIWindow
             slot.Setup(ability, GameManager.settings.keybindings[GameManager.player.abilities.IndexOf(ability)].ToString());
             slot.gameObject.SetActive(true);
         }
+        Update();
     }
 
     /// <summary>

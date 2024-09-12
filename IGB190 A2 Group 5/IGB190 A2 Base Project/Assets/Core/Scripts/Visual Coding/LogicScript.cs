@@ -558,7 +558,44 @@ public class LogicScript
             return;
         }
 
-        GameManager.player.inventory.AddItem(item);
+        GameManager.player.inventory.AddItem(item.RollItem());
+    }
+
+    public void RemoveEquipment()
+    {
+        if (GameManager.player == null)
+        {
+            Error("No player exists.");
+            return;
+        }
+        for (int i = 0; i < GameManager.player.equipment.GetSlots(); i++)
+        {
+            GameManager.player.equipment.RemoveItemAtID(i);
+        }
+    }
+
+    public void EquipItem (Item item)
+    {
+        if (item.itemType == Item.ItemType.Weapon)
+            GameManager.player.equipment.AddItemAtID(item, 0);
+
+        else if (item.itemType == Item.ItemType.Amulet)
+            GameManager.player.equipment.AddItemAtID(item, 1);
+
+        else if (item.itemType == Item.ItemType.Armor)
+            GameManager.player.equipment.AddItemAtID(item, 2);
+
+        else if (item.itemType == Item.ItemType.Boots)
+            GameManager.player.equipment.AddItemAtID(item, 3);
+
+        else if (item.itemType == Item.ItemType.Ring && GameManager.player.equipment.GetItemAtID(4) == null)
+            GameManager.player.equipment.AddItemAtID(item, 4);
+
+        else if (item.itemType == Item.ItemType.Ring && GameManager.player.equipment.GetItemAtID(5) == null)
+            GameManager.player.equipment.AddItemAtID(item, 5);
+
+        else if (item.itemType == Item.ItemType.Ring)
+            GameManager.player.equipment.AddItemAtID(item, 4);
     }
 
     public void RemoveItem(Item item)
@@ -1473,6 +1510,177 @@ public class LogicScript
         }
     }
 
+    public void ReduceAbilityCooldown (Ability ability, Unit unit, float amount)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        unit.ReduceAbilityCooldown(ability, amount);
+    }
+
+    public void AddAbilityToUnit(Ability ability, Unit unit)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        unit.AddAbility(ability);
+    }
+
+    public void RemoveAbilityFromUnit(Ability ability, Unit unit)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        unit.RemoveAbility(ability);
+    }
+
+    public void ReplaceAbilityOnUnit(Ability oldAbility, Ability newAbility, Unit unit)
+    {
+        if (oldAbility == null || newAbility == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        unit.ReplaceAbility(oldAbility, newAbility);
+    }
+
+    public void AddAbilityCostModifierToUnit (string increaseDecrease, Ability ability, Unit unit, float modifier, string buffName = "None", int maxStacks = 99)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        if (increaseDecrease == "Decrease") modifier *= -1;
+        unit.AddAbilityCostModifier(ability, modifier, buffName, maxStacks);
+    }
+
+    public void AddAbilityCooldownModifierToUnit(string increaseDecrease, Ability ability, Unit unit, float modifier, string buffName = "None", int maxStacks = 99)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        if (increaseDecrease == "Decrease") modifier *= -1;
+        unit.AddAbilityCooldownModifier(ability, modifier, buffName, maxStacks);
+    }
+
+    public void AddAbilityDamageModifierToUnit(string increaseDecrease, Ability ability, Unit unit, float modifier, string buffName = "None", float maxStacks = 99)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        if (increaseDecrease == "Decrease") modifier *= -1;
+        unit.AddAbilityDamageModifier(ability, modifier / 100.0f, buffName, (int)maxStacks);
+    }
+
+    public void AddTimedAbilityCostModifierToUnit(string increaseDecrease, Ability ability, Unit unit, float modifier, float duration, string buffName = "None", float maxStacks = 99)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        if (increaseDecrease == "Decrease") modifier *= -1;
+        unit.AddTimedAbilityCostModifier(ability, modifier, duration, buffName, (int)maxStacks);
+    }
+
+    public void AddTimedAbilityCooldownModifierToUnit(string increaseDecrease, Ability ability, Unit unit, float modifier, float duration, string buffName = "None", float maxStacks = 99)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        if (increaseDecrease == "Decrease") modifier *= -1;
+        unit.AddTimedAbilityCooldownModifier(ability, modifier, duration, buffName, (int)maxStacks);
+    }
+
+    public void AddTimedAbilityDamageModifierToUnit(string increaseDecrease, Ability ability, Unit unit, float modifier, float duration, string buffName = "None", float maxStacks = 99)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        if (increaseDecrease == "Decrease") modifier *= -1;
+        unit.AddTimedAbilityDamageModifier(ability, modifier / 100.0f, duration, buffName, (int)maxStacks);
+    }
+
+    public void RemoveAbilityModifier(Ability ability, Unit unit, string buffName)
+    {
+        if (ability == null)
+        {
+            Error("The specified ability is invalid.");
+            return;
+        }
+        if (unit == null)
+        {
+            Error("The specified unit is invalid.");
+            return;
+        }
+        unit.RemoveAbilityBuffModifiers(ability, buffName);
+    }
+
     public void SpawnEffectAtLocation (CustomVisualEffect effect, Vector3 position, float duration, float scale)
     {
         if (effect == null)
@@ -1889,6 +2097,18 @@ public class LogicScript
     #endregion
 
     #region Bool Value Nodes
+
+    public bool KeyIsHeld (string keyString)
+    {
+        foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
+        {
+            if (key.ToString().ToUpper() == keyString.ToUpper() && Input.GetKey(key))
+            {
+                return true;   
+            }
+        }
+        return false;
+    }
 
     public bool UnitGroupIsEmpty (List<Unit> unitGroup)
     {

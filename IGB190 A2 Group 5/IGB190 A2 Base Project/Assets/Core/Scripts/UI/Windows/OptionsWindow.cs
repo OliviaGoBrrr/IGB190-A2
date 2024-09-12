@@ -91,7 +91,6 @@ public class OptionsWindow : UIWindow, IPausing, ICloseable
         GameManager.music.SetVolume(GameManager.settings.musicVolume);
         musicVolumeSlider.onValueChanged.AddListener(value =>
         {
-            Debug.Log(value);
             GameManager.music.SetVolume(value);
             GameManager.settings.musicVolume = value;
         });

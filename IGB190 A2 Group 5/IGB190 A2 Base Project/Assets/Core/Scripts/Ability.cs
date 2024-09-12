@@ -19,6 +19,15 @@ public class Ability : ScriptableObject, IEngineHandler
     public Sprite abilityIcon;
     public TargetMode targetMode = TargetMode.PointAtRanged;
     [TextArea(2, 6)] public string abilityDescription;
+    private Ability _template;
+    public Ability template { 
+    get
+        {
+            if (_template == null) 
+                _template = this;
+            return _template;
+        }
+    }
 
     // Ability values.
     public string abilityAnimation = "None";
@@ -121,7 +130,7 @@ public class Ability : ScriptableObject, IEngineHandler
         if (cooldownIsAtackSpeed)
             return 1.0f / caster.stats.GetValue(Stat.AttacksPerSecond);
         else
-            return abilityCooldown * Mathf.Max(0.1f, 1 - (caster.stats.GetValue(Stat.CooldownReduction) - 1));
+            return abilityCooldown * Mathf.Max(0.1f, 1 - (caster.stats.GetValue(Stat.CooldownReduction) - 1)) * caster.GetAbilityCooldownModifier(this);
     }
 
     /// <summary>
@@ -150,7 +159,7 @@ public class Ability : ScriptableObject, IEngineHandler
     /// </summary>
     private float GetCostModifier (Unit caster)
     {
-        return (1.0f - caster.stats.GetValue(Stat.ResourceCostReduction));
+        return (1.0f - caster.stats.GetValue(Stat.ResourceCostReduction)) * caster.GetAbilityCostModifier(this);
     }
 
     /// <summary>
@@ -411,13 +420,14 @@ public class Ability : ScriptableObject, IEngineHandler
     }
 
     /// <summary>
-    /// Do a shallow copy of the ability, not copying over the ability scripting.
+    /// Do a ` copy of the ability, not copying over the ability scripting.
     /// This reduces copying and allows you to 
     /// </summary>
     public Ability ShallowCopy ()
     {
         Ability ability = Instantiate(this);
         ability.engine = engine.ShallowCopy(ability);
+        ability._template = template;
         return ability;
     }
 
@@ -425,7 +435,7 @@ public class Ability : ScriptableObject, IEngineHandler
     /// Return the logic engine associated with this ability.
     /// The logic engine controls the visual scripting logic for the ability.
     /// </summary>
-    public LogicEngine GetEngine()
+    public LogicEngine GetEngine() 
     {
         return engine;
     }

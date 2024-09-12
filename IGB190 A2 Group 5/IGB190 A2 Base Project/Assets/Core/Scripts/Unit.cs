@@ -4,6 +4,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor.Playables;
+using UnityEditor.Recorder;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -36,6 +39,9 @@ public class Unit : Interactable
     public List<Ability> abilities = new List<Ability>();
     public Dictionary<Ability, float> abilitiesLastCastAt = new Dictionary<Ability, float>();
     [HideInInspector] public Ability lastAbilityCast;
+    private Dictionary<Ability, StatModifier> abilityDamageModifiers = new Dictionary<Ability, StatModifier>();
+    private Dictionary<Ability, StatModifier> abilityCooldownModifiers = new Dictionary<Ability, StatModifier>();
+    private Dictionary<Ability, StatModifier> abilityCostModifiers = new Dictionary<Ability, StatModifier>();
 
     [Header("[Unit Visuals]")]
     public Transform handPoint;
@@ -85,6 +91,21 @@ public class Unit : Interactable
         SetupStats();
         SetupAbilities();
         SetupAnimations();
+    }
+
+    /// <summary>
+    /// Apply the damage formula to this unit.
+    /// </summary>
+    protected virtual float ApplyDamageFormula(float amount, bool isCritical,
+        Unit damagingUnit, IEngineHandler damageSource)
+    {
+        // Apply damage modifiers (e.g. a -50% damage taken buff).
+        amount *= GetBaseDamageTakenModifier();
+
+        // Armor currently doesn't do anything? Add logic here.
+
+        // Return the modified amount.
+        return amount;
     }
 
     /// <summary>
@@ -376,6 +397,27 @@ public class Unit : Interactable
         return true;
     }
 
+    public void ReduceAbilityCooldown (Ability ability, float amount)
+    {
+        foreach (var a in abilitiesLastCastAt.Keys)
+        {
+            if (ability.abilityName == a.abilityName)
+            {
+                ability = a;
+                break;
+            }
+        }
+
+        if (abilitiesLastCastAt.ContainsKey(ability))
+        {
+            abilitiesLastCastAt[ability] -= amount;
+        } 
+        else
+        {
+            abilitiesLastCastAt.Add(ability, -999);
+        }
+    }
+
     public virtual void CastAbility (Ability ability, Unit target, Vector3 targetPosition)
     {
         if (!CanCastAbility(ability, target, targetPosition)) return;
@@ -404,20 +446,7 @@ public class Unit : Interactable
         ability.StartCast(this, target, targetPosition);
     }
 
-    /// <summary>
-    /// Apply the damage formula to this unit.
-    /// </summary>
-    protected virtual float ApplyDamageFormula (float amount, bool isCritical,
-        Unit damagingUnit, IEngineHandler damageSource)
-    {
-        // Apply damage modifiers (e.g. a -50% damage taken buff).
-        amount *= GetBaseDamageTakenModifier(); 
-        
-        // Armor currently doesn't do anything? Add logic here.
-
-        // Return the modified amount.
-        return amount;
-    }
+    
 
     /// <summary>
     /// Return the damage value, modified by unit stats (e.g. armor and DR).
@@ -448,27 +477,27 @@ public class Unit : Interactable
         if (amount < 0) return;
 
         // Remove the health.
-        RemoveHealth(amount, damagingUnit, damageSource);
+        RemoveHealth(amount, damagingUnit, damageSource, isCritical);
 
         // Apply the "on hit" feedback for this unit.
         onHitFeedback?.ActivateFeedback(gameObject, null, transform.position);
 
         // Trigger OnUnitDamaged event.
-        GameManager.events.OnUnitDamaged.Invoke(this, amount, damagingUnit, damageSource);
-    }
+        GameManager.events.OnUnitDamaged.Invoke(new GameEvents.OnUnitDamagedInfo(this, amount, damagingUnit, damageSource, isCritical));
+    } 
 
     /// <summary>
     /// Kill the unit, destroying the unit logic but keeping the model 
     /// around to play the death animation.
     /// </summary>
-    public virtual void Kill(Unit killingUnit, IEngineHandler killingSource)
+    public virtual void Kill(Unit killingUnit, IEngineHandler killingSource, bool isCritical = false)
     {
         // Do not kill the unit if it is already dead.
         if (isDead) return;
 
         // If unit isn't dead, perform required death actions.
         isDead = true;
-        GameManager.events.OnUnitKilled.Invoke(this, killingUnit, killingSource);
+        GameManager.events.OnUnitKilled.Invoke(this, killingUnit, killingSource, isCritical);
         onDeathFeedback?.ActivateFeedback(gameObject, null, gameObject.transform.position);
         if (hasAnimations)
         {
@@ -490,13 +519,13 @@ public class Unit : Interactable
     /// Remove the specified amount of health from the unit. 
     /// </summary>
     public virtual void RemoveHealth(float amount, Unit damagingUnit = null,
-        IEngineHandler damageSource = null)
+        IEngineHandler damageSource = null, bool isCritical = false)
     {
         health -= amount;
         if (health <= 0)
         {
             health = 0;
-            Kill(damagingUnit, damageSource);
+            Kill(damagingUnit, damageSource, isCritical);
         }
     }
 
@@ -581,6 +610,9 @@ public class Unit : Interactable
     public void DamageOtherUnit (Unit unit, float weaponDamagePercent, IEngineHandler source)
     {
         float amount = Mathf.Round(stats.GetValue(Stat.Damage) * weaponDamagePercent);
+        if (source != null && source.GetData() is Ability ability)
+            amount *= GetAbilityDamageModifier(ability);
+
         if (CheckForCritical())
         {
             amount *= stats.GetValue(Stat.CriticalStrikeDamage);
@@ -600,7 +632,9 @@ public class Unit : Interactable
     public void DamageOtherUnits (List<Unit> units, float weaponDamagePercent, IEngineHandler source)
     {
         float amount = Mathf.Round(stats.GetValue(Stat.Damage) * weaponDamagePercent);
-        
+        if (source != null && source.GetData() is Ability ability)
+            amount *= GetAbilityDamageModifier(ability);
+
         bool isCrit = false;
         if (CheckForCritical())
         {
@@ -621,7 +655,7 @@ public class Unit : Interactable
         agentNavigation.Warp(Utilities.GetValidNavMeshPosition(newPosition));
     }
     
-    /// <summary>
+    /// <summary> 
     /// Return the faction of the given unit.
     /// </summary>
     public virtual Faction GetFaction()
@@ -675,11 +709,171 @@ public class Unit : Interactable
         return (abilityBeingCast != null);
     }
 
+    // Should fix this up to reduce the code repetition.
+    public void AddAbility(Ability ability)
+    {
+        Ability abilityToAdd = ability.ShallowCopy();
+        abilityToAdd.SetOwner(this);
+        GameManager.logicEngine.AddEngine(abilityToAdd.engine);
+        abilities.Add(abilityToAdd);
+        OnAbilitiesUpdated();
+    }
+
+    // Should fix this up to reduce the code repetition.
+    public void RemoveAbility (Ability abilityTemplate)
+    {
+        foreach (var a in abilities)
+        {
+            if (abilityTemplate.abilityName == a.abilityName)
+            {
+                abilityTemplate = a;
+                break;
+            }
+        }
+        if (abilityTemplate != null)
+        {
+            GameManager.logicEngine.RemoveEngine(abilityTemplate.GetEngine());
+            abilities.Remove(abilityTemplate);
+            OnAbilitiesUpdated();
+        }
+    }
+
+    // Should fix this up to reduce the code repetition.
+    public void ReplaceAbility (Ability abilityToReplaceTemplate, Ability newAbility)
+    {
+        foreach (var a in abilities)
+        {
+            if (abilityToReplaceTemplate.abilityName == a.abilityName)
+            {
+                abilityToReplaceTemplate = a;
+                break;
+            }
+        }
+        if (abilityToReplaceTemplate != null)
+        {
+            int index = abilities.IndexOf(abilityToReplaceTemplate);
+            if (index >= 0)
+            {
+                GameManager.logicEngine.RemoveEngine(abilityToReplaceTemplate.GetEngine());
+                Ability abilityToAdd = newAbility.ShallowCopy();
+                abilityToAdd.SetOwner(this);
+                GameManager.logicEngine.AddEngine(abilityToAdd.engine);
+                abilities[index] = abilityToAdd;
+                OnAbilitiesUpdated();
+            }
+        }
+    }
+
     /// <summary>
     /// Return the name of this unit.
     /// </summary>
     public override string ToString()
     {
         return name;
+    }
+
+    public virtual void OnAbilitiesUpdated ()
+    {
+
+    }
+
+    public void AddTimedAbilityDamageModifier(Ability ability, float modifier, float duration, string buffName = "Buff", int maxStacks = 99)
+    {
+        if (!abilityDamageModifiers.ContainsKey(ability.template))
+        {
+            abilityDamageModifiers[ability.template] = new StatModifier($"{ability.abilityName}_DamageMod", 1.0f);
+        }
+        abilityDamageModifiers[ability.template].AddTimedPercentageModifier(modifier, duration, buffName, maxStacks);
+    }
+
+    public void AddAbilityDamageModifier(Ability ability, float modifier, string buffName = "Buff", int maxStacks = 99)
+    {
+        if (!abilityDamageModifiers.ContainsKey(ability.template))
+        {
+            abilityDamageModifiers[ability.template] = new StatModifier($"{ability.abilityName}_DamageMod", 1.0f);
+        }
+        abilityDamageModifiers[ability.template].AddPercentageModifier(modifier, buffName, maxStacks);
+    }
+
+    public void AddTimedAbilityCooldownModifier(Ability ability, float modifier, float duration, string buffName = "Buff", int maxStacks = 99)
+    {
+        if (!abilityCooldownModifiers.ContainsKey(ability.template))
+        {
+            abilityCooldownModifiers[ability.template] = new StatModifier($"{ability.abilityName}_CooldownMod", 1.0f);
+        }
+        abilityCooldownModifiers[ability.template].AddTimedPercentageModifier(modifier, duration, buffName, maxStacks);
+    }
+
+    public void AddAbilityCooldownModifier(Ability ability, float modifier, string buffName = "Buff", int maxStacks = 99)
+    {
+        if (!abilityCooldownModifiers.ContainsKey(ability.template))
+        {
+            abilityCooldownModifiers[ability.template] = new StatModifier($"{ability.abilityName}_CooldownMod", 1.0f);
+        }
+        abilityCooldownModifiers[ability.template].AddPercentageModifier(modifier, buffName, maxStacks);
+    }
+
+    public void AddTimedAbilityCostModifier(Ability ability, float modifier, float duration, string buffName = "Buff", int maxStacks = 99)
+    {
+        if (!abilityCostModifiers.ContainsKey(ability.template))
+        {
+            abilityCostModifiers[ability.template] = new StatModifier($"{ability.abilityName}_CooldownMod", 1.0f);
+        }
+        abilityCostModifiers[ability.template].AddTimedPercentageModifier(modifier, duration, buffName, maxStacks);
+    }
+
+    public void AddAbilityCostModifier(Ability ability, float modifier, string buffName = "Buff", int maxStacks = 99)
+    {
+        if (!abilityCostModifiers.ContainsKey(ability.template))
+        {
+            abilityCostModifiers[ability.template] = new StatModifier($"{ability.abilityName}_CooldownMod", 1.0f);
+        }
+        abilityCostModifiers[ability.template].AddPercentageModifier(modifier, buffName, maxStacks);
+    }
+
+    public float GetAbilityDamageModifier(Ability ability)
+    {
+        if (abilityDamageModifiers.ContainsKey(ability.template))
+        {
+            return abilityDamageModifiers[ability.template].GetValue();
+        }
+        else
+        {
+            return 1.0f;
+        }
+    }
+
+    public float GetAbilityCooldownModifier(Ability ability)
+    {
+        if (abilityCooldownModifiers.ContainsKey(ability.template))
+        {
+            return abilityCooldownModifiers[ability.template].GetValue();
+        }
+        else
+        {
+            return 1.0f;
+        }
+    }
+
+    public float GetAbilityCostModifier(Ability ability)
+    {
+        if (abilityCostModifiers.ContainsKey(ability.template))
+        {
+            return abilityCostModifiers[ability.template].GetValue();
+        }
+        else
+        {
+            return 1.0f;
+        }
+    }
+
+    public void RemoveAbilityBuffModifiers(Ability ability, string buffName)
+    {
+        if (abilityCooldownModifiers.ContainsKey(ability.template))
+            abilityCooldownModifiers[ability.template].RemoveModifiersWithLabel(buffName);
+        if (abilityCostModifiers.ContainsKey(ability.template))
+            abilityCostModifiers[ability.template].RemoveModifiersWithLabel(buffName);
+        if (abilityDamageModifiers.ContainsKey(ability.template))
+            abilityDamageModifiers[ability.template].RemoveModifiersWithLabel(buffName);
     }
 }

@@ -135,8 +135,9 @@ public class Player : Unit
     private void OnItemPickedUp(Item item)
     {
         // Do not auto-equip the first item, so we can ensure that the player knows how to do this.
-        if (equipment.GetFilledSlots() == 0)
-            return;
+        /*
+        //if (equipment.GetFilledSlots() == 0)
+        //    return;
 
         // Auto-equip items if the player is not wearing an item in that slot.
         if (item.itemType == Item.ItemType.Weapon && equipment.IsEmpty(WEAPON)) {
@@ -168,6 +169,7 @@ public class Player : Unit
             inventory.RemoveItem(item);
             equipment.AddItemAtID(item, RING2);
         }
+        */
     }
 
     /// <summary>
@@ -340,10 +342,10 @@ public class Player : Unit
     /// <summary>
     /// Kill this unit.
     /// </summary>
-    public override void Kill(Unit killingUnit, IEngineHandler killingSource)
+    public override void Kill(Unit killingUnit, IEngineHandler killingSource, bool isCritical)
     {
         if (isDead) return;
-        base.Kill(killingUnit, killingSource);
+        base.Kill(killingUnit, killingSource, isCritical);
         GameManager.events.OnPlayerKilled.Invoke(this, killingUnit);
     }
 
@@ -376,17 +378,6 @@ public class Player : Unit
         {
             AddLevels(1);
             currentExperience -= experienceToNextLevel;
-
-            // Modify player stats based on the scaling properties.
-            stats[Stat.MovementSpeed].ModifyBaseValue(bonusMovementSpeedPerLevel);
-            stats[Stat.MaxHealth].ModifyBaseValue(bonusHealthPerLevel);
-            stats[Stat.Damage].ModifyBaseValue(bonusDamagePerLevel);
-            stats[Stat.MaxResource].ModifyBaseValue(bonusResourcePerLevel);
-            stats[Stat.Armor].ModifyBaseValue(bonusArmorPerLevel);
-            stats[Stat.CriticalStrikeChance].ModifyBaseValue(bonusCriticalChancePerLevel);
-            stats[Stat.CriticalStrikeDamage].ModifyBaseValue(bonusCriticalDamagePerLevel);
-            baseHealthRegen += bonusHealthRegenPerLevel;
-            baseResourceRegen += bonusResourcePerLevel;
         } 
     }
 
@@ -426,7 +417,15 @@ public class Player : Unit
             levelUpFeedback.ActivateFeedback(gameObject, null, transform.position);
 
             // Apply stat scaling.
-
+            stats[Stat.MovementSpeed].ModifyBaseValue(bonusMovementSpeedPerLevel);
+            stats[Stat.MaxHealth].ModifyBaseValue(bonusHealthPerLevel);
+            stats[Stat.Damage].ModifyBaseValue(bonusDamagePerLevel);
+            stats[Stat.MaxResource].ModifyBaseValue(bonusResourcePerLevel);
+            stats[Stat.Armor].ModifyBaseValue(bonusArmorPerLevel);
+            stats[Stat.CriticalStrikeChance].ModifyBaseValue(bonusCriticalChancePerLevel);
+            stats[Stat.CriticalStrikeDamage].ModifyBaseValue(bonusCriticalDamagePerLevel);
+            baseHealthRegen += bonusHealthRegenPerLevel;
+            baseResourceRegen += bonusResourcePerLevel;
         }
     }
 
@@ -518,5 +517,11 @@ public class Player : Unit
         // Set the unit to full health and play the idle animation.
         health = stats.GetValue(Stat.MaxHealth);
         animator.Play(RESPAWN_ANIMATION);
+    }
+
+    public override void OnAbilitiesUpdated()
+    {
+        base.OnAbilitiesUpdated();
+        GameManager.ui.PlayerWindow.RedrawChacterHUD();
     }
 }

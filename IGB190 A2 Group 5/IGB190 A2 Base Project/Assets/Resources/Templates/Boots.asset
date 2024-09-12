@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Boots
   itemDescription: 
-  randomStatCount: 1
-  itemCost: 500
+  randomStatCount: 0
+  itemCost: 0
   itemIcon: {fileID: 21300000, guid: 87a6ace052badc94890297eb1f920c27, type: 3}
   itemType: 4
   itemRarity: 0
@@ -35,44 +35,9 @@ MonoBehaviour:
       - rid: 248813236419559504
       conditionNodes: []
       actionNodes: []
-  guaranteedStats:
-  - stat: 6
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
-  randomisableStats:
-  - stat: 4
-    minimum: 20
-    maximum: 20
-    isPercent: 0
-  - stat: 5
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
-  - stat: 1
-    minimum: 100
-    maximum: 100
-    isPercent: 0
-  - stat: 10
-    minimum: 0.1
-    maximum: 0.1
-    isPercent: 0
-  - stat: 11
-    minimum: 0.3
-    maximum: 0.3
-    isPercent: 0
-  - stat: 5
-    minimum: 20
-    maximum: 20
-    isPercent: 0
-  - stat: 9
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
-  - stat: 8
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
+  template: {fileID: 0}
+  guaranteedStats: []
+  randomisableStats: []
   references:
     version: 2
     RefIds:

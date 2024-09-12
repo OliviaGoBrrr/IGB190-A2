@@ -19,6 +19,7 @@ public class Item : ScriptableObject, IEngineHandler
     public ItemType itemType;
     public ItemRarity itemRarity;
     public LogicEngine engine = new LogicEngine();
+    public Item template;
 
     // Item stat options (used to 'roll' the final item stats)
     public List<StatBlock> guaranteedStats = new List<StatBlock>();
@@ -54,7 +55,8 @@ public class Item : ScriptableObject, IEngineHandler
         Amulet,
         Weapon,
         Armor,
-        Boots
+        Boots,
+        Other
     }
 
     /// <summary>
@@ -218,6 +220,7 @@ public class Item : ScriptableObject, IEngineHandler
     public static Item GetRandomItemOfRarity(ItemRarity rarity)
     {
         GenerateLootTable();
+        if (!itemLootTable.ContainsKey(rarity) || itemLootTable[rarity].Count == 0) return null;
         return itemLootTable[rarity].RandomItem();
     }
 

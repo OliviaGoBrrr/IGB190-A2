@@ -380,6 +380,9 @@ public class ItemEditor : EditorWindow
             engineEditor = new LogicEngineEditor(this, item.engine, item);
         }
 
+        // Record the state before any changes
+        Undo.RecordObject(item, "Changed Item " + item.itemName);
+
         // Start a change check, so the item can be dirtied if the user makes a change.
         EditorGUI.BeginChangeCheck();
 

@@ -41,6 +41,7 @@ MonoBehaviour:
       eventNodes: []
       conditionNodes: []
       actionNodes: []
+  template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
   references:

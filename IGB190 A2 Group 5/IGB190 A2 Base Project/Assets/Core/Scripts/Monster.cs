@@ -227,11 +227,11 @@ public class Monster : Unit
     /// <summary>
     /// Kills this unit, spawning gold, items, and giving experience to the player.
     /// </summary>
-    public override void Kill(Unit killingUnit, IEngineHandler killingSource)
+    public override void Kill(Unit killingUnit, IEngineHandler killingSource, bool isCritical)
     {
         if (isDead) return;
 
-        base.Kill(killingUnit, killingSource);
+        base.Kill(killingUnit, killingSource, isCritical);
         HandleKillCleanup();
 
         HandleMonsterDrops();
