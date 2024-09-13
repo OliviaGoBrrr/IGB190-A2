@@ -1,0 +1,424 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Boots of Evasion
+  m_EditorClassIdentifier: 
+  itemName: Boots of Evasion
+  itemDescription: 'Passive: While moving, have a 20% to evade all incoming damage'
+  randomStatCount: 0
+  itemCost: 3000
+  itemIcon: {fileID: 21300000, guid: 0e92c4172a174484789fe64de1d037ef, type: 3}
+  itemType: 4
+  itemRarity: 2
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 143078299
+      hasWait: 0
+      eventNodes:
+      - rid: 790164332097831403
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Item Unequipped
+      scriptUID: 1438961614
+      hasWait: 0
+      eventNodes:
+      - rid: 790164332097831404
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Passive
+      scriptUID: 2072550301
+      hasWait: 0
+      eventNodes:
+      - rid: 790164332097831405
+      conditionNodes:
+      - rid: 790164332097831408
+      - rid: 790164332097831410
+      actionNodes:
+      - rid: 790164332097831443
+      - rid: 790164332097831575
+  template: {fileID: 0}
+  guaranteedStats:
+  - stat: 6
+    minimum: 0.35
+    maximum: 0.35
+    isPercent: 1
+  randomisableStats: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 790164332097831403
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 790164332097831404
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 790164332097831405
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnUnitDamaged
+        functionDescription: Unit/Unit is damaged
+        functionDynamicDescription: 'When a unit is damaged (Presets: <color=yellow>Damaged
+          Unit</color>, <color=yellow>Damaging Unit</color>, <color=yellow>Damaging
+          Ability</color>, <color=yellow>Damage Dealt</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Damaged Unit
+        - Damaging Unit
+        - Damaging Ability
+        - Damage Dealt
+        - Is Critical
+    - rid: 790164332097831408
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitIsMoving
+        functionDescription: Unit/Unit Is Moving
+        functionDynamicDescription: $ is moving
+        functionEvaluators:
+        - rid: 790164332097831409
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 790164332097831409
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 790164332097831410
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitIsInUnitGroup
+        functionDescription: Unit Group/Unit is in Unit Group
+        functionDynamicDescription: $ is in $
+        functionEvaluators:
+        - rid: 790164332097831411
+        - rid: 790164332097831412
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 790164332097831411
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Damaged Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 790164332097831412
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: GetUnitGroupVariable
+        functionDescription: Unit Group Variable
+        functionDynamicDescription: 'Unit Group: $'
+        functionEvaluators:
+        - rid: 790164332097831439
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831439
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Player
+        options: []
+    - rid: 790164332097831443
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 790164332097831444
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831444
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 790164332097831510
+        - rid: 790164332097831511
+        - rid: 790164332097831512
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 790164332097831510
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: RandomNumberBetween
+        functionDescription: Random/Random Number
+        functionDynamicDescription: Random Number Between $ and $
+        functionEvaluators:
+        - rid: 790164332097831570
+        - rid: 790164332097831571
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 790164332097831511
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Less Than or Equal To
+        options:
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than or Equal To
+        - Greater Than
+        - Greater Than or Equal To
+    - rid: 790164332097831512
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20
+    - rid: 790164332097831570
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20
+    - rid: 790164332097831571
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 790164332097831575
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealth
+        functionDescription: Unit/Add Health
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 790164332097831576
+        - rid: 790164332097831577
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831576
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Damage Dealt
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 790164332097831577
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

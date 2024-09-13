@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Bloodthirster
   m_EditorClassIdentifier: 
   itemName: Bloodthirster
-  itemDescription: 
-  randomStatCount: 0
-  itemCost: 0
-  itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
+  itemDescription: 'A weapon whose steel was cast with the blood of its creator.
+
+
+    On
+    hit: Heal 10 health.'
+  randomStatCount: 2
+  itemCost: 2500
+  itemIcon: {fileID: 21300000, guid: efc013e3db3ea144c8795366d761c52d, type: 3}
   itemType: 2
-  itemRarity: 0
+  itemRarity: 1
   engine:
     scripts:
     - scriptName: Item Equipped
@@ -35,12 +39,204 @@ MonoBehaviour:
       - rid: 1318962329340870682
       conditionNodes: []
       actionNodes: []
+    - scriptName: Item Passive 1
+      scriptUID: 53573042
+      hasWait: 0
+      eventNodes:
+      - rid: 790164328317190144
+      conditionNodes:
+      - rid: 790164328317191113
+      actionNodes:
+      - rid: 790164328317190145
   template: {fileID: 0}
-  guaranteedStats: []
-  randomisableStats: []
+  guaranteedStats:
+  - stat: 0
+    minimum: 20
+    maximum: 25
+    isPercent: 0
+  randomisableStats:
+  - stat: 4
+    minimum: 0
+    maximum: 0
+    isPercent: 0
+  - stat: 4
+    minimum: 0
+    maximum: 0
+    isPercent: 1
+  - stat: 3
+    minimum: 0.1
+    maximum: 0.25
+    isPercent: 1
+  - stat: 9
+    minimum: 0
+    maximum: 0
+    isPercent: 1
+  - stat: 10
+    minimum: 0
+    maximum: 0
+    isPercent: 0
+  - stat: 11
+    minimum: 0
+    maximum: 0
+    isPercent: 0
   references:
     version: 2
     RefIds:
+    - rid: 790164328317190144
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnUnitDamaged
+        functionDescription: Unit/Unit is damaged
+        functionDynamicDescription: 'When a unit is damaged (Presets: <color=yellow>Damaged
+          Unit</color>, <color=yellow>Damaging Unit</color>, <color=yellow>Damaging
+          Ability</color>, <color=yellow>Damage Dealt</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Damaged Unit
+        - Damaging Unit
+        - Damaging Ability
+        - Damage Dealt
+        - Is Critical
+    - rid: 790164328317190145
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealth
+        functionDescription: Unit/Add Health
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 790164328317190146
+        - rid: 790164328317190147
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164328317190146
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 790164328317190147
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Damaging Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 790164328317191113
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitIsInUnitGroup
+        functionDescription: Unit Group/Unit is in Unit Group
+        functionDynamicDescription: $ is in $
+        functionEvaluators:
+        - rid: 790164328317191114
+        - rid: 790164328317191115
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 790164328317191114
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Damaging Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 790164328317191115
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: GetUnitGroupVariable
+        functionDescription: Unit Group Variable
+        functionDynamicDescription: 'Unit Group: $'
+        functionEvaluators:
+        - rid: 790164328317191156
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164328317191156
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Player
+        options: []
     - rid: 1318962329340870681
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

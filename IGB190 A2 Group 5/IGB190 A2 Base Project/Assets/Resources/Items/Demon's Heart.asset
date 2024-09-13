@@ -10,47 +10,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Amulet
+  m_Name: Demon's Heart
   m_EditorClassIdentifier: 
-  itemName: Amulet
-  itemDescription: 
+  itemName: Demon's Heart
+  itemDescription: 'Gain +50% damage but take 10% Max HP damage every second
+
+
+    You
+    can still hear the evil beating in the gem.'
   randomStatCount: 0
-  itemCost: 0
-  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemCost: 3500
+  itemIcon: {fileID: 21300000, guid: ec888f7f279932d479dd9d2f3047a4ba, type: 3}
   itemType: 1
-  itemRarity: 0
+  itemRarity: 2
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1057175407
+      scriptUID: 1064244391
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559491
+      - rid: 790164332097831146
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 378403594
+      scriptUID: 1075897510
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559492
+      - rid: 790164332097831147
       conditionNodes: []
       actionNodes: []
     - scriptName: Passive
-      scriptUID: 80498456
+      scriptUID: 75722780
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831148
+      - rid: 790164332097831162
       conditionNodes: []
       actionNodes:
-      - rid: 790164332097831149
-      - rid: 790164332097831150
+      - rid: 790164332097831164
+      - rid: 790164332097831171
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
   references:
     version: 2
     RefIds:
-    - rid: 248813236419559491
+    - rid: 790164332097831146
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -68,7 +72,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559492
+    - rid: 790164332097831147
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -86,7 +90,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831148
+    - rid: 790164332097831162
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -95,7 +99,7 @@ MonoBehaviour:
         functionDescription: Time/Do every X Seconds
         functionDynamicDescription: Every $ seconds
         functionEvaluators:
-        - rid: 790164332097831151
+        - rid: 790164332097831163
         presetName: 
         variableName: 
         stringSuffix: 
@@ -105,50 +109,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831149
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: IncreaseStatPercent
-        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Percent
-        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
-          Stacks: $)'
-        functionEvaluators:
-        - rid: 790164332097831152
-        - rid: 790164332097831153
-        - rid: 790164332097831154
-        - rid: 790164332097831155
-        - rid: 790164332097831156
-        - rid: 790164332097831157
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 790164332097831150
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: RemoveHealth
-        functionDescription: Unit/Remove Health
-        functionDynamicDescription: Remove $ health from $
-        functionEvaluators:
-        - rid: 790164332097831158
-        - rid: 790164332097831159
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 790164332097831151
+    - rid: 790164332097831163
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -166,7 +127,31 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.5
-    - rid: 790164332097831152
+    - rid: 790164332097831164
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: IncreaseStatPercent
+        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Percent
+        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
+        functionEvaluators:
+        - rid: 790164332097831165
+        - rid: 790164332097831166
+        - rid: 790164332097831167
+        - rid: 790164332097831168
+        - rid: 790164332097831169
+        - rid: 790164332097831170
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831165
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -197,7 +182,7 @@ MonoBehaviour:
         - Resource Generation
         - Critical Chance
         - Critical Damage
-    - rid: 790164332097831153
+    - rid: 790164332097831166
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -215,7 +200,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 790164332097831154
+    - rid: 790164332097831167
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -233,7 +218,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 50
-    - rid: 790164332097831155
+    - rid: 790164332097831168
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -251,7 +236,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.5
-    - rid: 790164332097831156
+    - rid: 790164332097831169
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -270,7 +255,7 @@ MonoBehaviour:
         allowFunction: 1
         value: None
         options: []
-    - rid: 790164332097831157
+    - rid: 790164332097831170
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -288,7 +273,26 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 790164332097831158
+    - rid: 790164332097831171
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveHealth
+        functionDescription: Unit/Remove Health
+        functionDynamicDescription: Remove $ health from $
+        functionEvaluators:
+        - rid: 790164332097831172
+        - rid: 790164332097831173
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831172
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -297,8 +301,8 @@ MonoBehaviour:
         functionDescription: Math/Multiplication
         functionDynamicDescription: $ x $
         functionEvaluators:
-        - rid: 790164332097831160
-        - rid: 790164332097831161
+        - rid: 790164332097831182
+        - rid: 790164332097831183
         presetName: 
         variableName: 
         stringSuffix: 
@@ -308,7 +312,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 100
-    - rid: 790164332097831159
+    - rid: 790164332097831173
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -317,7 +321,7 @@ MonoBehaviour:
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
-        presetName: Ability Owner
+        presetName: Player
         variableName: 
         stringSuffix: 
         indent: 0
@@ -326,15 +330,16 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 790164332097831160
+    - rid: 790164332097831182
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 2
         tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: UnitMaxHealth
+        functionDescription: Unit/Unit Max Health
+        functionDynamicDescription: $ Max Health
+        functionEvaluators:
+        - rid: 790164332097831214
         presetName: 
         variableName: 
         stringSuffix: 
@@ -344,7 +349,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 790164332097831161
+    - rid: 790164332097831183
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -361,4 +366,22 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 0.05
+    - rid: 790164332097831214
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}

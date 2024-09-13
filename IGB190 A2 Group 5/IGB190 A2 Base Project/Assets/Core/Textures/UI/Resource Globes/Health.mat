@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Health
   m_Shader: {fileID: 4800000, guid: 9749b72c49b65654990e29c7bfcf885c, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - ETC1_EXTERNAL_ALPHA
   m_InvalidKeywords: []
@@ -18,6 +20,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -152,7 +155,7 @@ Material:
     - _DisplacementPack_ValueY_1: 0.2
     - _DstBlend: 0
     - _FadeToAlpha_Fade_1: 0.513
-    - _Fill: 0.657
+    - _Fill: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

@@ -10,47 +10,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Amulet
+  m_Name: Amulet of Midas
   m_EditorClassIdentifier: 
-  itemName: Amulet
-  itemDescription: 
+  itemName: Amulet of Midas
+  itemDescription: 'Gain a 5% chance to gain 20 gold when killing a unit.
+
+
+    They
+    say the cursed man''s spirit is trapped within this medallion...'
   randomStatCount: 0
-  itemCost: 0
-  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemCost: 500
+  itemIcon: {fileID: 21300000, guid: 490b8ea16029aca409a0ab5c570bb96e, type: 3}
   itemType: 1
   itemRarity: 0
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1057175407
+      scriptUID: 1444240410
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559491
+      - rid: 790164332097830941
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 378403594
+      scriptUID: 323854267
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559492
+      - rid: 790164332097830942
       conditionNodes: []
       actionNodes: []
     - scriptName: Passive
-      scriptUID: 80498456
+      scriptUID: 1139172703
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831148
+      - rid: 790164332097830947
       conditionNodes: []
       actionNodes:
-      - rid: 790164332097831149
-      - rid: 790164332097831150
+      - rid: 790164332097831003
+      - rid: 790164332097831144
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
   references:
     version: 2
     RefIds:
-    - rid: 248813236419559491
+    - rid: 790164332097830941
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -68,7 +72,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559492
+    - rid: 790164332097830942
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -86,77 +90,60 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831148
+    - rid: 790164332097830947
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: OnTimerFinished
-        functionDescription: Time/Do every X Seconds
-        functionDynamicDescription: Every $ seconds
-        functionEvaluators:
-        - rid: 790164332097831151
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []
-    - rid: 790164332097831149
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: IncreaseStatPercent
-        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Percent
-        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
-          Stacks: $)'
-        functionEvaluators:
-        - rid: 790164332097831152
-        - rid: 790164332097831153
-        - rid: 790164332097831154
-        - rid: 790164332097831155
-        - rid: 790164332097831156
-        - rid: 790164332097831157
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 790164332097831150
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: RemoveHealth
-        functionDescription: Unit/Remove Health
-        functionDynamicDescription: Remove $ health from $
-        functionEvaluators:
-        - rid: 790164332097831158
-        - rid: 790164332097831159
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 790164332097831151
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
         functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 790164332097831003
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 790164332097831004
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831004
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 790164332097831062
+        - rid: 790164332097831063
+        - rid: 790164332097831064
         presetName: 
         variableName: 
         stringSuffix: 
@@ -165,8 +152,28 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
-    - rid: 790164332097831152
+        value: 0
+    - rid: 790164332097831062
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: RandomNumberBetween
+        functionDescription: Random/Random Number
+        functionDynamicDescription: Random Number Between $ and $
+        functionEvaluators:
+        - rid: 790164332097831142
+        - rid: 790164332097831143
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 790164332097831063
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -181,155 +188,20 @@ MonoBehaviour:
         indent: 0
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Damage
+        allowPreset: 1
+        allowFunction: 1
+        value: Less Than or Equal To
         options:
-        - Damage
-        - Armor
-        - Damage Taken
-        - Attack Speed
-        - Max Health
-        - Max Resource
-        - Movement Speed
-        - Cooldown Reduction
-        - Ability Cost Reduction
-        - Resource Generation
-        - Critical Chance
-        - Critical Damage
-    - rid: 790164332097831153
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 790164332097831154
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than or Equal To
+        - Greater Than
+        - Greater Than or Equal To
+    - rid: 790164332097831064
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Percent
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 50
-    - rid: 790164332097831155
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0.5
-    - rid: 790164332097831156
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: None
-        options: []
-    - rid: 790164332097831157
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 790164332097831158
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Multiplication
-        functionDescription: Math/Multiplication
-        functionDynamicDescription: $ x $
-        functionEvaluators:
-        - rid: 790164332097831160
-        - rid: 790164332097831161
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 100
-    - rid: 790164332097831159
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Ability Owner
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 790164332097831160
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
         tempName: Number
         functionName: 
         functionDescription: 
@@ -343,8 +215,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
-    - rid: 790164332097831161
+        value: 5
+    - rid: 790164332097831142
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -361,4 +233,58 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 0
+    - rid: 790164332097831143
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 790164332097831144
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddGold
+        functionDescription: Player/Add Gold
+        functionDynamicDescription: Add $ gold to the player
+        functionEvaluators:
+        - rid: 790164332097831145
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 790164332097831145
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20

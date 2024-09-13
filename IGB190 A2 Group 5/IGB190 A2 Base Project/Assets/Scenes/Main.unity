@@ -7916,7 +7916,7 @@ MonoBehaviour:
   playerGoldText: {fileID: 953769410}
   xpBar: {fileID: 734190709}
   healthGlobeMaterial: {fileID: 2100000, guid: 2bb56c658babbbb44a3aae48cc56a78c, type: 2}
-  resourceGlobeMaterial: {fileID: 2100000, guid: 897f6ac202914ba41a82bf5960c98a76, type: 2}
+  resourceGlobeMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
   healthBar: {fileID: 543590529}
   resourceBar: {fileID: 1366455516}
 --- !u!1 &604799144
@@ -13557,7 +13557,7 @@ MonoBehaviour:
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 10
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
@@ -29245,12 +29245,12 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
   _monsterValues:
-    baseGoldDropAmountMinimum: 10
-    baseGoldDropAmountMaximum: 20
-    goldDropChance: 0.2
-    unempoweredMonsterCommonDropChance: 0
-    unempoweredMonsterRareDropChance: 0
-    unempoweredMonsterLegendaryDropChance: 0
+    baseGoldDropAmountMinimum: 46
+    baseGoldDropAmountMaximum: 54
+    goldDropChance: 1
+    unempoweredMonsterCommonDropChance: 0.2
+    unempoweredMonsterRareDropChance: 0.05
+    unempoweredMonsterLegendaryDropChance: 0.01
   _empoweredMonsterValues:
     empoweredMonsterHealthModifier: 2
     empoweredMonsterDamageModifier: 2
@@ -29261,9 +29261,9 @@ MonoBehaviour:
     empoweredMonsterRareDropChance: 0.2
     empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
-    baseMonsterXP: 10
-    startingXPPerLevel: 1000
-    additionalMaxXPPerLevel: 0
+    baseMonsterXP: 100
+    startingXPPerLevel: 500
+    additionalMaxXPPerLevel: 1000
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25
