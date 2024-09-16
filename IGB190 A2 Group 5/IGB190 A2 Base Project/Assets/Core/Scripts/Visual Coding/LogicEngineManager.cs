@@ -73,6 +73,7 @@ public class LogicEngineManager : MonoBehaviour
     /// </summary>
     public void RemoveEngine (LogicEngine engine)
     {
+        engine.DisableTimers();
         engines.Remove(engine);
         foreach (List<LogicEngine> list in eventLookup.Values)
             list.RemoveAll(x => x.Equals(engine));

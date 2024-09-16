@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Assault Cuirass
   m_EditorClassIdentifier: 
   itemName: Assault Cuirass
-  itemDescription: 'Passive: The closest unit within 5m of the player has their Armor
-    decreased by 20.'
+  itemDescription: Enemies within 5m of the player have their Armor decreased by
+    20.
   randomStatCount: 0
   itemCost: 5000
   itemIcon: {fileID: 21300000, guid: 744db98fc1bce394ba0826a0bf55b410, type: 3}
@@ -43,7 +43,8 @@ MonoBehaviour:
       - rid: 790164332097831239
       conditionNodes: []
       actionNodes:
-      - rid: 790164332097831230
+      - rid: 8097808950255681696
+      - rid: 8097808950255681963
   template: {fileID: 0}
   guaranteedStats:
   - stat: 1
@@ -94,154 +95,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831230
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DecreaseStatValue
-        functionDescription: Unit/Decrease Stat/Decrease Stat on Unit by Value
-        functionDynamicDescription: 'Decrease $ of $ by $ for $ (Buff Name: $ | Max
-          Stacks: $)'
-        functionEvaluators:
-        - rid: 790164332097831231
-        - rid: 790164332097831232
-        - rid: 790164332097831233
-        - rid: 790164332097831234
-        - rid: 790164332097831235
-        - rid: 790164332097831236
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 790164332097831231
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Armor
-        options:
-        - Damage
-        - Armor
-        - Damage Taken
-        - Attack Speed
-        - Max Health
-        - Max Resource
-        - Movement Speed
-        - Cooldown Reduction
-        - Ability Cost Reduction
-        - Resource Generation
-        - Critical Chance
-        - Critical Damage
-    - rid: 790164332097831232
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit
-        functionName: ClosestUnitToUnit
-        functionDescription: Distance/Closest Unit Near Unit
-        functionDynamicDescription: Closest unit within $ distance of $
-        functionEvaluators:
-        - rid: 790164332097831397
-        - rid: 790164332097831398
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 790164332097831233
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 20
-    - rid: 790164332097831234
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0.5
-    - rid: 790164332097831235
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: None
-        options: []
-    - rid: 790164332097831236
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
     - rid: 790164332097831239
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -279,7 +132,64 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.5
-    - rid: 790164332097831397
+    - rid: 8097808950255681696
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetUnitGroupVariable
+        functionDescription: Variables/Set Unit Group Variable
+        functionDynamicDescription: Set Unit Group named $ to $
+        functionEvaluators:
+        - rid: 8097808950255681697
+        - rid: 8097808950255681698
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8097808950255681697
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Targets
+        options: []
+    - rid: 8097808950255681698
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfPoint2
+        functionDescription: All Enemies Near Point
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 8097808950255681952
+        - rid: 8097808950255681953
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8097808950255681952
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -297,7 +207,26 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 5
-    - rid: 790164332097831398
+    - rid: 8097808950255681953
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Location
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 8097808950255681962
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 8097808950255681962
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -311,7 +240,172 @@ MonoBehaviour:
         stringSuffix: 
         indent: 0
         nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 8097808950255681963
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DecreaseStatValueUnitGroup
+        functionDescription: Unit/Decrease Stat/Decrease Stat of Unit Group by Value
+        functionDynamicDescription: 'Decrease $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
+        functionEvaluators:
+        - rid: 8097808950255681964
+        - rid: 8097808950255681965
+        - rid: 8097808950255681966
+        - rid: 8097808950255681967
+        - rid: 8097808950255681968
+        - rid: 8097808950255681969
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 8097808950255681964
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Armor
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+    - rid: 8097808950255681965
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: GetUnitGroupVariable
+        functionDescription: Unit Group Variable
+        functionDynamicDescription: 'Unit Group: $'
+        functionEvaluators:
+        - rid: 8097808950255681989
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8097808950255681966
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20
+    - rid: 8097808950255681967
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 8097808950255681968
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: None
+        options: []
+    - rid: 8097808950255681969
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 8097808950255681989
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Targets
+        options: []

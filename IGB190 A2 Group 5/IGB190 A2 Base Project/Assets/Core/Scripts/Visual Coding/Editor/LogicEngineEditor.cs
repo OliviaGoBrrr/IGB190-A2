@@ -553,6 +553,15 @@ public class LogicEngineEditor
             NumberNode.Value(360, "º/s"),
             NumberNode.Value(1, "s")));
 
+
+        allNodes.Add(GeneralNode.Func<ActionNode>(
+            "Unit/Remove Buff",
+            "Remove buff named $ from $",
+            "RemoveBuff",
+            unitIcon,
+            StringNode.Temp().NoFunction().NoPreset(),
+            UnitNode.Temp().NoValue()));
+
         allNodes.Add(GeneralNode.Func<ActionNode>(
             "Unit/Ability/Enable Ability on Unit",
             "Enable $ on $",

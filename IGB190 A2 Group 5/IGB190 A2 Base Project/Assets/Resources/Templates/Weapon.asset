@@ -35,6 +35,14 @@ MonoBehaviour:
       - rid: 248813236419559496
       conditionNodes: []
       actionNodes: []
+    - scriptName: Passive
+      scriptUID: 592662447
+      hasWait: 0
+      eventNodes:
+      - rid: 8097808946744787526
+      conditionNodes: []
+      actionNodes:
+      - rid: 8097808946744787706
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
@@ -77,3 +85,84 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
+    - rid: 8097808946744787526
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnUnitDamaged
+        functionDescription: Unit/Unit is damaged
+        functionDynamicDescription: 'When a unit is damaged (Presets: <color=yellow>Damaged
+          Unit</color>, <color=yellow>Damaging Unit</color>, <color=yellow>Damaging
+          Ability</color>, <color=yellow>Damage Dealt</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Damaged Unit
+        - Damaging Unit
+        - Damaging Ability
+        - Damage Dealt
+        - Is Critical
+    - rid: 8097808946744787706
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetNumberVariable
+        functionDescription: Variables/Set Number Variable
+        functionDynamicDescription: Set script number variable named $ to $
+        functionEvaluators:
+        - rid: 8097808946744787707
+        - rid: 8097808946744787708
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8097808946744787707
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 
+        options: []
+    - rid: 8097808946744787708
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0

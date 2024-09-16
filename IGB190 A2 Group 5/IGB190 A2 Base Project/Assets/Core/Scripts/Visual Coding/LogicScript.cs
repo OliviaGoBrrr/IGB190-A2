@@ -576,6 +576,7 @@ public class LogicScript
 
     public void EquipItem (Item item)
     {
+        item = item.RollItem();
         if (item.itemType == Item.ItemType.Weapon)
             GameManager.player.equipment.AddItemAtID(item, 0);
 
@@ -992,6 +993,16 @@ public class LogicScript
                 feedback.ActivateFeedback(unit.gameObject, unit.gameObject, unit.transform.position);
             }
         }
+    }
+
+    public void RemoveBuff(string buffName, Unit unit)
+    {
+        if (unit == null)
+        {
+            Error("The specified unit was invalid.");
+            return;
+        }
+        unit.stats.RemoveBuffWithLabel(buffName);
     }
 
     public void IncreaseStatValue(string modifier, Unit unit, float mod, float duration, string buff, float maxStacks)

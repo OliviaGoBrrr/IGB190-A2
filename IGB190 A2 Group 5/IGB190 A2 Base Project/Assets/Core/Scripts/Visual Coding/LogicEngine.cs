@@ -247,6 +247,11 @@ public class LogicEngine
         }
     }
 
+    public void DisableTimers ()
+    {
+        activeTimers = new List<LogicEngineTimer>();
+    }
+
     public Unit GetOwner ()
     {
         return engineHandler.GetOwner();

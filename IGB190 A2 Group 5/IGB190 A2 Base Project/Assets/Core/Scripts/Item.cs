@@ -160,8 +160,8 @@ public class Item : ScriptableObject, IEngineHandler
                 string perc = statBlock.stat.ShowAsPercent(statBlock.isPercent) ? "%" : "";
                 float mod = statBlock.stat.DisplayModifier(statBlock.isPercent);
                 description += statBlock.minimum != statBlock.maximum
-                    ? $"+[{statBlock.minimum * mod}{perc} - {statBlock.maximum * mod}{perc}] {statBlock.stat.Label()}\n"
-                    : $"+{statBlock.minimum * mod}{perc} {statBlock.stat.Label()}\n";
+                    ? $"{(statBlock.minimum > 0 ? "+" : "-")}[{Mathf.Abs(statBlock.minimum * mod)}{perc} - {Mathf.Abs(statBlock.maximum * mod)}{perc}] {statBlock.stat.Label()}\n"
+                    : $"{(statBlock.minimum > 0 ? "+" : "-")}{Mathf.Abs(statBlock.minimum * mod)}{perc} {statBlock.stat.Label()}\n";
             }
             description += "<color=#F3EF92>";
             for (int i = 0; i < randomStatCount; i++)

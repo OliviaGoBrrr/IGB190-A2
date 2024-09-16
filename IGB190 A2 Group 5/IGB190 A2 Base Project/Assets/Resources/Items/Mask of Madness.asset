@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Mask of Madness
+  m_EditorClassIdentifier: 
+  itemName: Mask of Madness
+  itemDescription: Replace Health Potion with Mask of Madness
+  randomStatCount: 0
+  itemCost: 2000
+  itemIcon: {fileID: 21300000, guid: 485172507593f1740bd23a4a4e0df8db, type: 3}
+  itemType: 1
+  itemRarity: 1
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 1605833272
+      hasWait: 0
+      eventNodes:
+      - rid: 8097808950255681990
+      conditionNodes: []
+      actionNodes:
+      - rid: 8097808950255682101
+    - scriptName: Item Unequipped
+      scriptUID: 959812842
+      hasWait: 0
+      eventNodes:
+      - rid: 8097808950255681991
+      conditionNodes: []
+      actionNodes:
+      - rid: 8097808950255682105
+  template: {fileID: 0}
+  guaranteedStats: []
+  randomisableStats: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8097808950255681990
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 8097808950255681991
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 8097808950255682101
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
+        functionEvaluators:
+        - rid: 8097808950255682102
+        - rid: 8097808950255682103
+        - rid: 8097808950255682104
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8097808950255682102
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
+    - rid: 8097808950255682103
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 948fba8a7d3193444b5a87c882ec5a74, type: 2}
+    - rid: 8097808950255682104
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 8097808950255682105
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
+        functionEvaluators:
+        - rid: 8097808950255682106
+        - rid: 8097808950255682107
+        - rid: 8097808950255682108
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8097808950255682106
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 948fba8a7d3193444b5a87c882ec5a74, type: 2}
+    - rid: 8097808950255682107
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
+    - rid: 8097808950255682108
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
