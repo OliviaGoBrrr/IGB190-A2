@@ -17,7 +17,7 @@ MonoBehaviour:
   abilityName: Cleave
   abilityIcon: {fileID: 21300000, guid: 5c06d58fe97ebfb40ad16877f1488733, type: 3}
   targetMode: 3
-  abilityDescription: Swing with a mighty attack, dealing 50% attack damage to all
+  abilityDescription: Swing with a mighty attack, dealing 70% attack damage to all
     units in front of the caster.
   abilityAnimation: One Hand Slash
   range: 2
@@ -76,7 +76,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 50
+        value: 70
     - rid: 248813534025351212
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:

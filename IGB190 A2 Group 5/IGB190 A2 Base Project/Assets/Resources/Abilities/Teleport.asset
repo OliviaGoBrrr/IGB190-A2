@@ -16,14 +16,13 @@ MonoBehaviour:
     rid: 4796091822556839949
   abilityName: Teleport
   abilityIcon: {fileID: 21300000, guid: db065e997da876d48b41e76e95d3e7b7, type: 3}
-  abilityType: 0
   targetMode: 4
   abilityDescription: Instantly teleport towards the target location, and become
     immune to all damage for 2 seconds.
   abilityAnimation: None
   range: 20
   castTime: 0
-  abilityCooldown: 4
+  abilityCooldown: 6
   abilityCost: 15
   movementLock: 1
   animationActivationPosition: 0.5
@@ -34,10 +33,10 @@ MonoBehaviour:
   requiresLineOfSight: 0
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  isUnlocked: 1
   castCompleteSound: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
   castCompleteSoundVolume: 1
-  feedbackOnCaster: {fileID: 0}
+  needsReminderFlash: 0
+  isUnlocked: 1
   references:
     version: 2
     RefIds:

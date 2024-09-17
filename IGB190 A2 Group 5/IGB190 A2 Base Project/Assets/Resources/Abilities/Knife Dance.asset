@@ -16,11 +16,10 @@ MonoBehaviour:
     rid: 6728881647084109937
   abilityName: Knife Dance
   abilityIcon: {fileID: 21300000, guid: cc687f3e871f61c42911c09c98710181, type: 3}
-  abilityType: 0
   targetMode: 0
-  abilityDescription: Throw knives all around you, dealing 150% attack damage to
+  abilityDescription: Throw knives all around you, dealing 230% attack damage to
     all nearby enemies.
-  abilityAnimation: Spin
+  abilityAnimation: None
   range: 20
   castTime: 0.2
   abilityCooldown: 10
@@ -34,10 +33,10 @@ MonoBehaviour:
   requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  isUnlocked: 1
   castCompleteSound: {fileID: 8300000, guid: d431758d9381dd8448702a22c11f9c01, type: 3}
   castCompleteSoundVolume: 0.54
-  feedbackOnCaster: {fileID: 0}
+  needsReminderFlash: 0
+  isUnlocked: 1
   references:
     version: 2
     RefIds:
@@ -77,7 +76,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 150
+        value: 230
     - rid: 248813534025351230
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:

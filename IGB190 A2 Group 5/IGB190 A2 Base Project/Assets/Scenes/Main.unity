@@ -8175,14 +8175,14 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Mana
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
-  bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
+  bonusDamagePerLevel: 10
+  bonusHealthPerLevel: 10
+  bonusMovementSpeedPerLevel: 0.1
+  bonusResourcePerLevel: 15
+  bonusArmorPerLevel: 2.5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
+  bonusHealthRegenPerLevel: 2
   bonusResourceRegenPerLevel: 0
 --- !u!195 &623941940
 NavMeshAgent:
@@ -11503,6 +11503,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Acceleration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
       value: 0
       objectReference: {fileID: 0}
@@ -13647,7 +13651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1043651113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13668,7 +13672,7 @@ MonoBehaviour:
   resource: 0
   baseDamage: 20
   baseAttacksPerSecond: 1.5
-  baseMaxHealth: 200
+  baseMaxHealth: 300
   baseMaxResource: 100
   baseMovementSpeed: 3
   baseArmor: 0
@@ -13697,14 +13701,14 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
-  bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
+  bonusDamagePerLevel: 10
+  bonusHealthPerLevel: 15
+  bonusMovementSpeedPerLevel: 0.1
+  bonusResourcePerLevel: 10
+  bonusArmorPerLevel: 5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
+  bonusHealthRegenPerLevel: 2
   bonusResourceRegenPerLevel: 0
 --- !u!195 &1043651115
 NavMeshAgent:
@@ -26760,7 +26764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1806430104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26781,7 +26785,7 @@ MonoBehaviour:
   resource: 0
   baseDamage: 20
   baseAttacksPerSecond: 1.8
-  baseMaxHealth: 200
+  baseMaxHealth: 250
   baseMaxResource: 100
   baseMovementSpeed: 3.5
   baseArmor: 0
@@ -26810,14 +26814,14 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Energy
   resourceMaterial: {fileID: 2100000, guid: 53e6d10c83e73f74a984d384a27c13d4, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
-  bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
+  bonusDamagePerLevel: 10
+  bonusHealthPerLevel: 10
+  bonusMovementSpeedPerLevel: 0.2
+  bonusResourcePerLevel: 10
+  bonusArmorPerLevel: 2.5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
+  bonusHealthRegenPerLevel: 2
   bonusResourceRegenPerLevel: 0
 --- !u!195 &1806430105
 NavMeshAgent:

@@ -18,11 +18,12 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: c46d7d28f1fafaf46ad6115bb92d4f1e, type: 3}
   targetMode: 4
   abilityDescription: Charge towards the target location, dealing 150% weapon damage
-    to all enemies near the point of impact.
+    to all enemies near the point of impact, and an additional 50% weapon damage
+    to directly impacted enemies.
   abilityAnimation: One Hand Slash
   range: 10
   castTime: 0
-  abilityCooldown: 10
+  abilityCooldown: 8
   abilityCost: 0
   movementLock: 0.5
   animationActivationPosition: 0.5
@@ -510,6 +511,98 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1.5
+    - rid: 5052283808562020378
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: HaveUnitDamageUnits2
+        functionDescription: Unit/Deal Damage to Unit Group
+        functionDynamicDescription: Deal $ attack damage to $
+        functionEvaluators:
+        - rid: 5052283808562020379
+        - rid: 5052283808562020380
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5052283808562020379
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 50
+    - rid: 5052283808562020380
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfPoint2
+        functionDescription: All Enemies Near Point
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 5052283808562020391
+        - rid: 5052283808562020392
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5052283808562020391
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 5052283808562020392
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Ability Target Location
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
     - rid: 6728881630435868675
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -528,6 +621,7 @@ MonoBehaviour:
           - rid: 248813549377814762
           - rid: 248813549377814550
           - rid: 248813534025351194
+          - rid: 5052283808562020378
     - rid: 6728881630435868676
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
