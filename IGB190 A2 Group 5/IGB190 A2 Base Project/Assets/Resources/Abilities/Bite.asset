@@ -29,8 +29,8 @@ MonoBehaviour:
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 1
   abilityGeneratesResource: 1
-  requiresLineOfSight: 0
-  canUpdateTargetWhileCasting: 1
+  requiresLineOfSight: 1
+  canUpdateTargetWhileCasting: 0
   castAtClosestPointInRange: 1
   castCompleteSound: {fileID: 0}
   castCompleteSoundVolume: 1
