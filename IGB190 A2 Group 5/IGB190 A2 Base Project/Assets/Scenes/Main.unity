@@ -11504,7 +11504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Acceleration
-      value: 8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
@@ -11593,6 +11597,10 @@ PrefabInstance:
     - target: {fileID: 7077608692380533153, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142263307436866698, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Center.y
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 7206035749426561629, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Layer
@@ -13651,7 +13659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1043651113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26764,7 +26772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1806430104
 MonoBehaviour:
   m_ObjectHideFlags: 0

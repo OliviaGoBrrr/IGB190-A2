@@ -90,3 +90,45 @@ Things to work on for A2
  - 
 
 
+//=================================
+// Potential Additional Classes
+//=================================
+
+ - Alchemist 
+	- Uses high damage spells in an AoE
+	- Conerts gold passively (+GPM)
+	- Fragile
+	- Potentially
+
+ - Druid
+	- Utilises a "companion" to deal additional damage/tank
+	- Could either target one unit by itself or what the player is targetting
+	- 
+
+ - Vampire?
+	- Heals on attack
+	- Abilities cost Health instead of Resource
+
+ - Hwei
+	- Hwei from League of Legends
+	- Asian twink boy
+
+ - Paladin
+	- Low DPS
+	- High sustain
+
+ - Rogue/Duelist
+	- Speedy, all about movement and repositioning
+	- High skill ceiling
+	- Dashes that do damage
+	- Skill shots?
+
+ - Gunslinger
+	- Cowboy
+	- Save a horse
+	- VAMPIRE COWBOY?"!!
+	- Guns
+
+
+ - 
+
