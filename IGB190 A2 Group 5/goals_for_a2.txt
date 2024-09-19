@@ -108,6 +108,8 @@ Things to work on for A2
  - Vampire?
 	- Heals on attack
 	- Abilities cost Health instead of Resource
+	- Could use "blood" as a resource
+	- Consume blood to heal
 
  - Hwei
 	- Hwei from League of Legends
