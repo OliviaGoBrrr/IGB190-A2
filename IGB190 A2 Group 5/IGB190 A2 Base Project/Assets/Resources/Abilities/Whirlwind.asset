@@ -492,6 +492,152 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 4720471770268434838
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DecreaseStatPercent
+        functionDescription: Unit/Decrease Stat/Decrease Stat on Unit by Percent
+        functionDynamicDescription: 'Decrease $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
+        functionEvaluators:
+        - rid: 4720471770268434839
+        - rid: 4720471770268434840
+        - rid: 4720471770268434841
+        - rid: 4720471770268434842
+        - rid: 4720471770268434843
+        - rid: 4720471770268434844
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 4720471770268434839
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Attack Speed
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+    - rid: 4720471770268434840
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 4720471770268434841
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Percent
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 4720471770268434842
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.33
+    - rid: 4720471770268434843
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: None
+        options: []
+    - rid: 4720471770268434844
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
     - rid: 4796092190316822901
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -504,6 +650,7 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 248813549377814785
+          - rid: 4720471770268434838
           - rid: 248813534025351178
           - rid: 248813549377814624
           - rid: 248813549377814625

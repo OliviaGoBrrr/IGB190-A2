@@ -1,0 +1,62 @@
+Patch notes
+Key
+Unempowered Monster = UEM
+Empowered Monster = EPM
+
+
+System Changes
+ - XP Gain 100 -> 75
+ - Base XP: 500 -> 100
+ - Max XP per Lvl: 1000 -> 600
+ (Roughly goes from +10 enemies killed per level to +8)
+
+ - Gold Drop Min: 46 -> 78
+ - Gold Drop Max: 52 -> 118
+ - Gold Chance: 100% -> 50%
+
+ - UEM Common Drop Chance: set to 0.3
+ - UEM Rare Drop Chance set to 0.1
+ - UEM Legendary Drop Chance: set to 0.05
+
+ - EPM HP Modifier: 2x -> 2.5x
+ - EPM AtkSpd Modifier: 1.0x -> 1.25x
+ - EPM Common Drop Chance: set to 0.0
+ - EPM Rare Drop Chance: set to 0.8
+ - EPM Legendary Drop Chance: set to 0.2
+ - EPM XP Modifier: 5 -> 3
+
+Monster Scaling
+ - Increased Damage per Player Level: 0.2 -> 0.25
+ - Increase Health per Player Level: 0.2 -> 0.25
+
+Player Base Stats (Barbarian)
+ - Base AtkSpd: 1.5 -> 0.9
+ - Base HP Regen: 10 -> 5
+ - Base Crit Chance: 10% -> 5%
+ - Base Armor: 0 -> 50
+
+Player Scaling (Barbarian)
+ - Bonus Damage Per Level: 10 -> 5
+ - Bonus Health Per Level: 15 -> 25
+ - Bonus HP Regen Per Level: 2 -> 2.5
+ - Bonus Max Resource Per Level: 10 -> 0
+
+Barbarian Ability
+ - Now "Disarms" the Player so they can't attack while spinning (Decreases AtkSpd by 100%)
+
+Monsters
+Monster 1 (Zombie)
+ - Base Damage: 10 -> 15
+ - Base AtkSpd: 2.0 -> 1.2
+ - Base MaxHP: 200 -> 100
+ - Base AtkRange: 2.2 -> 1.8
+
+Monster 2 (Skeleton with Sword)
+ - Base AtkSpd: 2.0/s -> 1.2/s
+ - Base MaxHp: 200 -> 150
+ - Base MveSpd: 1.0 -> 1.5
+
+Monster 5 (Skeleton with Bow/Spectral Skeleton)
+ - Base AtkSpd: 1.0/s -> 0.7/s
+ - Base MaxHp: 200 -> 100
+
