@@ -12410,24 +12410,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_AutoRepath
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Acceleration
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_AngularSpeed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
-      propertyPath: m_AutoTraverseOffMeshLink
+      propertyPath: avoidancePriority
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1761990222672793380, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Mass
-      value: 100000000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1761990222672793380, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_UseGravity
@@ -12435,7 +12451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1761990222672793380, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_AngularDrag
-      value: 0
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761990222672793380, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1904762223958030522, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Layer
