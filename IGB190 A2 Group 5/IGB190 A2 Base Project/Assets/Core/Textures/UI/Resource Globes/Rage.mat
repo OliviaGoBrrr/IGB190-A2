@@ -155,7 +155,7 @@ Material:
     - _DisplacementPack_ValueY_1: 0.2
     - _DstBlend: 0
     - _FadeToAlpha_Fade_1: 0.513
-    - _Fill: 1
+    - _Fill: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
