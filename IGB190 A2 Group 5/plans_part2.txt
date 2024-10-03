@@ -1,0 +1,14 @@
+Create a variety of Areas with unique enemies in area
+
+New enemies to be aded (rats, bandits, etc.)
+
+Quests (find keys to open door)
+
+Balance values of enemies/player
+
+Big boss behind big door
+
+Unique spells for Boss to increase complexity
+
+Level up progression
+

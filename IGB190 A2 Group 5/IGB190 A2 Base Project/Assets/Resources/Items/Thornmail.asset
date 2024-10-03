@@ -19,7 +19,7 @@ MonoBehaviour:
     Armor
     coated in thorns that stabs anyone who tries to harm the wearer.'
   randomStatCount: 3
-  itemCost: 5000
+  itemCost: 0
   itemIcon: {fileID: 21300000, guid: 564236ed3ade15248accfc3079bc884d, type: 3}
   itemType: 3
   itemRarity: 2
@@ -46,8 +46,8 @@ MonoBehaviour:
       - rid: 790164328317190365
       conditionNodes: []
       actionNodes:
-      - rid: 8097808950255681653
-      - rid: 8097808950255681693
+      - rid: 4720471770268434586
+      - rid: 4720471770268434737
   template: {fileID: 0}
   guaranteedStats:
   - stat: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
         - Damaging Ability
         - Damage Dealt
         - Is Critical
-    - rid: 8097808950255681653
+    - rid: 4720471770268434586
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -152,7 +152,7 @@ MonoBehaviour:
         functionDescription: Flow/If Statement
         functionDynamicDescription: Do actions if $
         functionEvaluators:
-        - rid: 8097808950255681654
+        - rid: 4720471770268434587
         presetName: 
         variableName: 
         stringSuffix: 
@@ -161,17 +161,18 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 8097808950255681654
+    - rid: 4720471770268434587
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: Bool
-        functionName: UnitIsNotInUnitGroup
-        functionDescription: Unit Group/Unit is not in Unit Group
-        functionDynamicDescription: $ is not in $
+        functionName: UnitComparison
+        functionDescription: Comparisons/Unit Comparison
+        functionDynamicDescription: $ $ $
         functionEvaluators:
-        - rid: 8097808950255681665
-        - rid: 8097808950255681666
+        - rid: 4720471770268434683
+        - rid: 4720471770268434684
+        - rid: 4720471770268434685
         presetName: 
         variableName: 
         stringSuffix: 
@@ -181,7 +182,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 8097808950255681665
+    - rid: 4720471770268434683
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -190,38 +191,20 @@ MonoBehaviour:
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
-        presetName: Damaging Unit
+        presetName: Damaged Unit
         variableName: 
         stringSuffix: 
         indent: 0
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
-    - rid: 8097808950255681666
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit Group
-        functionName: GetUnitGroupVariable
-        functionDescription: Unit Group Variable
-        functionDynamicDescription: 'Unit Group: $'
-        functionEvaluators:
-        - rid: 8097808950255681692
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 8097808950255681692
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 4720471770268434684
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Text
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -232,11 +215,31 @@ MonoBehaviour:
         indent: 0
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Player
-        options: []
-    - rid: 8097808950255681693
+        allowPreset: 1
+        allowFunction: 1
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 4720471770268434685
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 4720471770268434737
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -245,8 +248,8 @@ MonoBehaviour:
         functionDescription: Unit/Deal Damage to Unit
         functionDynamicDescription: Deal $ attack damage to $
         functionEvaluators:
-        - rid: 8097808950255681694
-        - rid: 8097808950255681695
+        - rid: 4720471770268434738
+        - rid: 4720471770268434739
         presetName: 
         variableName: 
         stringSuffix: 
@@ -255,7 +258,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 8097808950255681694
+    - rid: 4720471770268434738
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -273,7 +276,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 5
-    - rid: 8097808950255681695
+    - rid: 4720471770268434739
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
