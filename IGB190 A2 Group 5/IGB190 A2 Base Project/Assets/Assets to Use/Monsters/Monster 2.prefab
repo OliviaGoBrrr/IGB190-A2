@@ -99,10 +99,10 @@ MonoBehaviour:
   health: 100
   resource: 0
   baseDamage: 10
-  baseAttacksPerSecond: 2
-  baseMaxHealth: 200
+  baseAttacksPerSecond: 1.2
+  baseMaxHealth: 150
   baseMaxResource: 100
-  baseMovementSpeed: 1
+  baseMovementSpeed: 1.5
   baseArmor: 0
   baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 2
