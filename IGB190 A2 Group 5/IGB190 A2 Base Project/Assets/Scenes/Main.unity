@@ -1194,7 +1194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &118622784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6528,11 +6528,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
---- !u!4 &473006141 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-  m_PrefabInstance: {fileID: 1004422003}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &489915326
 GameObject:
   m_ObjectHideFlags: 0
@@ -12533,28 +12528,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-      value: 15.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
-      propertyPath: m_LocalRotation.x
-=======
->>>>>>> a16f121b45975d9d5fa3cdde183c721a8fb396c6
->>>>>>> Stashed changes
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
@@ -14154,67 +14127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7391d8e809b7e664aa031cd2c4288c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1004422003
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1161926036}
-    m_Modifications:
-    - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_Name
-      value: Spawner 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: caef50e694e10204c993186864e4cc23, type: 3}
 --- !u!1 &1006228442
 GameObject:
   m_ObjectHideFlags: 0
@@ -14849,7 +14761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1043651113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14869,14 +14781,14 @@ MonoBehaviour:
   health: 500
   resource: 0
   baseDamage: 20
-  baseAttacksPerSecond: 0.9
+  baseAttacksPerSecond: 1.5
   baseMaxHealth: 300
   baseMaxResource: 100
   baseMovementSpeed: 3
-  baseArmor: 50
-  baseCriticalStrikeChance: 0.05
+  baseArmor: 0
+  baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 5
+  baseHealthRegen: 10
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
@@ -14899,14 +14811,14 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 5
-  bonusHealthPerLevel: 25
+  bonusDamagePerLevel: 10
+  bonusHealthPerLevel: 15
   bonusMovementSpeedPerLevel: 0.1
-  bonusResourcePerLevel: 0
+  bonusResourcePerLevel: 10
   bonusArmorPerLevel: 5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 2.5
+  bonusHealthRegenPerLevel: 2
   bonusResourceRegenPerLevel: 0
 --- !u!195 &1043651115
 NavMeshAgent:
@@ -16569,7 +16481,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 595191138}
-  - {fileID: 473006141}
   - {fileID: 958844033}
   - {fileID: 1336336558}
   - {fileID: 1929345704}
@@ -31469,28 +31380,28 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
   _monsterValues:
-    baseGoldDropAmountMinimum: 78
-    baseGoldDropAmountMaximum: 118
-    goldDropChance: 0.5
-    unempoweredMonsterCommonDropChance: 0.3
-    unempoweredMonsterRareDropChance: 0.1
-    unempoweredMonsterLegendaryDropChance: 0.05
+    baseGoldDropAmountMinimum: 46
+    baseGoldDropAmountMaximum: 54
+    goldDropChance: 1
+    unempoweredMonsterCommonDropChance: 0.2
+    unempoweredMonsterRareDropChance: 0.05
+    unempoweredMonsterLegendaryDropChance: 1
   _empoweredMonsterValues:
-    empoweredMonsterHealthModifier: 2.5
+    empoweredMonsterHealthModifier: 2
     empoweredMonsterDamageModifier: 2
-    empoweredMonsterAttackSpeedModifier: 1.25
-    empoweredMonsterXPModifier: 3
+    empoweredMonsterAttackSpeedModifier: 1
+    empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
-    empoweredMonsterCommonDropChance: 0
-    empoweredMonsterRareDropChance: 0.8
-    empoweredMonsterLegendaryDropChance: 0.2
+    empoweredMonsterCommonDropChance: 1
+    empoweredMonsterRareDropChance: 0.2
+    empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
-    baseMonsterXP: 150
-    startingXPPerLevel: 300
-    additionalMaxXPPerLevel: 1200
+    baseMonsterXP: 100
+    startingXPPerLevel: 500
+    additionalMaxXPPerLevel: 1000
   _monsterScalingValues:
-    increasedHealthPerPlayerLevel: 1
-    increasedDamagePerPlayerLevel: 1
+    increasedHealthPerPlayerLevel: 0.25
+    increasedDamagePerPlayerLevel: 0.25
   _healthGlobeValues:
     baseHealthGlobeChance: 0
     reducedChancePerExistingGlobe: 0
@@ -31567,7 +31478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60ad280c52f718498d63b5829ae6a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDensity: 2
+  spawnDensity: 1
   monstersToSpawn:
   - {fileID: 5560953499317727810, guid: 3af91c814aab5ea4ca125fde32872b0a, type: 3}
   - {fileID: 1649265759049038220, guid: 02102f2f786a49d418694911eea0f16f, type: 3}
