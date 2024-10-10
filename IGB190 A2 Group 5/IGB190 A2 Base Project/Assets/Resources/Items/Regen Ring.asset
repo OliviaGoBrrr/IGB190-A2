@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Regen Ring
   m_EditorClassIdentifier: 
   itemName: Regen Ring
-  itemDescription: 'Passive: Gives 2 health every second'
+  itemDescription: 'Passive: Gives 2 health every second.
+
+
+    The gleam of the
+    ruby fills you with vigour.'
   randomStatCount: 0
   itemCost: 250
   itemIcon: {fileID: 21300000, guid: 09447583938b3ae4fa2ee9e1e9a1aab1, type: 3}

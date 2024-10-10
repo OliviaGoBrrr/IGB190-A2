@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Spirit Visage
   m_EditorClassIdentifier: 
   itemName: Spirit Visage
-  itemDescription: 'Heal 1% of your Max HP every second. '
+  itemDescription: "Heal 1% of your Max HP every second. \n\nThis Armour glows with
+    a deathly green glow, forming a mantle or arcane energy."
   randomStatCount: 0
   itemCost: 0
   itemIcon: {fileID: 21300000, guid: 99b4f8fc34f1c414cbdd9cf4488975bd, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ogre's Hammer
   m_EditorClassIdentifier: 
   itemName: Ogre's Hammer
-  itemDescription: 
+  itemDescription: A mighty hammer fit for crushing bones and annihilating the puny.
   randomStatCount: 2
   itemCost: 1800
   itemIcon: {fileID: 21300000, guid: 0f5b3d04a5f8cc7429dcee0332eef1b0, type: 3}

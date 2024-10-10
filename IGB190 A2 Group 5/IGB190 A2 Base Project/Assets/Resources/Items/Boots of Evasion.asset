@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Boots of Evasion
   m_EditorClassIdentifier: 
   itemName: Boots of Evasion
-  itemDescription: 'Passive: While moving, have a 20% to evade all incoming damage'
+  itemDescription: 'Passive: While moving, have a 20% to evade all incoming damage.
+
+
+    A
+    legendary rogue is rumoured to have once worn these boots.'
   randomStatCount: 0
   itemCost: 3000
   itemIcon: {fileID: 21300000, guid: 0e92c4172a174484789fe64de1d037ef, type: 3}

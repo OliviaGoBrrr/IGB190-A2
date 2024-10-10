@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Mask of Madness
   m_EditorClassIdentifier: 
   itemName: Mask of Madness
-  itemDescription: Replace Health Potion with Mask of Madness
+  itemDescription: 'Replace Health Potion with Mask of Madness
+
+
+    While holding
+    this you hear a voice whisper in your ear, telling you to put it on.'
   randomStatCount: 0
   itemCost: 2000
   itemIcon: {fileID: 21300000, guid: 485172507593f1740bd23a4a4e0df8db, type: 3}

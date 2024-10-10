@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Assault Cuirass
   m_EditorClassIdentifier: 
   itemName: Assault Cuirass
-  itemDescription: Enemies within 5m of the player have their Armor decreased by
-    20.
+  itemDescription: "Enemies within 5m of the player have their Armor decreased by
+    20.\n\nArmour worn by the elites in the King\u2019s armies. Exudes an aura of
+    intimidation and power."
   randomStatCount: 0
   itemCost: 5000
   itemIcon: {fileID: 21300000, guid: 744db98fc1bce394ba0826a0bf55b410, type: 3}

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Turtle's Shell
   m_EditorClassIdentifier: 
   itemName: Turtle's Shell
-  itemDescription: 'The armor carved from a giant tortoise. It can reflect steel
-    but is hard to move in.
+  itemDescription: 'Passive: Grants Turtle''s Armor ability.
 
 
-    Passive: Grants Turtle''s Armor ability'
+    The armor carved
+    from a giant tortoise. It can reflect steel but is hard to move in.'
   randomStatCount: 2
   itemCost: 2000
   itemIcon: {fileID: 21300000, guid: 2af3abc2853cfdb4eafe5d29d3222230, type: 3}

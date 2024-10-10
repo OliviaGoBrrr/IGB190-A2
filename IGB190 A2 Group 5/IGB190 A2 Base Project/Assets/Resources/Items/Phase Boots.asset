@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Phase Boots
   m_EditorClassIdentifier: 
   itemName: Phase Boots
-  itemDescription: 'These boots make the wearer feel like the wind.
+  itemDescription: 'Passive: Grants Phase ability.
 
 
-    Passive:
-    Grants Phase ability'
+    These boots make the wearer
+    feel like the wind.'
   randomStatCount: 0
   itemCost: 1500
   itemIcon: {fileID: 21300000, guid: 41db8b9820856b742a74c3273f8e2dff, type: 3}

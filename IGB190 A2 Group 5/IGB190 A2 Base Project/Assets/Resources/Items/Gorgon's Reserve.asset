@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Gorgon's Reserve
   m_EditorClassIdentifier: 
   itemName: Gorgon's Reserve
-  itemDescription: While above 50% resouce, 75% of damage is taken from resource
+  itemDescription: 'While above 50% resouce, 75% of damage is taken from resource
     instead of health.
+
+
+    A vial filled with the poison of a gorgon.'
   randomStatCount: 0
   itemCost: 6000
   itemIcon: {fileID: 21300000, guid: 650f1490561804c48908af065bc3d1df, type: 3}

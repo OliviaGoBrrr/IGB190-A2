@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Excalibur
   m_EditorClassIdentifier: 
   itemName: Excalibur
-  itemDescription: 'A holy blade. Some say the blade chooses who can and can not
-    wield it...
+  itemDescription: 'Passive: It''s radiant glow damages enemies for 20% of your attack
+    damage every second in an area around you.
 
 
-    Passive: It''s radiant glow damages enemies for 20% of your
-    attack damage every second in an area around you.'
+    A holy blade. Some say the blade
+    chooses who can and can not wield it...'
   randomStatCount: 6
   itemCost: 15000
   itemIcon: {fileID: 21300000, guid: 5ad9fb827823973498b6278fd53029ed, type: 3}

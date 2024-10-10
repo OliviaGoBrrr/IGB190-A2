@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Knight's Ring
   m_EditorClassIdentifier: 
   itemName: Knight's Ring
-  itemDescription: 
+  itemDescription: "A ring with the King\u2019s coat of arms, signalling the wearer
+    as a Knight."
   randomStatCount: 1
   itemCost: 1500
   itemIcon: {fileID: 21300000, guid: a8bc19c7daadb6044b071d234a1d62a3, type: 3}

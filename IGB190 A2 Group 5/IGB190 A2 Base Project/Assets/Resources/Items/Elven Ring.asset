@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Elven Ring
   m_EditorClassIdentifier: 
   itemName: Elven Ring
-  itemDescription: 'Passive: Gives 2 resource every second'
+  itemDescription: 'Passive: Gives 2 resource every second.
+
+
+    Elven jewellery
+    imbued with sensitivity to magics.'
   randomStatCount: 0
   itemCost: 250
   itemIcon: {fileID: 21300000, guid: e7eab74a3fb073e47b8ff5f06f8037e9, type: 3}

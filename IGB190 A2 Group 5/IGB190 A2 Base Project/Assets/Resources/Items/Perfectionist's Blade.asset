@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Perfectionist's Blade
   m_EditorClassIdentifier: 
   itemName: Perfectionist's Blade
-  itemDescription: 'A blade that only few can wield.
+  itemDescription: 'Passive:
+
+    While above 80% health, increase damage by 30,
+    and attack speed by 30%.
 
 
-    Passive:
-
-    While above
-    80% health, increase damage by 30, and attack speed by 30%.'
+    A blade that brings out the full potential of
+    its wielder.'
   randomStatCount: 4
   itemCost: 5000
   itemIcon: {fileID: 21300000, guid: 09b62cca23038b9438555a6258a5c0ca, type: 3}
