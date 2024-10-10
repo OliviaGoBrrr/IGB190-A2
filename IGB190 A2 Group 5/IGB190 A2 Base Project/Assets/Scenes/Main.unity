@@ -1214,15 +1214,15 @@ MonoBehaviour:
   health: 500
   resource: 0
   baseDamage: 25
-  baseAttacksPerSecond: 1.5
+  baseAttacksPerSecond: 1.2
   baseMaxHealth: 200
-  baseMaxResource: 200
+  baseMaxResource: 0
   baseMovementSpeed: 3
   baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 10
-  baseResourceRegen: 10
+  baseResourceRegen: 0
   baseAttackRange: 2
   abilities:
   - {fileID: 11400000, guid: 03c7e82d031b72f409a17f8895aa899e, type: 2}
@@ -1245,13 +1245,13 @@ MonoBehaviour:
   resourceName: Blood
   resourceMaterial: {fileID: 2100000, guid: 2bb56c658babbbb44a3aae48cc56a78c, type: 2}
   bonusDamagePerLevel: 10
-  bonusHealthPerLevel: 10
+  bonusHealthPerLevel: 20
   bonusMovementSpeedPerLevel: 0.1
-  bonusResourcePerLevel: 15
+  bonusResourcePerLevel: 0
   bonusArmorPerLevel: 2.5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 2
+  bonusHealthRegenPerLevel: 4
   bonusResourceRegenPerLevel: 0
 --- !u!195 &118622785
 NavMeshAgent:
@@ -14781,14 +14781,14 @@ MonoBehaviour:
   health: 500
   resource: 0
   baseDamage: 20
-  baseAttacksPerSecond: 1.5
+  baseAttacksPerSecond: 0.9
   baseMaxHealth: 300
   baseMaxResource: 100
   baseMovementSpeed: 3
-  baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseArmor: 50
+  baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 10
+  baseHealthRegen: 5
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
@@ -14811,14 +14811,14 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 10
-  bonusHealthPerLevel: 15
+  bonusDamagePerLevel: 5
+  bonusHealthPerLevel: 25
   bonusMovementSpeedPerLevel: 0.1
-  bonusResourcePerLevel: 10
+  bonusResourcePerLevel: 0
   bonusArmorPerLevel: 5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 2
+  bonusHealthRegenPerLevel: 2.5
   bonusResourceRegenPerLevel: 0
 --- !u!195 &1043651115
 NavMeshAgent:
@@ -31380,25 +31380,25 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
   _monsterValues:
-    baseGoldDropAmountMinimum: 46
-    baseGoldDropAmountMaximum: 54
-    goldDropChance: 1
-    unempoweredMonsterCommonDropChance: 0.2
-    unempoweredMonsterRareDropChance: 0.05
-    unempoweredMonsterLegendaryDropChance: 1
+    baseGoldDropAmountMinimum: 78
+    baseGoldDropAmountMaximum: 118
+    goldDropChance: 0.5
+    unempoweredMonsterCommonDropChance: 0.3
+    unempoweredMonsterRareDropChance: 0.1
+    unempoweredMonsterLegendaryDropChance: 0.05
   _empoweredMonsterValues:
-    empoweredMonsterHealthModifier: 2
-    empoweredMonsterDamageModifier: 2
-    empoweredMonsterAttackSpeedModifier: 1
-    empoweredMonsterXPModifier: 5
+    empoweredMonsterHealthModifier: 2.5
+    empoweredMonsterDamageModifier: 1.5
+    empoweredMonsterAttackSpeedModifier: 1.25
+    empoweredMonsterXPModifier: 3
     empoweredMonsterGoldModifier: 3
-    empoweredMonsterCommonDropChance: 1
-    empoweredMonsterRareDropChance: 0.2
-    empoweredMonsterLegendaryDropChance: 0
+    empoweredMonsterCommonDropChance: 0
+    empoweredMonsterRareDropChance: 0.8
+    empoweredMonsterLegendaryDropChance: 0.2
   _playerExperienceValues:
-    baseMonsterXP: 100
-    startingXPPerLevel: 500
-    additionalMaxXPPerLevel: 1000
+    baseMonsterXP: 150
+    startingXPPerLevel: 300
+    additionalMaxXPPerLevel: 1200
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25
