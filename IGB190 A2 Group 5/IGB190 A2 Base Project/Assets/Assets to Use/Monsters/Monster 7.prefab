@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 6968082634827464930}
   - component: {fileID: 7026301748349933647}
   m_Layer: 7
-  m_Name: Monster 6
+  m_Name: Monster 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1390,8 +1390,7 @@ MonoBehaviour:
   baseResourceRegen: 0
   baseAttackRange: 2.2
   abilities:
-  - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
-  - {fileID: 11400000, guid: 252f631cc723d684c963af48327d1571, type: 2}
+  - {fileID: 11400000, guid: e42b70e4dea3b4341a23f4c0bb18fe9c, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}

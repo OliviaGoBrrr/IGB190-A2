@@ -17,8 +17,15 @@ MonoBehaviour:
   abilityName: Bat Swarm
   abilityIcon: {fileID: 21300000, guid: 4ce6c6a8e253ce240864e4cd04cd0cb9, type: 3}
   targetMode: 0
-  abilityDescription: Turn into a swarm of bats, becoming invincible for 3s. During
-    this state, you cannot cast any abilities.
+  abilityDescription: 'Turn into a swarm of bats, becoming invincible for 3s. During
+    this state, you cannot cast any abilities besides "Bite".
+
+
+    Ability Cost:
+    50% of current HP.
+
+
+'
   abilityAnimation: Magic Area Attack
   range: 0
   castTime: 0
@@ -528,6 +535,61 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 3279906225996693763
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.5
+    - rid: 3279906225996693764
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitHealth
+        functionDescription: Unit/Unit Health
+        functionDynamicDescription: $ Health
+        functionEvaluators:
+        - rid: 3279906225996693802
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 3279906225996693802
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
     - rid: 7582232845503168538
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -598,12 +660,14 @@ MonoBehaviour:
     - rid: 7582232845503168576
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: Multiplication
+        functionDescription: Math/Multiplication
+        functionDynamicDescription: $ x $
+        functionEvaluators:
+        - rid: 3279906225996693763
+        - rid: 3279906225996693764
         presetName: 
         variableName: 
         stringSuffix: 
@@ -612,7 +676,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 100
+        value: 10
     - rid: 7582232845503168577
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

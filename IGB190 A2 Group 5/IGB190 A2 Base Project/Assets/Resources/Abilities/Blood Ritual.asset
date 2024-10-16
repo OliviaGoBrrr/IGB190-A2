@@ -17,8 +17,8 @@ MonoBehaviour:
   abilityName: Blood Ritual
   abilityIcon: {fileID: 21300000, guid: 485172507593f1740bd23a4a4e0df8db, type: 3}
   targetMode: 0
-  abilityDescription: Cast a blood ritual, recovering 100 HP and dealing 300% attack
-    damage over 3 seconds and reducing enemy attack speed by 75%.
+  abilityDescription: "Cast a blood ritual, dealing 300% attack damage over 3 seconds
+    and reducing enemy attack speed by 75%. \n\nAbility Gain: 50% of missing HP."
   abilityAnimation: Magic Channel
   range: 15
   castTime: 0.1
@@ -532,12 +532,14 @@ MonoBehaviour:
     - rid: 3279905883816722534
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: Multiplication
+        functionDescription: Math/Multiplication
+        functionDynamicDescription: $ x $
+        functionEvaluators:
+        - rid: 3279906225996693835
+        - rid: 3279906225996693836
         presetName: Resources Gained
         variableName: 
         stringSuffix: 
@@ -654,8 +656,8 @@ MonoBehaviour:
         functionDescription: Math/Vector Subtraction
         functionDynamicDescription: $ - $
         functionEvaluators:
-        - rid: 3279905883816722680
-        - rid: 3279905883816722681
+        - rid: 3279906232000053944
+        - rid: 3279906232000053945
         presetName: Ability Target Location
         variableName: 
         stringSuffix: 
@@ -701,61 +703,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 10
-    - rid: 3279905883816722680
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfUnit
-        functionDescription: Unit/Position of Unit
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 3279905883816722692
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279905883816722681
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 17.5, z: 0}
-    - rid: 3279905883816722692
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
     - rid: 3279905883816722760
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -988,3 +935,170 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
+    - rid: 3279906225996693835
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.5
+    - rid: 3279906225996693836
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Subtraction
+        functionDescription: Math/Subtraction
+        functionDynamicDescription: $ - $
+        functionEvaluators:
+        - rid: 3279906225996693991
+        - rid: 3279906225996693992
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 3279906225996693991
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: UnitMaxHealth
+        functionDescription: Unit/Unit Max Health
+        functionDynamicDescription: $ Max Health
+        functionEvaluators:
+        - rid: 3279906225996694008
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 3279906225996693992
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitHealth
+        functionDescription: Unit/Unit Health
+        functionDynamicDescription: $ Health
+        functionEvaluators:
+        - rid: 3279906225996694018
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 3279906225996694008
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 3279906225996694018
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 3279906232000053944
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Location
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 3279906232000053957
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 3279906232000053945
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 17, z: 0}
+    - rid: 3279906232000053957
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
