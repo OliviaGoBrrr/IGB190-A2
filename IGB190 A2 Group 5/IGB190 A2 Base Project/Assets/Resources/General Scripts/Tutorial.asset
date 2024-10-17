@@ -70,6 +70,13 @@ MonoBehaviour:
       - rid: 7043080132712988783
       - rid: 7043080132712988786
       - rid: 7043080132712988788
+    - scriptName: Quest Complete
+      scriptUID: 1434821192
+      hasWait: 0
+      eventNodes:
+      - rid: 8611218226731024388
+      conditionNodes: []
+      actionNodes: []
   references:
     version: 2
     RefIds:
@@ -1197,3 +1204,27 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
+    - rid: 8611218226731024388
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
