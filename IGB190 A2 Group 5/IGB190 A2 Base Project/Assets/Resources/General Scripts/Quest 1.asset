@@ -17,15 +17,63 @@ MonoBehaviour:
     - scriptName: Quest Start
       scriptUID: 1529564862
       hasWait: 0
-      eventNodes: []
+      eventNodes:
+      - rid: 8611218226731024397
       conditionNodes: []
       actionNodes:
-      - rid: 3279906232000054030
-      - rid: 3279906232000054032
+      - rid: 8611218226731024399
+      - rid: 8611218226731024401
+    - scriptName: Quest Complete
+      scriptUID: 1153473854
+      hasWait: 0
+      eventNodes:
+      - rid: 8611218226731024405
+      conditionNodes:
+      - rid: 8611218226731024406
+      actionNodes:
+      - rid: 8611218226731024408
   references:
     version: 2
     RefIds:
-    - rid: 3279906232000054030
+    - rid: 8611218226731024397
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitEntersRegion
+        functionDescription: Region/Unit enters region
+        functionDynamicDescription: Unit enters region named $
+        functionEvaluators:
+        - rid: 8611218226731024398
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 8611218226731024398
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Tutorial Goal
+        options: []
+    - rid: 8611218226731024399
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -34,7 +82,7 @@ MonoBehaviour:
         functionDescription: Quests/Create Quest
         functionDynamicDescription: Give the player a quest named $
         functionEvaluators:
-        - rid: 3279906232000054031
+        - rid: 8611218226731024400
         presetName: 
         variableName: 
         stringSuffix: 
@@ -43,7 +91,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 3279906232000054031
+    - rid: 8611218226731024400
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -60,9 +108,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: dwadaw
+        value: Monster Slayer
         options: []
-    - rid: 3279906232000054032
+    - rid: 8611218226731024401
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -71,9 +119,9 @@ MonoBehaviour:
         functionDescription: Quests/Add Quest Requirement
         functionDynamicDescription: Add $ requirement to $ with $ progress increments
         functionEvaluators:
-        - rid: 3279906232000054033
-        - rid: 3279906232000054034
-        - rid: 3279906232000054035
+        - rid: 8611218226731024402
+        - rid: 8611218226731024403
+        - rid: 8611218226731024404
         presetName: 
         variableName: 
         stringSuffix: 
@@ -82,7 +130,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 3279906232000054033
+    - rid: 8611218226731024402
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -99,12 +147,12 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 
+        value: Slay the Zombies
         options: []
-    - rid: 3279906232000054034
+    - rid: 8611218226731024403
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Quest Name
         functionName: 
         functionDescription: 
@@ -118,9 +166,127 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 
+        value: Monster Slayer
         options: []
-    - rid: 3279906232000054035
+    - rid: 8611218226731024404
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 8611218226731024405
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 8611218226731024406
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: QuestIsActive
+        functionDescription: Quest/Quest Is Active
+        functionDynamicDescription: Quest named $ is currently active
+        functionEvaluators:
+        - rid: 8611218226731024407
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 8611218226731024407
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Monster Slayer
+        options: []
+    - rid: 8611218226731024408
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifyQuestRequirementProgress2
+        functionDescription: Quests/Modify Quest Progress
+        functionDynamicDescription: Modify quest progress of $ by $
+        functionEvaluators:
+        - rid: 8611218226731024409
+        - rid: 8611218226731024410
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8611218226731024409
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Monster Slayer
+        options: []
+    - rid: 8611218226731024410
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
