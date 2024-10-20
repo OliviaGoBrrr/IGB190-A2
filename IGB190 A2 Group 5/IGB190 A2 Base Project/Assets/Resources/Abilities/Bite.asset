@@ -20,13 +20,13 @@ MonoBehaviour:
   abilityDescription: 'Bite the target in front of you.
 
 
-    Ability Gain: 10% of
-    missing HP.'
+    Gains 10 resource,
+    and heals you by 10% of missing HP.'
   abilityAnimation: Pickup
   range: 0
   castTime: 0.5
   abilityCooldown: 0.1
-  abilityCost: 0
+  abilityCost: 10
   movementLock: 1
   animationActivationPosition: 0.3
   canMoveWhileCasting: 0
@@ -56,14 +56,6 @@ MonoBehaviour:
           actionNodes:
           - rid: 2762473921105887248
           - rid: 3279906225996694144
-        - scriptName: Resource Regen Passive
-          scriptUID: 1370872853
-          hasWait: 0
-          eventNodes:
-          - rid: 4720471769846382753
-          conditionNodes: []
-          actionNodes:
-          - rid: 4720471769846382744
     - rid: 2762473921105887233
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -123,7 +115,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 70
+        value: 50
     - rid: 2762473921105887250
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -161,7 +153,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 90
+        value: 180
     - rid: 2762473921105887252
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -367,167 +359,3 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 4720471769846382744
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DecreaseStatPercent
-        functionDescription: Unit/Decrease Stat/Decrease Stat on Unit by Percent
-        functionDynamicDescription: 'Decrease $ of $ by $ for $ (Buff Name: $ | Max
-          Stacks: $)'
-        functionEvaluators:
-        - rid: 4720471769846382745
-        - rid: 4720471769846382746
-        - rid: 4720471769846382747
-        - rid: 4720471769846382748
-        - rid: 4720471769846382749
-        - rid: 4720471769846382750
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4720471769846382745
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Resource Generation
-        options:
-        - Damage
-        - Armor
-        - Damage Taken
-        - Attack Speed
-        - Max Health
-        - Max Resource
-        - Movement Speed
-        - Cooldown Reduction
-        - Ability Cost Reduction
-        - Resource Generation
-        - Critical Chance
-        - Critical Damage
-    - rid: 4720471769846382746
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 4720471769846382747
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Percent
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 100
-    - rid: 4720471769846382748
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0.5
-    - rid: 4720471769846382749
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: None
-        options: []
-    - rid: 4720471769846382750
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 4720471769846382753
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: EveryFrame
-        functionDescription: Time/Do every frame
-        functionDynamicDescription: Do actions every frame
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []

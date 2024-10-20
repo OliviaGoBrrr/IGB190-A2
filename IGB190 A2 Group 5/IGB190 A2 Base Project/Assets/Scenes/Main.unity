@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 118622785}
   - component: {fileID: 118622784}
   m_Layer: 0
-  m_Name: Player (Demon)
+  m_Name: Player (Vampire)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,18 +1281,18 @@ MonoBehaviour:
   resource: 0
   baseDamage: 25
   baseAttacksPerSecond: 1.2
-  baseMaxHealth: 200
-  baseMaxResource: 0
+  baseMaxHealth: 275
+  baseMaxResource: 100
   baseMovementSpeed: 3
   baseArmor: 0
   baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 10
-  baseResourceRegen: 0
+  baseResourceRegen: 2
   baseAttackRange: 2
   abilities:
   - {fileID: 11400000, guid: 03c7e82d031b72f409a17f8895aa899e, type: 2}
-  - {fileID: 11400000, guid: eef90a4c299724244b41313c57410d97, type: 2}
+  - {fileID: 11400000, guid: f668b18892fa4184c8729378b8dcb102, type: 2}
   - {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
   - {fileID: 11400000, guid: 814bf212a477c344f9572d020219056d, type: 2}
   - {fileID: 11400000, guid: dfbfff1892550674890969c82beb1657, type: 2}
@@ -1313,12 +1313,12 @@ MonoBehaviour:
   bonusDamagePerLevel: 10
   bonusHealthPerLevel: 20
   bonusMovementSpeedPerLevel: 0.1
-  bonusResourcePerLevel: 0
+  bonusResourcePerLevel: 10
   bonusArmorPerLevel: 2.5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
   bonusHealthRegenPerLevel: 4
-  bonusResourceRegenPerLevel: 0
+  bonusResourceRegenPerLevel: 2
 --- !u!195 &118622785
 NavMeshAgent:
   m_ObjectHideFlags: 0
