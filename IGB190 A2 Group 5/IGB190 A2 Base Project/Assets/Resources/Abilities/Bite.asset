@@ -21,7 +21,8 @@ MonoBehaviour:
 
 
     Gains 10 resource,
-    and heals you by 10% of missing HP.'
+    and heals you by 10% of missing HP, as well as damaging enemies for 50% attack
+    damage.'
   abilityAnimation: Pickup
   range: 0
   castTime: 0.5
