@@ -16,7 +16,7 @@ MonoBehaviour:
     rid: 8495770697921200135
   abilityName: Rat Bite
   abilityIcon: {fileID: 21300000, guid: 3c4a5715742cfc54db50c52552dd66ba, type: 3}
-  targetMode: 3
+  targetMode: 1
   abilityDescription: Simple melee ability which deals 50% attack damage extending
     1m.
   abilityAnimation: One Hand Slash
@@ -222,7 +222,7 @@ MonoBehaviour:
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
-        presetName: Casting Unit
+        presetName: Player
         variableName: 
         stringSuffix: 
         indent: 0
