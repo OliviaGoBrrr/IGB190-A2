@@ -331,9 +331,12 @@ public class Unit : Interactable
     /// <param name="duration">The total time to spin for.</param>
     public void StartSpin(float spinSpeed, float duration)
     {
-        this.spinUntil = Time.time + duration;
-        this.spinSpeed = spinSpeed;
-        this.spinAngle = animator.transform.rotation.eulerAngles.y;
+        if (animator != null) //don't try to spin when theres no animator for it.
+        {
+            this.spinUntil = Time.time + duration;
+            this.spinSpeed = spinSpeed;
+            this.spinAngle = animator.transform.rotation.eulerAngles.y;
+        }
     }
 
     /// <summary>
@@ -350,14 +353,17 @@ public class Unit : Interactable
     /// </summary>
     private void Spin ()
     {
-        if (Time.time < spinUntil)
+        if (animator != null) //don't try to spin when theres no animator for it.
         {
-            spinAngle += spinSpeed * Time.deltaTime;
-            animator.transform.rotation = Quaternion.Euler(0, spinAngle, 0);
-        }
-        else
-        {
-            animator.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            if (Time.time < spinUntil)
+            {
+                spinAngle += spinSpeed * Time.deltaTime;
+                animator.transform.rotation = Quaternion.Euler(0, spinAngle, 0);
+            }
+            else
+            {
+                animator.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
 
