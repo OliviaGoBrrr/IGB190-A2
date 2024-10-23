@@ -28319,6 +28319,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 422452, guid: 52301af46bf2aca4cba80ecf307a7777, type: 3}
   m_PrefabInstance: {fileID: 1693210894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &660269895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 206858993456326501, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_Carve
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 206858993456326501, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_Extents.z
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156121889994217623, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_Name
+      value: Breakable Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233018978569172961, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560953499317727810, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      propertyPath: monsterLabel
+      value: Wall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4156121889994217623, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1300726200}
+  m_SourcePrefab: {fileID: 100100000, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
 --- !u!1 &664984537
 GameObject:
   m_ObjectHideFlags: 0
@@ -43847,6 +43919,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298590214}
   m_CullTransparentMesh: 1
+--- !u!1 &1300726194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4156121889994217623, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+  m_PrefabInstance: {fileID: 660269895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &1300726200
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300726194}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.00001
+  m_Speed: 0
+  m_Acceleration: 0
+  avoidancePriority: 0
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 0
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0
 --- !u!1001 &1301956511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63723,3 +63822,4 @@ SceneRoots:
   - {fileID: 63038048}
   - {fileID: 117552452}
   - {fileID: 860050790}
+  - {fileID: 660269895}

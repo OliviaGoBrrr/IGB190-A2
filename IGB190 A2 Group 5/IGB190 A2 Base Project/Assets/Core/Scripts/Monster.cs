@@ -132,13 +132,16 @@ public class Monster : Unit
     /// </summary>
     private void HandleMovement()
     {
-        if (CanMove() && !InRange(target.transform.position))
+        if (unitName != "Breakable Wall") //Walls don't move.
         {
-            agentNavigation.SetDestination(target.transform.position);
-        }
-        else
-        {
-            StopMoving();
+            if (CanMove() && !InRange(target.transform.position))
+            {
+                agentNavigation.SetDestination(target.transform.position);
+            }
+            else
+            {
+                StopMoving();
+            }
         }
     }
 
