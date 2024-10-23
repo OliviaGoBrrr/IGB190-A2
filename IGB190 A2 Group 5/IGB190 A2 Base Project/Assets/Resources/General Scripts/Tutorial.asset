@@ -1549,7 +1549,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: You spot a magical item in the Noble's cellar. He wouldn't mind if
+        value: You spot a magical item in the Noble's cellar. She wouldn't mind if
           you "borrowed" it.
         options: []
     - rid: 7043080132712988696
