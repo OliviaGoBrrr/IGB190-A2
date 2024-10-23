@@ -103,10 +103,7 @@ public class ShopWindow : UIWindow
 
         foreach (var item in Item.GetAllItemsOfType(filter))
         {
-            if (item.canPurchaseInShop)
-            {
-                Instantiate(template, marketplaceItemsContainer).Setup(item);
-            }
+            Instantiate(template, marketplaceItemsContainer).Setup(item);
         }
     }
 
