@@ -59977,7 +59977,7 @@ Transform:
   m_GameObject: {fileID: 1995053433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.43, y: 0.83, z: 27.63}
+  m_LocalPosition: {x: 5.43, y: 0.83, z: 27.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60016,7 +60016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446c2c97be0e47c47990089e0ebbe30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionName: Combat Walk Goal
+  regionName: Tutorial Finish Goal
 --- !u!1 &1998604228
 GameObject:
   m_ObjectHideFlags: 0
