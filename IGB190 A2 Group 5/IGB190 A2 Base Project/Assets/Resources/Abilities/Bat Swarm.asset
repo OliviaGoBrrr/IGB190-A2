@@ -17,8 +17,8 @@ MonoBehaviour:
   abilityName: Bat Swarm
   abilityIcon: {fileID: 21300000, guid: 4ce6c6a8e253ce240864e4cd04cd0cb9, type: 3}
   targetMode: 0
-  abilityDescription: Turn into a swarm of bats, becoming invincible for 3s. During
-    this state, you cannot cast any abilities besides "Bite".
+  abilityDescription: Turn into a swarm of bats, becoming invincible and 75% faster
+    for 3s. During this state, you cannot cast any abilities besides "Bite".
   abilityAnimation: Magic Area Attack
   range: 0
   castTime: 0
