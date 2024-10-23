@@ -27,11 +27,10 @@ public class Settings
     public KeyCode abilityTwoKeybind = KeyCode.W;
     public KeyCode abilityThreeKeybind = KeyCode.E;
     public KeyCode abilityFourKeybind = KeyCode.R;
-    public KeyCode item1Keybind = KeyCode.V;
     public KeyCode forceMoveKeybind = KeyCode.Space;
     public KeyCode forceHoldKeybind = KeyCode.LeftShift;
 
-    public KeyCode[] keybindings = new KeyCode[9]
+    public KeyCode[] keybindings = new KeyCode[8]
     {
         KeyCode.Mouse0,
         KeyCode.Mouse1,
@@ -39,7 +38,6 @@ public class Settings
         KeyCode.W,
         KeyCode.E,
         KeyCode.R,
-        KeyCode.V,
         KeyCode.Space,
         KeyCode.LeftShift
     };

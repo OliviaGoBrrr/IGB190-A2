@@ -25,6 +25,9 @@ public class Item : ScriptableObject, IEngineHandler
     public List<StatBlock> guaranteedStats = new List<StatBlock>();
     public List<StatBlock> randomisableStats = new List<StatBlock>();
 
+    public bool canPurchaseInShop = true;
+    public bool canDropOffMonster = true;
+
     // The final item stat rolls
     [NonSerialized] public bool hasRolledStats = false;
     [NonSerialized] public List<RolledStatValue> rolledStatValues = new List<RolledStatValue>();
@@ -119,6 +122,8 @@ public class Item : ScriptableObject, IEngineHandler
         item.itemRarity = itemRarity;
         item.itemCost = itemCost;
         item.randomStatCount = randomStatCount;
+        item.canDropOffMonster = canDropOffMonster;
+        item.canPurchaseInShop = canPurchaseInShop;
         item.guaranteedStats.AddRange(guaranteedStats.ConvertAll(statBlock => statBlock.Copy()));
         item.randomisableStats.AddRange(randomisableStats.ConvertAll(statBlock => statBlock.Copy()));
         item.engine = engine.Copy();
@@ -146,7 +151,7 @@ public class Item : ScriptableObject, IEngineHandler
         {
             foreach (RolledStatValue rolledStat in rolledStatValues)
             {
-                description += $"+{rolledStat.amount * rolledStat.stat.DisplayModifier(rolledStat.isPercent)}";
+                description += $"{(rolledStat.amount > 0 ? "+" : "")}{rolledStat.amount * rolledStat.stat.DisplayModifier(rolledStat.isPercent)}";
                 if (rolledStat.stat.ShowAsPercent(rolledStat.isPercent))
                     description += "%";
                 description += $" {rolledStat.stat.Label()}\n";
@@ -250,7 +255,10 @@ public class Item : ScriptableObject, IEngineHandler
             {
                 itemLootTable.Add(item.itemRarity, new List<Item>());
             }
-            itemLootTable[item.itemRarity].Add(item);
+            if (item.canDropOffMonster)
+            {
+                itemLootTable[item.itemRarity].Add(item);
+            }
         }
     }
 
