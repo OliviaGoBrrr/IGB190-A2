@@ -8,11 +8,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dungeon_Material_01
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _EMISSION
   - _METALLICGLOSSMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 0
@@ -20,7 +19,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - GRABPASS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BlendOp: 0
@@ -80,7 +84,7 @@ Material:
     - _EmissionScaleUI: 1
     - _FlipbookMode: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.2
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LightingEnabled: 1
     - _Metallic: 0
@@ -101,4 +105,5 @@ Material:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
