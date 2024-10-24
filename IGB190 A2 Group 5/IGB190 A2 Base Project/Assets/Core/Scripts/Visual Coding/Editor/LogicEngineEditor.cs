@@ -1470,7 +1470,7 @@ public class LogicEngineEditor
             "Global Number Variable",
             "Global Number: $",
             "GetGlobalNumberVariable",
-            NumberNode.Temp().NoFunction().NoPreset()));
+            StringNode.Temp().NoFunction().NoPreset()));
 
         #endregion
 
@@ -1782,15 +1782,15 @@ public class LogicEngineEditor
             "Region labelled $ exists",
             "RegionExists",
             conditionIcon,
-            StringNode.Temp("Label")));
+            StringNode.Temp("Region Name")));
 
         allNodes.Add(GeneralNode.Func<BoolNode>(
             "Region/Unit Is In Region",
             "$ is in region labelled $",
-            "RegionExists",
+            "UnitIsInRegion",
             conditionIcon,
             UnitNode.Temp().NoValue(),
-            StringNode.Temp("Label")));
+            StringNode.Temp("Region Name")));
 
         allNodes.Add(GeneralNode.Func<BoolNode>(
             "Input/Key is Held",

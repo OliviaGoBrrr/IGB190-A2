@@ -199,9 +199,10 @@ public class Unit : Interactable
     /// <summary>
     /// Returns true if the unit is currently moving, otherwise false.
     /// </summary>
-    public bool IsMoving ()
-    {
+    public bool IsMoving()
+    {        
         return (agentNavigation.velocity.magnitude > 0);
+        
     }
 
     /// <summary>
@@ -224,7 +225,11 @@ public class Unit : Interactable
     /// </summary>
     public void StopMoving ()
     {
-        agentNavigation.SetDestination(transform.position);
+        if (unitName != "Breakable Wall")
+        {
+
+            agentNavigation.SetDestination(transform.position);
+        }
     }
 
     /// <summary>
@@ -274,7 +279,11 @@ public class Unit : Interactable
     /// </summary>
     private void ApplyStatBuffs ()
     {
-        agentNavigation.speed = baseMovementSpeed * stats.GetValue(Stat.MovementSpeed);
+        if (unitName != "Breakable Wall")
+        {
+
+            agentNavigation.speed = baseMovementSpeed * stats.GetValue(Stat.MovementSpeed);
+        }
     }
 
     /// <summary>
@@ -331,12 +340,9 @@ public class Unit : Interactable
     /// <param name="duration">The total time to spin for.</param>
     public void StartSpin(float spinSpeed, float duration)
     {
-        if (animator != null) //don't try to spin when theres no animator for it.
-        {
-            this.spinUntil = Time.time + duration;
-            this.spinSpeed = spinSpeed;
-            this.spinAngle = animator.transform.rotation.eulerAngles.y;
-        }
+        this.spinUntil = Time.time + duration;
+        this.spinSpeed = spinSpeed;
+        this.spinAngle = animator.transform.rotation.eulerAngles.y;
     }
 
     /// <summary>
@@ -353,8 +359,9 @@ public class Unit : Interactable
     /// </summary>
     private void Spin ()
     {
-        if (animator != null) //don't try to spin when theres no animator for it.
+        if (unitName != "Breakable Wall")
         {
+
             if (Time.time < spinUntil)
             {
                 spinAngle += spinSpeed * Time.deltaTime;

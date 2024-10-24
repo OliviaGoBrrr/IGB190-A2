@@ -2162,6 +2162,42 @@ public class LogicScript
 
     #region Bool Value Nodes
 
+    public bool RegionExists (string regionName)
+    {
+        Region[] regions = GameObject.FindObjectsOfType<Region>();
+        foreach (Region region in regions)
+        {
+            if (region.regionName == regionName) return true;
+        }
+        return false;
+    }
+
+    public bool UnitIsInRegion (Unit unit, string regionName)
+    {
+        Region region = Region.GetRegionWithName(regionName);
+        if (region == null)
+        {
+            Error("A region with the specified name does not exist.");
+        }
+        if (unit == null)
+        {
+            Error("The specified unit does not exist.");
+        }
+
+        Collider regionCollider = region.GetComponent<Collider>();
+        Collider unitCollider = unit.GetComponent<Collider>();
+        if (regionCollider == null)
+        {
+            Error("The region specified does not have a collider.");
+        }
+        if (unitCollider == null)
+        {
+            Error("The unit specified does not have a collider.");
+        }
+
+        return regionCollider.bounds.Intersects(unitCollider.bounds);
+    }
+
     public bool KeyIsHeld (string keyString)
     {
         foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))

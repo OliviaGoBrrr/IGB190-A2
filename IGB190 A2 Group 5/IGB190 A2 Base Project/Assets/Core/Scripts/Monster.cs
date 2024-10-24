@@ -132,7 +132,7 @@ public class Monster : Unit
     /// </summary>
     private void HandleMovement()
     {
-        if (unitName != "Breakable Wall") //Walls don't move.
+        if (unitName != "Breakable Wall")
         {
             if (CanMove() && !InRange(target.transform.position))
             {
@@ -353,8 +353,11 @@ public class Monster : Unit
     /// </summary>
     private void CalculateMonsterTargeting()
     {
-        target = GameManager.player;
-        targetPosition = target.transform.position;
+        if (unitName != "Breakable Wall")
+        {
+            target = GameManager.player;
+            targetPosition = target.transform.position;
+        }
     }
 
     /// <summary>
