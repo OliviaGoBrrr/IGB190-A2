@@ -112,7 +112,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 2455777388749698759, guid: 944bcca964e8d8546963e576d643c8f2, type: 3}
+        value: {fileID: 8451522469142907332, guid: a08d72aa03148d84e83bbfc5d61fd089, type: 3}
     - rid: 3279906225996694157
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:

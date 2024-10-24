@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 6968082634827464930}
   - component: {fileID: 7026301748349933647}
   m_Layer: 7
-  m_Name: Monster 7
+  m_Name: SlimeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Test
+  unitName: Slime
   health: 100
   resource: 0
   baseDamage: 5
