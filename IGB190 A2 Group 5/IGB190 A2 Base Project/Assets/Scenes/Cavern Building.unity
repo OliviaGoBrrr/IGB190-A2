@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &1320357569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+  m_PrefabInstance: {fileID: 6073635279859170644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5400442442019884732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,15 +175,85 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5120025276359527098, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6941760989530567444, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
       propertyPath: m_Name
       value: CavernBuilding
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 200438264034140032, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4370537655185408957, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1320357569}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
+--- !u!4 &5400442442019884733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4370537655185408957, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
+  m_PrefabInstance: {fileID: 5400442442019884732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6073635279859170644
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5400442442019884733}
+    m_Modifications:
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -69.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.118
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 35.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317970441782046489, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954405860514818185, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
+      propertyPath: m_Name
+      value: Cavern Building Opening Props
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6a6dba87442e39049906eb978d1ddfb0, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a7bc2d96c9230f5449e0f0aa1264021d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
