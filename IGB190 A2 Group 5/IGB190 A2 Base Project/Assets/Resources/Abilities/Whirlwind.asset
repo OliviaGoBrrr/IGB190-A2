@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 8095cd4e844ae5d4f9ffee0df9cba6f5, type: 3}
   targetMode: 0
   abilityDescription: Spin around in a circle wildly attacking all nearby enemies
-    for 150% attack damage every second.
+    for 150% attack damage every second and gaining 20% damage reduction while spinning.
   abilityAnimation: None
   range: 8
   castTime: 0

@@ -17,8 +17,8 @@ MonoBehaviour:
   abilityName: Energy Orb
   abilityIcon: {fileID: 21300000, guid: 2ffc6d0165d9c4345a4bb15e6dc86959, type: 3}
   targetMode: 4
-  abilityDescription: Fire a ball of electricity towards target location, dealing
-    150% attack damage to all enemies near the impact area.
+  abilityDescription: Fire a ball of energy towards target location, dealing 150%
+    attack damage to all enemies near the impact area.
   abilityAnimation: Bow Shoot
   range: 15
   castTime: 0.1

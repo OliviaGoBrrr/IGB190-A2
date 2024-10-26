@@ -1086,7 +1086,7 @@ MonoBehaviour:
   unitName: Demon
   health: 500
   resource: 0
-  baseDamage: 25
+  baseDamage: 20
   baseAttacksPerSecond: 1.2
   baseMaxHealth: 275
   baseMaxResource: 100
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   bonusArmorPerLevel: 2.5
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 4
+  bonusHealthRegenPerLevel: 2.5
   bonusResourceRegenPerLevel: 2
 --- !u!195 &118622785
 NavMeshAgent:
@@ -1851,17 +1851,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Acceleration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3813018641976554791, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904762223958030522, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217982354390685929, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246267861249761399, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4697017240656324050, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_Name
       value: training_dummy
       objectReference: {fileID: 0}
+    - target: {fileID: 4697017240656324050, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.827444
+      value: 12.556
       objectReference: {fileID: 0}
     - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09486675
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1894,6 +1918,34 @@ PrefabInstance:
     - target: {fileID: 5360683131785772904, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774080502169825540, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973413696058740841, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077608692380533153, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206035749426561629, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533163476571990239, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799557031240051223, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: monsterLabel
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500709513404734051, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8531,7 +8583,7 @@ MonoBehaviour:
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
   bonusHealthRegenPerLevel: 2
-  bonusResourceRegenPerLevel: 0
+  bonusResourceRegenPerLevel: 4
 --- !u!195 &623941940
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13911,10 +13963,10 @@ MonoBehaviour:
   baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 5
-  baseResourceRegen: 0
+  baseResourceRegen: 2
   baseAttackRange: 2.5
   abilities:
-  - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
+  - {fileID: 11400000, guid: 95713d9144f2b574797ee71b2e043144, type: 2}
   - {fileID: 11400000, guid: 2f1f41c2a1067594e8376bffc6d6f7a2, type: 2}
   - {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
   - {fileID: 11400000, guid: 2c0d2df3b515c4d47aa500f8d2a596b8, type: 2}
@@ -13933,7 +13985,7 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 5
+  bonusDamagePerLevel: 10
   bonusHealthPerLevel: 25
   bonusMovementSpeedPerLevel: 0.1
   bonusResourcePerLevel: 0
@@ -13994,7 +14046,7 @@ Transform:
   m_GameObject: {fileID: 1043651112}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.72, y: 0, z: -4.47}
+  m_LocalPosition: {x: 12.72, y: 0.111, z: -4.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22326,7 +22378,7 @@ MonoBehaviour:
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
   bonusHealthRegenPerLevel: 2
-  bonusResourceRegenPerLevel: 0
+  bonusResourceRegenPerLevel: 2
 --- !u!195 &1806430105
 NavMeshAgent:
   m_ObjectHideFlags: 0

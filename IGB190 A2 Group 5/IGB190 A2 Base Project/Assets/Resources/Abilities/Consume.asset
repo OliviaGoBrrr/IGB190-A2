@@ -17,13 +17,13 @@ MonoBehaviour:
   abilityName: Consume
   abilityIcon: {fileID: 21300000, guid: da43d3d91f3929943b9eef0e6cbf17c1, type: 3}
   targetMode: 0
-  abilityDescription: Consume the flesh of your enemies, dealing 450% attack damage
+  abilityDescription: Consume the flesh of your enemies, dealing 270% attack damage
     over 2.25 seconds, holding both you and your targets in place for the duration.
   abilityAnimation: Magic Channel
   range: 15
   castTime: 0.1
-  abilityCooldown: 7
-  abilityCost: 35
+  abilityCooldown: 5.5
+  abilityCost: 40
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
@@ -782,7 +782,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 150
+        value: 90
     - rid: 5729344444049654599
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
