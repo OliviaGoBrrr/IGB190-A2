@@ -99,12 +99,12 @@ MonoBehaviour:
   unitName: Skeleton Guard
   health: 100
   resource: 0
-  baseDamage: 10
-  baseAttacksPerSecond: 2
-  baseMaxHealth: 200
+  baseDamage: 17
+  baseAttacksPerSecond: 1.2
+  baseMaxHealth: 180
   baseMaxResource: 100
   baseMovementSpeed: 1
-  baseArmor: 0
+  baseArmor: 10
   baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
@@ -112,6 +112,7 @@ MonoBehaviour:
   baseAttackRange: 2.2
   abilities:
   - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
+  - {fileID: 11400000, guid: 7e9f6456a353ee442981ed2cb2f2ad41, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}

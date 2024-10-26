@@ -55,9 +55,9 @@ MonoBehaviour:
   unitName: Zombie
   health: 100
   resource: 0
-  baseDamage: 15
+  baseDamage: 10
   baseAttacksPerSecond: 1.2
-  baseMaxHealth: 100
+  baseMaxHealth: 80
   baseMaxResource: 100
   baseMovementSpeed: 1.4
   baseArmor: 0
