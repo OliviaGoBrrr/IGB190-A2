@@ -407,7 +407,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 3
     - rid: 5729344577022984766
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
