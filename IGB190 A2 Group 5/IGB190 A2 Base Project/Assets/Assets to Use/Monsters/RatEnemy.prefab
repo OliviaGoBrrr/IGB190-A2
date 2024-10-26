@@ -152,7 +152,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 2
   spawnLevel: 1
-  spawnLikelihood: 5
+  spawnLikelihood: 0
 --- !u!1001 &5150644973011443438
 PrefabInstance:
   m_ObjectHideFlags: 0

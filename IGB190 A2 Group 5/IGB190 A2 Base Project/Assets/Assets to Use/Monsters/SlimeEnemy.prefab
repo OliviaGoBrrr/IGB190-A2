@@ -3181,8 +3181,8 @@ MonoBehaviour:
   healthBarType: 0
   uiSize: 1
   uiHeight: 1.7
-  spawnLevel: 1
-  spawnLikelihood: 10
+  spawnLevel: 5
+  spawnLikelihood: 1
 --- !u!54 &6968082634827464930
 Rigidbody:
   m_ObjectHideFlags: 0

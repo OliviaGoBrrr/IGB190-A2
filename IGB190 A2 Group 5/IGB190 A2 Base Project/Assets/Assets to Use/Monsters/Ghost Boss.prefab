@@ -4482,7 +4482,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Ghost Boss
+  unitName: Archmage Ghost
   health: 100
   resource: 0
   baseDamage: 30
@@ -4512,7 +4512,7 @@ MonoBehaviour:
   healthBarType: 1
   uiSize: 3.6
   uiHeight: 2
-  spawnLevel: 1
+  spawnLevel: 10
   spawnLikelihood: 0
 --- !u!54 &2780831380324950161
 Rigidbody:

@@ -300,7 +300,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 15
+        value: 20
     - rid: 4114987733859434735
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

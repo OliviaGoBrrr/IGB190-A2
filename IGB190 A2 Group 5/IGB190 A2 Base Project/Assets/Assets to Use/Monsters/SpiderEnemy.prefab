@@ -1359,7 +1359,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 2
   spawnLevel: 1
-  spawnLikelihood: 5
+  spawnLikelihood: 0
 --- !u!1 &4749811862303466145
 GameObject:
   m_ObjectHideFlags: 0

@@ -206,7 +206,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 13
+        value: 20
     - rid: 4114987733859434589
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:

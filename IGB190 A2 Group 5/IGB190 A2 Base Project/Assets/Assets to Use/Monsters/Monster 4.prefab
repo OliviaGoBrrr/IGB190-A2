@@ -96,7 +96,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Skeleton Guard
+  unitName: Skeleton Bastion
   health: 100
   resource: 0
   baseDamage: 17
@@ -127,8 +127,8 @@ MonoBehaviour:
   healthBarType: 0
   uiSize: 1
   uiHeight: 2
-  spawnLevel: 1
-  spawnLikelihood: 3
+  spawnLevel: 4
+  spawnLikelihood: 1
 --- !u!54 &2156350940946629938
 Rigidbody:
   m_ObjectHideFlags: 0
