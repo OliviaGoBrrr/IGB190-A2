@@ -225,7 +225,7 @@ public class Unit : Interactable
     /// </summary>
     public void StopMoving ()
     {
-        if (unitName != "Breakable Wall")
+        if (unitName != "Breakable Wall" && unitName != "Training Dummy")
         {
 
             agentNavigation.SetDestination(transform.position);
@@ -279,7 +279,7 @@ public class Unit : Interactable
     /// </summary>
     private void ApplyStatBuffs ()
     {
-        if (unitName != "Breakable Wall")
+        if (unitName != "Breakable Wall" && unitName != "Training Dummy")
         {
 
             agentNavigation.speed = baseMovementSpeed * stats.GetValue(Stat.MovementSpeed);
@@ -359,7 +359,7 @@ public class Unit : Interactable
     /// </summary>
     private void Spin ()
     {
-        if (unitName != "Breakable Wall")
+        if (unitName != "Breakable Wall" && unitName != "Training Dummy")
         {
 
             if (Time.time < spinUntil)
