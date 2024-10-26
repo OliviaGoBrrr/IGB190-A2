@@ -124,16 +124,16 @@ MonoBehaviour:
   unitName: Rat
   health: 100
   resource: 0
-  baseDamage: 10
+  baseDamage: 8
   baseAttacksPerSecond: 1
-  baseMaxHealth: 100
-  baseMaxResource: 100
+  baseMaxHealth: 50
+  baseMaxResource: 10
   baseMovementSpeed: 3
   baseArmor: 100
   baseCriticalStrikeChance: 0.2
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
-  baseResourceRegen: 0
+  baseResourceRegen: 1
   baseAttackRange: 1
   abilities:
   - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}

@@ -23,7 +23,7 @@ MonoBehaviour:
   range: 999
   castTime: 0
   abilityCooldown: 10
-  abilityCost: 0
+  abilityCost: 10
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 1
@@ -51,7 +51,6 @@ MonoBehaviour:
           - rid: 3279906225996694154
           conditionNodes: []
           actionNodes:
-          - rid: 3279906225996694169
           - rid: 3279906225996694155
     - rid: 3279906225996694154
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
@@ -147,61 +146,6 @@ MonoBehaviour:
         indent: 0
         nodeIcon: 
         allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906225996694169
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 3279906225996694170
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906225996694170
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: RemainingAbilityCooldown
-        functionDescription: Ability/Base Ability Cooldown
-        functionDynamicDescription: Base cooldown for $
-        functionEvaluators:
-        - rid: 3279906225996694201
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 10
-    - rid: 3279906225996694201
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
