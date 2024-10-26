@@ -22,7 +22,7 @@ MonoBehaviour:
       conditionNodes:
       - rid: 5729344583004061960
       actionNodes:
-      - rid: 5729344583004061949
+      - rid: 5729344583004062540
     - scriptName: Quest complete
       scriptUID: 856156382
       hasWait: 0
@@ -52,82 +52,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 5729344583004061949
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetSpecificQuestRequirementProgress2
-        functionDescription: Quests/Set Requirement Progress
-        functionDynamicDescription: Set quest progress of $ on $ to $
-        functionEvaluators:
-        - rid: 5729344583004061950
-        - rid: 5729344583004061951
-        - rid: 5729344583004061952
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5729344583004061950
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Tag
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Levels
-        options: []
-    - rid: 5729344583004061951
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Tag
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Get to Level 5
-        options: []
-    - rid: 5729344583004061952
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Number
-        functionName: GetPlayerLevel
-        functionDescription: Player/Player Level
-        functionDynamicDescription: Player Level
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
     - rid: 5729344583004061956
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -240,3 +164,79 @@ MonoBehaviour:
         allowFunction: 1
         value: Get to Level 5
         options: []
+    - rid: 5729344583004062540
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetSpecificQuestRequirementProgress2
+        functionDescription: Quests/Set Requirement Progress
+        functionDynamicDescription: Set quest progress of $ on $ to $
+        functionEvaluators:
+        - rid: 5729344583004062541
+        - rid: 5729344583004062542
+        - rid: 5729344583004062543
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344583004062541
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Tag
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Levels
+        options: []
+    - rid: 5729344583004062542
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Tag
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Get to Level 5
+        options: []
+    - rid: 5729344583004062543
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: GetPlayerLevel
+        functionDescription: Player/Player Level
+        functionDynamicDescription: Player Level
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0

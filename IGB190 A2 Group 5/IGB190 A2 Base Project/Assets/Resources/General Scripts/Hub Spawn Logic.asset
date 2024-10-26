@@ -21,20 +21,19 @@ MonoBehaviour:
       - rid: 5729344583004061962
       conditionNodes:
       - rid: 5729344583004061963
-      - rid: 5729344583004062405
       actionNodes:
       - rid: 5729344583004061964
       - rid: 5729344583004062004
-      - rid: 5729344583004062042
-      - rid: 5729344583004062322
-      - rid: 5729344583004062354
-      - rid: 5729344583004062355
-      - rid: 5729344583004062371
-      - rid: 5729344583004062372
-      - rid: 5729344583004062388
-      - rid: 5729344583004062389
       - rid: 5729344583004062407
       - rid: 5729344583004062408
+      - rid: 5729344583004062388
+      - rid: 5729344583004062389
+      - rid: 5729344583004062371
+      - rid: 5729344583004062372
+      - rid: 5729344583004062354
+      - rid: 5729344583004062355
+      - rid: 5729344583004062042
+      - rid: 5729344583004062322
   references:
     version: 2
     RefIds:
@@ -669,7 +668,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
@@ -688,7 +687,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -1004,7 +1003,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
@@ -1023,7 +1022,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -1339,7 +1338,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
@@ -1358,7 +1357,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -1661,44 +1660,6 @@ MonoBehaviour:
         allowFunction: 0
         value: MonsterSpawn
         options: []
-    - rid: 5729344583004062405
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: QuestIsCompleted
-        functionDescription: Quest/Quest Is Completed
-        functionDynamicDescription: Quest named $ has been completed
-        functionEvaluators:
-        - rid: 5729344583004062406
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5729344583004062406
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Find the disturbance
-        options: []
     - rid: 5729344583004062407
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1712,7 +1673,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
@@ -1731,7 +1692,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
