@@ -42,7 +42,11 @@ MonoBehaviour:
       actionNodes:
       - rid: 8097808950255682105
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 4
+    minimum: 100
+    maximum: 100
+    isPercent: 0
   randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1

@@ -10,73 +10,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Assault Cuirass
+  m_Name: Chainmail Shirt
   m_EditorClassIdentifier: 
-  itemName: Assault Cuirass
-  itemDescription: "Armour worn by the elites in the King\u2019s armies. Exudes an
-    aura of intimidation and power."
-  randomStatCount: 3
-  itemCost: 5000
-  itemIcon: {fileID: 21300000, guid: 744db98fc1bce394ba0826a0bf55b410, type: 3}
+  itemName: Chainmail Shirt
+  itemDescription: A simple woven chainmail shirt. Enough to stop many light attacks.
+  randomStatCount: 1
+  itemCost: 650
+  itemIcon: {fileID: 21300000, guid: f525fc04d7de01647a20ff599129b2f1, type: 3}
   itemType: 3
-  itemRarity: 2
+  itemRarity: 0
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1868569752
+      scriptUID: 2083216878
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831226
+      - rid: 5729344583004061931
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1218858339
+      scriptUID: 1988973027
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831227
+      - rid: 5729344583004061932
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
   guaranteedStats:
   - stat: 1
-    minimum: 50
-    maximum: 70
+    minimum: 25
+    maximum: 25
     isPercent: 0
-  - stat: 3
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
   randomisableStats:
   - stat: 0
-    minimum: 0.3
-    maximum: 0.5
-    isPercent: 1
-  - stat: 0
-    minimum: 5
-    maximum: 15
-    isPercent: 0
-  - stat: 4
-    minimum: 0.1
-    maximum: 0.25
-    isPercent: 1
-  - stat: 6
     minimum: 0.05
     maximum: 0.1
     isPercent: 1
-  - stat: 10
-    minimum: 0.1
-    maximum: 0.25
-    isPercent: 0
-  - stat: 11
-    minimum: 0.4
-    maximum: 0.6
-    isPercent: 0
+  - stat: 4
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
+  - stat: 9
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:
     version: 2
     RefIds:
-    - rid: 790164332097831226
+    - rid: 5729344583004061931
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -94,7 +77,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831227
+    - rid: 5729344583004061932
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

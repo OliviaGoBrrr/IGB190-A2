@@ -50,10 +50,12 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 5
-    minimum: 20
-    maximum: 20
+    minimum: 15
+    maximum: 25
     isPercent: 0
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

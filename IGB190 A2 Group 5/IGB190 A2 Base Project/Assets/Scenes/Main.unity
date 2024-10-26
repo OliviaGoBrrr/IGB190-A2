@@ -50415,7 +50415,7 @@ MonoBehaviour:
   _playerExperienceValues:
     baseMonsterXP: 150
     startingXPPerLevel: 300
-    additionalMaxXPPerLevel: 1200
+    additionalMaxXPPerLevel: 500
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25

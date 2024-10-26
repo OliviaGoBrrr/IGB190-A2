@@ -26,6 +26,7 @@ MonoBehaviour:
       - rid: 5729344583004061812
       - rid: 5729344583004061815
       - rid: 5729344583004061818
+      - rid: 5729344583004061935
     - scriptName: Level 3
       scriptUID: 33373898
       hasWait: 0
@@ -38,6 +39,7 @@ MonoBehaviour:
       - rid: 5729344583004061832
       - rid: 5729344583004061835
       - rid: 5729344583004061838
+      - rid: 5729344583004061936
   references:
     version: 2
     RefIds:
@@ -681,3 +683,37 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 5729344583004061935
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable This Script
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344583004061936
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable This Script
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
