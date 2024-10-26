@@ -6916,6 +6916,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5560953499317727810, guid: fa7712fd4d449044abf4dcda6107b6dc, type: 3}
+      propertyPath: unitName
+      value: Training Dummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560953499317727810, guid: fa7712fd4d449044abf4dcda6107b6dc, type: 3}
+      propertyPath: baseMaxHealth
+      value: 99999
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 206858993456326501, guid: fa7712fd4d449044abf4dcda6107b6dc, type: 3}
     m_RemovedGameObjects: []
