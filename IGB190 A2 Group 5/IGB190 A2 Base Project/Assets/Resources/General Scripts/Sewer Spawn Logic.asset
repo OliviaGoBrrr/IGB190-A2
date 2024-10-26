@@ -915,7 +915,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
+        value: 1
     - rid: 5729344585739534874
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

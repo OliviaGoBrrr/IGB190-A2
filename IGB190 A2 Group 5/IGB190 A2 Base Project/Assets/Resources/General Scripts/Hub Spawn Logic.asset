@@ -165,7 +165,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: MainSpawning
+        value: Hub Spawn
         options: []
     - rid: 5729344583004061980
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}

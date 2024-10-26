@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446c2c97be0e47c47990089e0ebbe30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionName: MainSpawning
+  regionName: Hub Spawn
 --- !u!65 &154570089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4203,7 +4203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446c2c97be0e47c47990089e0ebbe30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionName: MainSpawning
+  regionName: Hub Spawn
 --- !u!65 &203780427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24583,7 +24583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446c2c97be0e47c47990089e0ebbe30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionName: MainSpawning
+  regionName: Hub Spawn
 --- !u!65 &1079606279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39521,7 +39521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446c2c97be0e47c47990089e0ebbe30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionName: MainSpawning
+  regionName: Hub Spawn
 --- !u!65 &1512887071
 BoxCollider:
   m_ObjectHideFlags: 0
