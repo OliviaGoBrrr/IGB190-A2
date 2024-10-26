@@ -4996,7 +4996,7 @@ MonoBehaviour:
   unitName: Spectral Archer
   health: 100
   resource: 0
-  baseDamage: 5
+  baseDamage: 50
   baseAttacksPerSecond: 0.7
   baseMaxHealth: 100
   baseMaxResource: 100
