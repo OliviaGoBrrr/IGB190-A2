@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Burrow
+  m_Name: Tail Sweep
   m_EditorClassIdentifier: 
   engine:
-    rid: 3279906436413653189
-  abilityName: Burrow
-  abilityIcon: {fileID: 21300000, guid: 220aa9febcb9cb24d8108abf1ef75de3, type: 3}
-  targetMode: 4
-  abilityDescription: Rat Boss Ability 1
-  abilityAnimation: Bow Shoot
-  range: 20
-  castTime: 4
-  abilityCooldown: 10
+    rid: 3279906452012007537
+  abilityName: Tail Sweep
+  abilityIcon: {fileID: 21300000, guid: 26c4e76602f1d3c49a68537b2dee29f9, type: 3}
+  targetMode: 3
+  abilityDescription: Slash towards the target unit, dealing 100% attack damage.
+  abilityAnimation: One Hand Slash
+  range: 0
+  castTime: 0.5
+  abilityCooldown: 3
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -29,36 +29,42 @@ MonoBehaviour:
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
-  requiresLineOfSight: 1
+  requiresLineOfSight: 0
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  castCompleteSound: {fileID: 8300000, guid: d431758d9381dd8448702a22c11f9c01, type: 3}
-  castCompleteSoundVolume: 0.3
+  castCompleteSound: {fileID: 0}
+  castCompleteSoundVolume: 1
   needsReminderFlash: 0
   isUnlocked: 1
   references:
     version: 2
     RefIds:
-    - rid: 3279906436413653189
+    - rid: 3279906452012007537
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
         scripts:
         - scriptName: Cast Completed
-          scriptUID: 1109649223
+          scriptUID: 1839639738
           hasWait: 0
           eventNodes:
-          - rid: 3279906436413653190
+          - rid: 3279906452012007538
           conditionNodes: []
           actionNodes:
-          - rid: 3279906452012007424
-          - rid: 3279906452012007430
-          - rid: 3279906436413653238
-          - rid: 3279906436413653332
-          - rid: 3279906436413653207
-          - rid: 3279906436413653396
-          - rid: 3279906452012007436
-          - rid: 3279906436413653398
-    - rid: 3279906436413653190
+          - rid: 3279906452012007545
+          - rid: 3279906452012007549
+          - rid: 3279906452012007771
+          - rid: 3279906452012007611
+          - rid: 3279906452012007602
+          - rid: 3279906452012007606
+          - rid: 3279906452012007765
+        - scriptName: Target Hit
+          scriptUID: 1503617966
+          hasWait: 0
+          eventNodes:
+          - rid: 3279906452012007619
+          conditionNodes: []
+          actionNodes: []
+    - rid: 3279906452012007538
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -81,18 +87,18 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
-    - rid: 3279906436413653207
+    - rid: 3279906452012007545
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: MoveUnitOverTime
-        functionDescription: Unit/Move Over Time
-        functionDynamicDescription: Move $ to $ over $
+        functionName: SpinUnit
+        functionDescription: Unit/Spin
+        functionDynamicDescription: Spin $ by $ for $
         functionEvaluators:
-        - rid: 3279906436413653208
-        - rid: 3279906436413653209
-        - rid: 3279906436413653210
+        - rid: 3279906452012007546
+        - rid: 3279906452012007547
+        - rid: 3279906452012007548
         presetName: 
         variableName: 
         stringSuffix: 
@@ -101,7 +107,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 3279906436413653208
+    - rid: 3279906452012007546
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -119,27 +125,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 3279906436413653209
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: VectorSubtraction
-        functionDescription: Math/Vector Subtraction
-        functionDynamicDescription: $ - $
-        functionEvaluators:
-        - rid: 3279906436413653386
-        - rid: 3279906436413653387
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279906436413653210
+    - rid: 3279906452012007547
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -150,330 +136,14 @@ MonoBehaviour:
         functionEvaluators: []
         presetName: 
         variableName: 
-        stringSuffix: s
+        stringSuffix: "\xBA/s"
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
-    - rid: 3279906436413653238
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: MoveUnitOverTime
-        functionDescription: Unit/Move Over Time
-        functionDynamicDescription: Move $ to $ over $
-        functionEvaluators:
-        - rid: 3279906436413653239
-        - rid: 3279906436413653240
-        - rid: 3279906436413653241
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906436413653239
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906436413653240
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: VectorSubtraction
-        functionDescription: Math/Vector Subtraction
-        functionDynamicDescription: $ - $
-        functionEvaluators:
-        - rid: 3279906436413653320
-        - rid: 3279906436413653321
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279906436413653241
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 2
-    - rid: 3279906436413653320
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfUnit
-        functionDescription: Unit/Position of Unit
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 3279906436413653331
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279906436413653321
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 1.5, z: 0}
-    - rid: 3279906436413653331
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906436413653332
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 3279906436413653333
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906436413653333
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1.9
-    - rid: 3279906436413653386
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfUnit
-        functionDescription: Unit/Position of Unit
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 3279906436413653395
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279906436413653387
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 1.5, z: 0}
-    - rid: 3279906436413653395
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Target Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906436413653396
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 3279906436413653397
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906436413653397
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0.9
-    - rid: 3279906436413653398
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: MoveUnitOverTime
-        functionDescription: Unit/Move Over Time
-        functionDynamicDescription: Move $ to $ over $
-        functionEvaluators:
-        - rid: 3279906436413653399
-        - rid: 3279906436413653400
-        - rid: 3279906436413653401
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906436413653399
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906436413653400
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: VectorAddition
-        functionDescription: Math/Vector Addition
-        functionDynamicDescription: $ + $
-        functionEvaluators:
-        - rid: 3279906436413653513
-        - rid: 3279906436413653514
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279906436413653401
+        value: -720
+    - rid: 3279906452012007548
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -491,85 +161,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.5
-    - rid: 3279906436413653513
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfUnit
-        functionDescription: Unit/Position of Unit
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 3279906436413653520
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 3279906436413653514
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 1.5, z: 0}
-    - rid: 3279906436413653520
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906452012007424
+    - rid: 3279906452012007549
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: SpawnEffectOnUnit
-        functionDescription: Feedback/Play Effect on Unit
-        functionDynamicDescription: $ $ effect on $ for $ at $ scale
+        functionName: HaveUnitDamageUnits2
+        functionDescription: Unit/Deal Damage to Unit Group
+        functionDynamicDescription: Deal $ attack damage to $
         functionEvaluators:
-        - rid: 3279906452012007425
-        - rid: 3279906452012007426
-        - rid: 3279906452012007427
-        - rid: 3279906452012007428
-        - rid: 3279906452012007429
+        - rid: 3279906452012007550
+        - rid: 3279906452012007551
         presetName: 
         variableName: 
         stringSuffix: 
         indent: 0
-        nodeIcon: Effect
+        nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 3279906452012007425
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+    - rid: 3279906452012007550
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
         tempName: 
@@ -579,36 +191,51 @@ MonoBehaviour:
         functionEvaluators: []
         presetName: 
         variableName: 
-        stringSuffix: 
+        stringSuffix: '%'
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Play or Refresh
-        options:
-        - Play
-        - Stop
-        - Play or Refresh
-    - rid: 3279906452012007426
-      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
+        value: 100
+    - rid: 3279906452012007551
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfUnit2
+        functionDescription: All Enemies Near Unit
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 3279906452012007600
+        - rid: 3279906452012007601
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906452012007600
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Effect
+        tempName: Number
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         presetName: 
         variableName: 
-        stringSuffix: 
+        stringSuffix: m
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: -8195080831661823167, guid: b0cbc9a0e16f1b24fa1580f03be1e34a, type: 3}
-    - rid: 3279906452012007427
+        value: 5
+    - rid: 3279906452012007601
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -626,7 +253,63 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 3279906452012007428
+    - rid: 3279906452012007602
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpinUnit
+        functionDescription: Unit/Spin
+        functionDynamicDescription: Spin $ by $ for $
+        functionEvaluators:
+        - rid: 3279906452012007603
+        - rid: 3279906452012007604
+        - rid: 3279906452012007605
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906452012007603
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 3279906452012007604
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: "\xBA/s"
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: -720
+    - rid: 3279906452012007605
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -643,8 +326,259 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3.5
-    - rid: 3279906452012007429
+        value: 0.5
+    - rid: 3279906452012007606
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: HaveUnitDamageUnits2
+        functionDescription: Unit/Deal Damage to Unit Group
+        functionDynamicDescription: Deal $ attack damage to $
+        functionEvaluators:
+        - rid: 3279906452012007607
+        - rid: 3279906452012007608
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906452012007607
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 3279906452012007608
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfUnit2
+        functionDescription: All Enemies Near Unit
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 3279906452012007609
+        - rid: 3279906452012007610
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906452012007609
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 3279906452012007610
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 3279906452012007611
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 3279906452012007612
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906452012007612
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 3279906452012007619
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnUnitDamaged
+        functionDescription: Unit/Unit is damaged
+        functionDynamicDescription: 'When a unit is damaged (Presets: <color=yellow>Damaged
+          Unit</color>, <color=yellow>Damaging Unit</color>, <color=yellow>Damaging
+          Ability</color>, <color=yellow>Damage Dealt</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Damaged Unit
+        - Damaging Unit
+        - Damaging Ability
+        - Damage Dealt
+        - Is Critical
+    - rid: 3279906452012007765
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpawnEffectOnUnit
+        functionDescription: Feedback/Play Effect on Unit
+        functionDynamicDescription: $ $ effect on $ for $ at $ scale
+        functionEvaluators:
+        - rid: 3279906452012007766
+        - rid: 3279906452012007767
+        - rid: 3279906452012007768
+        - rid: 3279906452012007769
+        - rid: 3279906452012007770
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906452012007766
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Play
+        options:
+        - Play
+        - Stop
+        - Play or Refresh
+    - rid: 3279906452012007767
+      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Effect
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 769673449038971139, guid: d9dd06d2c400dd043b0e61020e0318f8, type: 3}
+    - rid: 3279906452012007768
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 3279906452012007769
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 3279906452012007770
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -662,30 +596,33 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 2.5
-    - rid: 3279906452012007430
+    - rid: 3279906452012007771
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: Play2DSound
-        functionDescription: Audio/Play Sound
-        functionDynamicDescription: Play $ at $ volume
+        functionName: SpawnEffectOnUnit
+        functionDescription: Feedback/Play Effect on Unit
+        functionDynamicDescription: $ $ effect on $ for $ at $ scale
         functionEvaluators:
-        - rid: 3279906452012007431
-        - rid: 3279906452012007432
+        - rid: 3279906452012007772
+        - rid: 3279906452012007773
+        - rid: 3279906452012007774
+        - rid: 3279906452012007775
+        - rid: 3279906452012007776
         presetName: 
         variableName: 
         stringSuffix: 
         indent: 0
-        nodeIcon: Audio
+        nodeIcon: Effect
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 3279906452012007431
-      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
+    - rid: 3279906452012007772
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Audio Clip
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -698,8 +635,48 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
-    - rid: 3279906452012007432
+        value: Play
+        options:
+        - Play
+        - Stop
+        - Play or Refresh
+    - rid: 3279906452012007773
+      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Effect
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 769673449038971139, guid: d9dd06d2c400dd043b0e61020e0318f8, type: 3}
+    - rid: 3279906452012007774
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 3279906452012007775
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -710,51 +687,14 @@ MonoBehaviour:
         functionEvaluators: []
         presetName: 
         variableName: 
-        stringSuffix: '%'
+        stringSuffix: s
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 50
-    - rid: 3279906452012007436
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Play2DSound
-        functionDescription: Audio/Play Sound
-        functionDynamicDescription: Play $ at $ volume
-        functionEvaluators:
-        - rid: 3279906452012007437
-        - rid: 3279906452012007438
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Audio
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906452012007437
-      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Audio Clip
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
-    - rid: 3279906452012007438
+        value: 1
+    - rid: 3279906452012007776
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -765,10 +705,10 @@ MonoBehaviour:
         functionEvaluators: []
         presetName: 
         variableName: 
-        stringSuffix: '%'
+        stringSuffix: x
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 50
+        value: 2.5
