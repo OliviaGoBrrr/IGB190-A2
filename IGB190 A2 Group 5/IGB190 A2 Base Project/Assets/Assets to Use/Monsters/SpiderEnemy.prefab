@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.333333, y: 3.333333, z: 3.333333}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4479868554893491904}
@@ -1235,7 +1235,7 @@ Transform:
   m_GameObject: {fileID: 4569347782601712889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.55, y: 0.6, z: 1.1}
+  m_LocalPosition: {x: -39.880722, y: 0.2639997, z: 6.7054386}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1261,8 +1261,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.43, y: 6.42, z: 10.68}
-  m_Center: {x: -0.06, y: 1.4, z: -2.23}
+  m_Size: {x: 2.9, y: 2.96, z: 4.86}
+  m_Center: {x: -0.14, y: 1.1, z: -1.15}
 --- !u!54 &4298921702639439078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1342,8 +1342,8 @@ MonoBehaviour:
   baseResourceRegen: 0
   baseAttackRange: 1.5
   abilities:
-  - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
-  - {fileID: 11400000, guid: 252f631cc723d684c963af48327d1571, type: 2}
+  - {fileID: 11400000, guid: 03c7e82d031b72f409a17f8895aa899e, type: 2}
+  - {fileID: 11400000, guid: 69f383dc8360aba4bad3af8963d60a7e, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 0}

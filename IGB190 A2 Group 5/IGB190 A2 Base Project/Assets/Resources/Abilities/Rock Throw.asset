@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Rush
+  m_Name: Rock Throw
   m_EditorClassIdentifier: 
   engine:
     rid: 3279906402145927384
-  abilityName: Rush
+  abilityName: Rock Throw
   abilityIcon: {fileID: 21300000, guid: c46d7d28f1fafaf46ad6115bb92d4f1e, type: 3}
   targetMode: 4
   abilityDescription: 'Final Boss Ability 2
@@ -39,7 +39,7 @@ MonoBehaviour:
   requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  castCompleteSound: {fileID: 8300000, guid: d431758d9381dd8448702a22c11f9c01, type: 3}
+  castCompleteSound: {fileID: 0}
   castCompleteSoundVolume: 0.3
   needsReminderFlash: 0
   isUnlocked: 1
@@ -58,9 +58,8 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 3279906402145927412
-          - rid: 3279906436413653003
-          - rid: 3279906436413653144
           - rid: 3279906402145927418
+          - rid: 3279906436413653003
           - rid: 3279906436413653147
           - rid: 3279906402145927426
           - rid: 3279906402145927420
@@ -587,61 +586,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 3279906436413653144
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: FaceProjectileTowardsPoint
-        functionDescription: Projectile/Face Projectile Towards Point
-        functionDynamicDescription: Face $ towards $
-        functionEvaluators:
-        - rid: 3279906436413653145
-        - rid: 3279906436413653146
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3279906436413653145
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 3279906436413653146
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Ability Target Location
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
     - rid: 3279906436413653147
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
