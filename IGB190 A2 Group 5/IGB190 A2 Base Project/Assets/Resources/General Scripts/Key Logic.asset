@@ -22,21 +22,28 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes:
       - rid: 4114987665048994491
-    - scriptName: Blue Key
-      scriptUID: 709587037
+      - rid: 5729344583004062559
+      - rid: 5729344583004062561
+      - rid: 5729344585219178516
+    - scriptName: GetKey
+      scriptUID: 1586855731
       hasWait: 0
       eventNodes:
-      - rid: 4114987665048994451
+      - rid: 5729344583004062565
       conditionNodes:
-      - rid: 4114987665048994493
+      - rid: 5729344583004062566
       actionNodes:
-      - rid: 4114987665048994433
-      - rid: 4114987665048994688
-      - rid: 4114987665048994719
-      - rid: 4114987684402823178
-      - rid: 4114987684402823173
-      - rid: 4114987684402823175
-      - rid: 4114987684402823172
+      - rid: 5729344583004062568
+      - rid: 5729344585219178507
+      - rid: 5729344585219178512
+    - scriptName: QuestComplete
+      scriptUID: 1417843803
+      hasWait: 0
+      eventNodes:
+      - rid: 5729344585219178518
+      conditionNodes: []
+      actionNodes:
+      - rid: 5729344585219178520
   references:
     version: 2
     RefIds:
@@ -78,62 +85,6 @@ MonoBehaviour:
         allowFunction: 1
         value: KeyQuestEntry
         options: []
-    - rid: 4114987665048994433
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 4114987665048994434
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4114987665048994434
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 4114987665048994451
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: OnItemPickedUp
-        functionDescription: Player/Player picks up an item
-        functionDynamicDescription: 'When the player picks up an item (Presets: <color=yellow>Triggering
-          Item</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Pickup
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Triggering Item
     - rid: 4114987665048994491
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -171,7 +122,140 @@ MonoBehaviour:
         allowFunction: 1
         value: KeyQuestEntry
         options: []
-    - rid: 4114987665048994493
+    - rid: 5729344583004062559
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: CreateQuest2
+        functionDescription: Quests/Create Quest
+        functionDynamicDescription: Give the player a quest named $
+        functionEvaluators:
+        - rid: 5729344583004062560
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344583004062560
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Open the Doors
+        options: []
+    - rid: 5729344583004062561
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
+        functionEvaluators:
+        - rid: 5729344583004062562
+        - rid: 5729344583004062563
+        - rid: 5729344583004062564
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344583004062562
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Find the Keys
+        options: []
+    - rid: 5729344583004062563
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Open the Doors
+        options: []
+    - rid: 5729344583004062564
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 5729344583004062565
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnItemPickedUp
+        functionDescription: Player/Player picks up an item
+        functionDynamicDescription: 'When the player picks up an item (Presets: <color=yellow>Triggering
+          Item</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Pickup
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Triggering Item
+    - rid: 5729344583004062566
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -180,7 +264,7 @@ MonoBehaviour:
         functionDescription: Quest/Quest Is Active
         functionDynamicDescription: Quest named $ is currently active
         functionEvaluators:
-        - rid: 4114987665048994494
+        - rid: 5729344583004062567
         presetName: 
         variableName: 
         stringSuffix: 
@@ -190,7 +274,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 4114987665048994494
+    - rid: 5729344583004062567
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -207,9 +291,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Find All The Keys
+        value: Open the Doors
         options: []
-    - rid: 4114987665048994688
+    - rid: 5729344583004062568
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -218,7 +302,7 @@ MonoBehaviour:
         functionDescription: Flow/If Statement
         functionDynamicDescription: Do actions if $
         functionEvaluators:
-        - rid: 4114987665048994689
+        - rid: 5729344583004062569
         presetName: 
         variableName: 
         stringSuffix: 
@@ -227,16 +311,17 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 4114987665048994689
+    - rid: 5729344583004062569
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: Bool
-        functionName: PlayerHasItemInInventory
-        functionDescription: Player/Player Has Item In Inventory
-        functionDynamicDescription: Player has $ in their inventory
+        functionName: OrComparison
+        functionDescription: Comparisons/Or Comparison
+        functionDynamicDescription: $ or $
         functionEvaluators:
-        - rid: 4114987665048994711
+        - rid: 5729344583004062636
+        - rid: 5729344583004062637
         presetName: 
         variableName: 
         stringSuffix: 
@@ -246,7 +331,45 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 4114987665048994711
+    - rid: 5729344583004062636
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: PlayerHasItemInInventory
+        functionDescription: Player/Player Has Item In Inventory
+        functionDynamicDescription: Player has $ in their inventory
+        functionEvaluators:
+        - rid: 5729344583004062685
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5729344583004062637
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: PlayerHasItemInInventory
+        functionDescription: Player/Player Has Item In Inventory
+        functionDynamicDescription: Player has $ in their inventory
+        functionEvaluators:
+        - rid: 5729344583004062707
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5729344583004062685
       type: {class: ItemNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -264,7 +387,84 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 11400000, guid: 0e5c7156fe0fe544f9ff72a3d54419d6, type: 2}
-    - rid: 4114987665048994719
+    - rid: 5729344583004062707
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Item
+        functionName: RandomItemOfRarity
+        functionDescription: Random Item of Rarity
+        functionDynamicDescription: Random $ Item
+        functionEvaluators:
+        - rid: 5729344585219178505
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 8061584b78c1b744db2721230e9367bc, type: 2}
+    - rid: 5729344585219178505
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Common
+        options:
+        - Common
+        - Rare
+        - Legendary
+    - rid: 5729344585219178507
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveItem
+        functionDescription: Player/Remove Item
+        functionDynamicDescription: Remove $ to the player
+        functionEvaluators:
+        - rid: 5729344585219178508
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344585219178508
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Triggering Item
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5729344585219178512
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -273,9 +473,9 @@ MonoBehaviour:
         functionDescription: Quests/Modify Requirement Progress
         functionDynamicDescription: Modify quest progress of $ on $ by $
         functionEvaluators:
-        - rid: 4114987665048994720
-        - rid: 4114987665048994721
-        - rid: 4114987665048994722
+        - rid: 5729344585219178513
+        - rid: 5729344585219178514
+        - rid: 5729344585219178515
         presetName: 
         variableName: 
         stringSuffix: 
@@ -284,7 +484,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 4114987665048994720
+    - rid: 5729344585219178513
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -301,9 +501,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Find the Blue Key
+        value: Find the Keys
         options: []
-    - rid: 4114987665048994721
+    - rid: 5729344585219178514
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -320,9 +520,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Find All The Keys
+        value: Open the Doors
         options: []
-    - rid: 4114987665048994722
+    - rid: 5729344585219178515
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -340,83 +540,29 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 4114987684402823172
+    - rid: 5729344585219178516
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: DisableScript
-        functionDescription: Flow/Disable This Script
-        functionDynamicDescription: Disable This Script
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Cancel
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4114987684402823173
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: RemoveItem
-        functionDescription: Player/Remove Item
-        functionDynamicDescription: Remove $ to the player
+        functionName: DestroyRegions
+        functionDescription: Region/Destroy Region
+        functionDynamicDescription: Destroy regions named $
         functionEvaluators:
-        - rid: 4114987684402823174
+        - rid: 5729344585219178517
         presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4114987684402823174
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Triggering Item
         variableName: 
         stringSuffix: 
         indent: 0
-        nodeIcon: 
+        nodeIcon: Region
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: 0e5c7156fe0fe544f9ff72a3d54419d6, type: 2}
-    - rid: 4114987684402823175
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ShowTutorialMessage
-        functionDescription: UI/Show Tutorial Message
-        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
-        functionEvaluators:
-        - rid: 4114987684402823176
-        - rid: 4114987684402823177
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: UI
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4114987684402823176
+    - rid: 5729344585219178517
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Text
+        tempName: Region Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -429,13 +575,32 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: KeyRemoved
+        value: AreaBlocker
         options: []
-    - rid: 4114987684402823177
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+    - rid: 5729344585219178518
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnQuestCompleted
+        functionDescription: Quests/On quest completed
+        functionDynamicDescription: When the quest named $ is completed
+        functionEvaluators:
+        - rid: 5729344585219178519
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 5729344585219178519
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Quest Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -448,31 +613,31 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
-    - rid: 4114987684402823178
+        value: Open the Doors
+        options: []
+    - rid: 5729344585219178520
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ShowTutorialMessage
-        functionDescription: UI/Show Tutorial Message
-        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionName: DestroyRegions
+        functionDescription: Region/Destroy Region
+        functionDynamicDescription: Destroy regions named $
         functionEvaluators:
-        - rid: 4114987684402823179
-        - rid: 4114987684402823180
+        - rid: 5729344585219178521
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
-        nodeIcon: UI
+        indent: 0
+        nodeIcon: Region
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 4114987684402823179
+    - rid: 5729344585219178521
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Text
+        tempName: Region Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -485,23 +650,5 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: QuestUpdated
+        value: BossBlocker
         options: []
-    - rid: 4114987684402823180
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 5
