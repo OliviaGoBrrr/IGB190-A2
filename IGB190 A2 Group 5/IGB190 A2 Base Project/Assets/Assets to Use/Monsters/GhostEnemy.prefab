@@ -4907,7 +4907,7 @@ MonoBehaviour:
   unitName: Ghost
   health: 100
   resource: 0
-  baseDamage: 100
+  baseDamage: 10
   baseAttacksPerSecond: 1
   baseMaxHealth: 100
   baseMaxResource: 100
@@ -4922,8 +4922,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 394a1d00964c466459e95b4c5d82bf3a, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
-  onDeathFeedback: {fileID: 0}
-  onHitFeedback: {fileID: 0}
+  onDeathFeedback: {fileID: 11400000, guid: 019234e2b154e8d4b857d7691229b509, type: 2}
+  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
   isDead: 0
   spawnEffect: {fileID: 0}
   goldModifier: 1
