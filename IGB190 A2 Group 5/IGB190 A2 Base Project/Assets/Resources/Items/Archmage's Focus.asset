@@ -10,73 +10,77 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Assault Cuirass
+  m_Name: Archmage's Focus
   m_EditorClassIdentifier: 
-  itemName: Assault Cuirass
-  itemDescription: "Armour worn by the elites in the King\u2019s armies. Exudes an
-    aura of intimidation and power."
-  randomStatCount: 3
-  itemCost: 5000
-  itemIcon: {fileID: 21300000, guid: 744db98fc1bce394ba0826a0bf55b410, type: 3}
-  itemType: 3
+  itemName: Archmage's Focus
+  itemDescription: The spellcasting focus once used by an archmage, now forgotten
+    to the cavern's depths.
+  randomStatCount: 2
+  itemCost: 4500
+  itemIcon: {fileID: 21300000, guid: 371f7aca98ca60744bebba125976b879, type: 3}
+  itemType: 1
   itemRarity: 2
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1868569752
+      scriptUID: 1370053185
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831226
+      - rid: 5729344583004061933
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1218858339
+      scriptUID: 312177252
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831227
+      - rid: 5729344583004061934
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
   guaranteedStats:
-  - stat: 1
-    minimum: 50
-    maximum: 70
+  - stat: 5
+    minimum: 100
+    maximum: 100
     isPercent: 0
-  - stat: 3
-    minimum: 0.2
-    maximum: 0.2
+  - stat: 9
+    minimum: 0.25
+    maximum: 0.5
     isPercent: 1
   randomisableStats:
   - stat: 0
-    minimum: 0.3
-    maximum: 0.5
-    isPercent: 1
-  - stat: 0
-    minimum: 5
-    maximum: 15
-    isPercent: 0
-  - stat: 4
     minimum: 0.1
-    maximum: 0.25
+    maximum: 0.2
     isPercent: 1
-  - stat: 6
+  - stat: 3
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
+  - stat: 5
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
+  - stat: 9
     minimum: 0.05
     maximum: 0.1
     isPercent: 1
   - stat: 10
     minimum: 0.1
-    maximum: 0.25
+    maximum: 0.15
     isPercent: 0
   - stat: 11
-    minimum: 0.4
-    maximum: 0.6
+    minimum: 0.2
+    maximum: 0.45
     isPercent: 0
+  - stat: 1
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:
     version: 2
     RefIds:
-    - rid: 790164332097831226
+    - rid: 5729344583004061933
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -94,7 +98,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831227
+    - rid: 5729344583004061934
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

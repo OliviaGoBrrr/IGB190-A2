@@ -58,29 +58,31 @@ MonoBehaviour:
     isPercent: 0
   randomisableStats:
   - stat: 4
-    minimum: 0
-    maximum: 0
+    minimum: 25
+    maximum: 75
     isPercent: 0
   - stat: 4
-    minimum: 0
-    maximum: 0
+    minimum: 0.4
+    maximum: 0.5
     isPercent: 1
   - stat: 3
     minimum: 0.1
     maximum: 0.25
     isPercent: 1
   - stat: 9
-    minimum: 0
-    maximum: 0
+    minimum: 0.2
+    maximum: 0.4
     isPercent: 1
   - stat: 10
-    minimum: 0
-    maximum: 0
+    minimum: 0.05
+    maximum: 0.1
     isPercent: 0
   - stat: 11
-    minimum: 0
-    maximum: 0
+    minimum: 0.2
+    maximum: 0.6
     isPercent: 0
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

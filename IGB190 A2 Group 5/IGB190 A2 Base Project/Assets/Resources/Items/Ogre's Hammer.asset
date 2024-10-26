@@ -58,6 +58,20 @@ MonoBehaviour:
     minimum: 0.15
     maximum: 0.2
     isPercent: 1
+  - stat: 0
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
+  - stat: 10
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 0
+  - stat: 11
+    minimum: 0.2
+    maximum: 0.35
+    isPercent: 0
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

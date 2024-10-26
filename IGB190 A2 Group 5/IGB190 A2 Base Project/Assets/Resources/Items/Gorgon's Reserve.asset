@@ -52,8 +52,14 @@ MonoBehaviour:
       - rid: 8097808950255681570
       - rid: 8097808950255681595
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 5
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

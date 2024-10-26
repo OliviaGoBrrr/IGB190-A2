@@ -46,6 +46,8 @@ MonoBehaviour:
     maximum: -0.2
     isPercent: 1
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

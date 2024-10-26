@@ -10,73 +10,61 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Assault Cuirass
+  m_Name: Soldier's Greaves
   m_EditorClassIdentifier: 
-  itemName: Assault Cuirass
-  itemDescription: "Armour worn by the elites in the King\u2019s armies. Exudes an
-    aura of intimidation and power."
+  itemName: Soldier's Greaves
+  itemDescription: Sturdy armored boots, fit for any soldier to march until dawn
+    in.
   randomStatCount: 3
-  itemCost: 5000
-  itemIcon: {fileID: 21300000, guid: 744db98fc1bce394ba0826a0bf55b410, type: 3}
-  itemType: 3
-  itemRarity: 2
+  itemCost: 1250
+  itemIcon: {fileID: 21300000, guid: e9620576e1fb27a44a1067a25da42233, type: 3}
+  itemType: 4
+  itemRarity: 1
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1868569752
+      scriptUID: 1295901666
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831226
+      - rid: 5729344583004061927
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1218858339
+      scriptUID: 2119864697
       hasWait: 0
       eventNodes:
-      - rid: 790164332097831227
+      - rid: 5729344583004061928
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats:
-  - stat: 1
-    minimum: 50
-    maximum: 70
-    isPercent: 0
-  - stat: 3
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
+  guaranteedStats: []
   randomisableStats:
   - stat: 0
-    minimum: 0.3
-    maximum: 0.5
-    isPercent: 1
-  - stat: 0
-    minimum: 5
-    maximum: 15
-    isPercent: 0
-  - stat: 4
-    minimum: 0.1
-    maximum: 0.25
-    isPercent: 1
-  - stat: 6
     minimum: 0.05
     maximum: 0.1
     isPercent: 1
   - stat: 10
-    minimum: 0.1
-    maximum: 0.25
+    minimum: 0.05
+    maximum: 0.1
     isPercent: 0
   - stat: 11
-    minimum: 0.4
-    maximum: 0.6
+    minimum: 0.2
+    maximum: 0.4
     isPercent: 0
+  - stat: 6
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
+  - stat: 7
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:
     version: 2
     RefIds:
-    - rid: 790164332097831226
+    - rid: 5729344583004061927
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -94,7 +82,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 790164332097831227
+    - rid: 5729344583004061928
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

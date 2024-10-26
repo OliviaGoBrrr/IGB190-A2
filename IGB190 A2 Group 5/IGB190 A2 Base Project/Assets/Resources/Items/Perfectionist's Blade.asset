@@ -63,38 +63,40 @@ MonoBehaviour:
     maximum: 0.25
     isPercent: 1
   - stat: 4
-    minimum: 200
-    maximum: 200
+    minimum: 125
+    maximum: 125
     isPercent: 0
   randomisableStats:
   - stat: 0
-    minimum: 0
-    maximum: 0
+    minimum: 0.1
+    maximum: 0.25
     isPercent: 1
   - stat: 4
-    minimum: 0
-    maximum: 0
+    minimum: 0.2
+    maximum: 0.3
     isPercent: 1
   - stat: 7
-    minimum: 0
-    maximum: 0
+    minimum: 0.1
+    maximum: 0.2
     isPercent: 1
   - stat: 6
-    minimum: 0
-    maximum: 0
+    minimum: 0.05
+    maximum: 0.1
     isPercent: 1
   - stat: 10
-    minimum: 0
-    maximum: 0
+    minimum: 0.05
+    maximum: 0.15
     isPercent: 0
   - stat: 11
-    minimum: 0
-    maximum: 0
+    minimum: 0.2
+    maximum: 0.6
     isPercent: 0
   - stat: 8
-    minimum: 0
-    maximum: 0
+    minimum: 0.15
+    maximum: 0.2
     isPercent: 1
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:
@@ -365,7 +367,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Perfectionist
+        value: Perfectionist_dmg
         options: []
     - rid: 790164328317190339
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -530,7 +532,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: None
+        value: Perfectionist_spd
         options: []
     - rid: 790164328317190362
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
