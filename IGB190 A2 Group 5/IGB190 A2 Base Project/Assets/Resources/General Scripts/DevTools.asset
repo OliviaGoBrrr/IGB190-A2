@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76ef298ccb713614cb4f11ef9d2c39cd, type: 3}
-  m_Name: DevTeleport
+  m_Name: DevTools
   m_EditorClassIdentifier: 
   engine:
     scripts:
@@ -30,6 +30,14 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes:
       - rid: 4114987733859434811
+    - scriptName: Add EXP
+      scriptUID: 65979796
+      hasWait: 0
+      eventNodes:
+      - rid: 5729344583004061923
+      conditionNodes: []
+      actionNodes:
+      - rid: 5729344583004061925
   references:
     version: 2
     RefIds:
@@ -219,3 +227,77 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: -45.9, y: 3.5, z: 50}
+    - rid: 5729344583004061923
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnKeyUp
+        functionDescription: Input/On Key Up
+        functionDynamicDescription: When the $ key is released
+        functionEvaluators:
+        - rid: 5729344583004061924
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Keyboard
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 5729344583004061924
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Key
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: '-'
+        options: []
+    - rid: 5729344583004061925
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddLevels
+        functionDescription: Player/Add Levels
+        functionDynamicDescription: Add $ level(s) to the player.
+        functionEvaluators:
+        - rid: 5729344583004061926
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344583004061926
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
