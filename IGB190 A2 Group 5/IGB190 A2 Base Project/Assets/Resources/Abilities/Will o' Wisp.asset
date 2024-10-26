@@ -21,7 +21,7 @@ MonoBehaviour:
   abilityAnimation: None
   range: 2
   castTime: 0
-  abilityCooldown: 15
+  abilityCooldown: 14
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -120,7 +120,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 100
+        value: 70
     - rid: 3279906386949702383
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -274,7 +274,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 1960674654432118277, guid: f8f540f1d74b5bd47aac925c43203e37, type: 3}
+        value: {fileID: 7175029423974514987, guid: 0e07367243b92004499d89fa8c4c5529, type: 3}
     - rid: 3279906386949702563
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -310,7 +310,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 7
     - rid: 3279906386949702565
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

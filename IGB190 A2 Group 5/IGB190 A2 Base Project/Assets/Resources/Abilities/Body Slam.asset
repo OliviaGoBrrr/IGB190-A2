@@ -23,7 +23,7 @@ MonoBehaviour:
   abilityAnimation: None
   range: 8
   castTime: 4
-  abilityCooldown: 12
+  abilityCooldown: 20
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.465
@@ -326,7 +326,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 4
+        value: 3
     - rid: 3279906392687771652
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
