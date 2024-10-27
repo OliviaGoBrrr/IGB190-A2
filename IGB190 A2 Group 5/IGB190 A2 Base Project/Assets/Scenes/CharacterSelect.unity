@@ -27809,7 +27809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Echoes of Valor
+  m_text: Withering Scourge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a25f6ce1fe07f44985ab8f3ee0b99b0, type: 2}
   m_sharedMaterial: {fileID: 8071695384262653234, guid: 2a25f6ce1fe07f44985ab8f3ee0b99b0, type: 2}
@@ -27872,7 +27872,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -37.250153, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
