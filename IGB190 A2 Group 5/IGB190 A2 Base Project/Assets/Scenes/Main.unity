@@ -23362,7 +23362,7 @@ MonoBehaviour:
   unitName: Barbarian
   health: 500
   resource: 0
-  baseDamage: 20
+  baseDamage: 25
   baseAttacksPerSecond: 0.9
   baseMaxHealth: 300
   baseMaxResource: 100
@@ -23370,7 +23370,7 @@ MonoBehaviour:
   baseArmor: 50
   baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 5
+  baseHealthRegen: 10
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
@@ -23396,12 +23396,12 @@ MonoBehaviour:
   bonusDamagePerLevel: 15
   bonusHealthPerLevel: 25
   bonusMovementSpeedPerLevel: 0.1
-  bonusResourcePerLevel: 0
+  bonusResourcePerLevel: 15
   bonusArmorPerLevel: 15
-  bonusCriticalChancePerLevel: 0
-  bonusCriticalDamagePerLevel: 0
+  bonusCriticalChancePerLevel: 0.01
+  bonusCriticalDamagePerLevel: 0.1
   bonusHealthRegenPerLevel: 2.5
-  bonusResourceRegenPerLevel: 0
+  bonusResourceRegenPerLevel: 1
 --- !u!195 &1043651115
 NavMeshAgent:
   m_ObjectHideFlags: 0
