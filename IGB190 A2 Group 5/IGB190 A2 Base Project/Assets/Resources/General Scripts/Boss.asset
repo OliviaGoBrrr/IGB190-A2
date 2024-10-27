@@ -167,13 +167,13 @@ MonoBehaviour:
     - rid: 4184214666413867029
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Unit
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
-        presetName: 
+        presetName: Killed Unit
         variableName: 
         stringSuffix: 
         indent: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+        value: {fileID: 243147159722867909, guid: 1dc1d810627330441b4e15830ebf78c4, type: 3}
     - rid: 4184214666413867030
       type: {class: AudioNode, ns: , asm: Assembly-CSharp}
       data:

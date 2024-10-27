@@ -36,6 +36,9 @@ MonoBehaviour:
       - rid: 5729344583004062568
       - rid: 5729344585219178507
       - rid: 5729344585219178512
+      - rid: 5729344598611067518
+      - rid: 5729344598611067521
+      - rid: 5729344598611067523
     - scriptName: QuestComplete
       scriptUID: 1417843803
       hasWait: 0
@@ -652,3 +655,150 @@ MonoBehaviour:
         allowFunction: 1
         value: BossBlocker
         options: []
+    - rid: 5729344598611067518
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 5729344598611067519
+        - rid: 5729344598611067520
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611067519
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Bringing you back.
+        options: []
+    - rid: 5729344598611067520
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 5729344598611067521
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 5729344598611067522
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611067522
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 5729344598611067523
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: TeleportUnit
+        functionDescription: Unit/Teleport
+        functionDynamicDescription: Teleport $ to $
+        functionEvaluators:
+        - rid: 5729344598611067524
+        - rid: 5729344598611067525
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611067524
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5729344598611067525
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 10.5, y: 3.52, z: 65.26}

@@ -49,8 +49,6 @@ MonoBehaviour:
       - rid: 4114987733859434775
       - rid: 4114987733859434783
       - rid: 4114987733859434780
-      - rid: 4114987733859434778
-      - rid: 4114987733859434772
       - rid: 5729344598611066901
   references:
     version: 2
@@ -602,61 +600,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 7190465956258999747, guid: 5ce4a913e9255584fb1cec2ef289ba0c, type: 3}
-    - rid: 4114987733859434772
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: TeleportUnit
-        functionDescription: Unit/Teleport
-        functionDynamicDescription: Teleport $ to $
-        functionEvaluators:
-        - rid: 4114987733859434773
-        - rid: 4114987733859434774
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4114987733859434773
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 4114987733859434774
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 10.5, y: 3.529, z: 65.25}
     - rid: 4114987733859434775
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -712,43 +655,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
-    - rid: 4114987733859434778
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 4114987733859434779
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4114987733859434779
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 3
+        value: 5
     - rid: 4114987733859434780
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -785,7 +692,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Bringing you back...
+        value: It left behind a key!
         options: []
     - rid: 4114987733859434782
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -804,7 +711,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 5
     - rid: 4114987733859434783
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -840,7 +747,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 5
     - rid: 5729344585739534837
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1304,7 +1211,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {x: 15.16, y: 3.52, z: 80.15}
+        value: {x: -11.75, y: -15, z: -15}
     - rid: 5729344598611066903
       type: {class: ItemNode, ns: , asm: Assembly-CSharp}
       data:
