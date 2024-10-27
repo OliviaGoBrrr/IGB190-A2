@@ -43883,7 +43883,7 @@ MonoBehaviour:
   _healthGlobeValues:
     baseHealthGlobeChance: 0.2
     reducedChancePerExistingGlobe: 0.05
-    spawnRadius: 6
+    spawnRadius: 3
     lifetime: 3.5
     healthGlobeHealthRestore: 50
   _inventoryValues:
@@ -43902,6 +43902,15 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      - serializedVersion: 3
+        time: 0.049328744
+        value: 0.09776939
+        inSlope: 2.0145247
+        outSlope: 2.0145247
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.3
         value: 0.5

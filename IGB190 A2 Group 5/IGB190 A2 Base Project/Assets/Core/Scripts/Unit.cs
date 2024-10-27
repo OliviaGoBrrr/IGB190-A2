@@ -102,7 +102,8 @@ public class Unit : Interactable
         // Apply damage modifiers (e.g. a -50% damage taken buff).
         amount *= GetBaseDamageTakenModifier();
 
-        // Armor currently doesn't do anything? Add logic here.
+        //We noticed too late into the game's lifetime that armor was not applied. This is what would be here if we could test and balance more.
+        //amount *= GetArmorDamageTakenModifier();
 
         // Return the modified amount.
         return amount;
