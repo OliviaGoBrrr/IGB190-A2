@@ -42,7 +42,6 @@ MonoBehaviour:
       scriptUID: 1481076597
       hasWait: 0
       eventNodes:
-      - rid: 5729344598611066880
       - rid: 5729344598611066882
       conditionNodes: []
       actionNodes:
@@ -310,44 +309,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 5729344598611066880
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: OnKeyHeld
-        functionDescription: Input/On Key Held
-        functionDynamicDescription: While the $ key is held down
-        functionEvaluators:
-        - rid: 5729344598611066881
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Keyboard
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []
-    - rid: 5729344598611066881
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Key
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Alt
-        options: []
     - rid: 5729344598611066882
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -384,7 +345,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: L
+        value: N
         options: []
     - rid: 5729344598611066891
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}

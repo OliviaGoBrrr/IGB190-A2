@@ -51,6 +51,7 @@ MonoBehaviour:
       - rid: 4114987733859434780
       - rid: 4114987733859434778
       - rid: 4114987733859434772
+      - rid: 5729344598611066901
   references:
     version: 2
     RefIds:
@@ -1267,3 +1268,58 @@ MonoBehaviour:
         allowFunction: 0
         value: Empowerment
         options: []
+    - rid: 5729344598611066901
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpawnItemDrop
+        functionDescription: Pickups/Spawn Item Pickup
+        functionDynamicDescription: Spawn an item pickup at $ containing $
+        functionEvaluators:
+        - rid: 5729344598611066902
+        - rid: 5729344598611066903
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Pickup
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611066902
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 15.16, y: 3.52, z: 80.15}
+    - rid: 5729344598611066903
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 8061584b78c1b744db2721230e9367bc, type: 2}

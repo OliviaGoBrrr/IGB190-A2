@@ -55,12 +55,13 @@ MonoBehaviour:
           - rid: 5729344577022984192
           - rid: 5729344444049654575
           - rid: 5729344577022984198
+          - rid: 5729344444049654629
           - rid: 5729344444049654521
           - rid: 5729344444049654457
           - rid: 5729344444049654633
           - rid: 5729344444049654347
-          - rid: 5729344444049654597
-          - rid: 5729344444049654629
+          - rid: 5729344598611066904
+          - rid: 5729344598611066936
           - rid: 5729344444049654623
           - rid: 5729344444049654576
     - rid: 5729344444049654279
@@ -746,61 +747,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.75
-    - rid: 5729344444049654597
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: HaveUnitDamageUnits2
-        functionDescription: Unit/Deal Damage to Unit Group
-        functionDynamicDescription: Deal $ attack damage to $
-        functionEvaluators:
-        - rid: 5729344444049654598
-        - rid: 5729344444049654599
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5729344444049654598
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 90
-    - rid: 5729344444049654599
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit Group
-        functionName: GetUnitGroupVariable
-        functionDescription: Unit Group Variable
-        functionDynamicDescription: 'Unit Group: $'
-        functionEvaluators:
-        - rid: 5729344444049654632
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
     - rid: 5729344444049654623
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -972,25 +918,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 50
-    - rid: 5729344444049654632
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Targets
-        options: []
     - rid: 5729344444049654633
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1406,4 +1333,155 @@ MonoBehaviour:
         allowPreset: 0
         allowFunction: 0
         value: Targets
+        options: []
+    - rid: 5729344598611066904
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ForEachUnitInGroup
+        functionDescription: Flow/For Each Unit in Unit Group
+        functionDynamicDescription: 'For Each Unit in $ (Variable Storing Current
+          Unit: $)'
+        functionEvaluators:
+        - rid: 5729344598611066905
+        - rid: 5729344598611066906
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611066905
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: GetUnitGroupVariable
+        functionDescription: Unit Group Variable
+        functionDynamicDescription: 'Unit Group: $'
+        functionEvaluators:
+        - rid: 5729344598611066935
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611066906
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Unit
+        options: []
+    - rid: 5729344598611066935
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Targets
+        options: []
+    - rid: 5729344598611066936
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: HaveUnitDamageUnit2
+        functionDescription: Unit/Deal Damage to Unit
+        functionDynamicDescription: Deal $ attack damage to $
+        functionEvaluators:
+        - rid: 5729344598611066937
+        - rid: 5729344598611066938
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 2
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611066937
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 90
+    - rid: 5729344598611066938
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit
+        functionName: GetUnitVariable
+        functionDescription: Unit Variable
+        functionDynamicDescription: 'Unit: $'
+        functionEvaluators:
+        - rid: 5729344598611066958
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5729344598611066958
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Unit
         options: []
