@@ -1347,7 +1347,7 @@ MonoBehaviour:
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 0}
-  onHitFeedback: {fileID: 0}
+  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
   isDead: 0
   spawnEffect: {fileID: 0}
   goldModifier: 1
