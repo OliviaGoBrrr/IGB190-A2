@@ -21,11 +21,10 @@ MonoBehaviour:
       - rid: 4184214666226172887
       conditionNodes:
       - rid: 4184214666226172888
-      - rid: 5729344586919969009
       actionNodes:
-      - rid: 4184214666226172889
-      - rid: 4184214666226172890
       - rid: 4184214666226172891
+      - rid: 5729344598611067531
+      - rid: 5729344598611067535
     - scriptName: SpawnFinalBoss
       scriptUID: 1977217416
       hasWait: 0
@@ -92,41 +91,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 4184214666226172889
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: WinGame
-        functionDescription: Game/Win Game
-        functionDynamicDescription: Have the player win the game
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Game
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 4184214666226172890
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ChangeGameMusic
-        functionDescription: Feedback/Change Game Music
-        functionDynamicDescription: Change Game Music to $
-        functionEvaluators:
-        - rid: 4184214666413867030
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Audio
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
     - rid: 4184214666226172891
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -182,24 +146,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 243147159722867909, guid: 1dc1d810627330441b4e15830ebf78c4, type: 3}
-    - rid: 4184214666413867030
-      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Audio Clip
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 8300000, guid: a4ecddd6670102e4d89268719241909f, type: 3}
     - rid: 4184214666413867031
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -366,44 +312,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: FinalBossSpawn
-        options: []
-    - rid: 5729344586919969009
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: QuestIsCompleted
-        functionDescription: Quest/Quest Is Completed
-        functionDynamicDescription: Quest named $ has been completed
-        functionEvaluators:
-        - rid: 5729344586919969010
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5729344586919969010
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Open the Doors
         options: []
     - rid: 5729344586919969011
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
@@ -610,3 +518,56 @@ MonoBehaviour:
         allowFunction: 1
         value: FinalQuestEntry
         options: []
+    - rid: 5729344598611067531
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WinGame
+        functionDescription: Game/Win Game
+        functionDynamicDescription: Have the player win the game
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Game
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611067535
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ChangeGameMusic
+        functionDescription: Audio/Play Music
+        functionDynamicDescription: Change Game Music to $
+        functionEvaluators:
+        - rid: 5729344598611067536
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Audio
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5729344598611067536
+      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Audio Clip
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 8300000, guid: a4ecddd6670102e4d89268719241909f, type: 3}
