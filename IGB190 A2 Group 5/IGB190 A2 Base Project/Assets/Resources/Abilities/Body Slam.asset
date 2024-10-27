@@ -21,9 +21,9 @@ MonoBehaviour:
 
 '
   abilityAnimation: None
-  range: 8
+  range: 12
   castTime: 4
-  abilityCooldown: 20
+  abilityCooldown: 18
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.465
@@ -1032,4 +1032,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 100
+        value: 50

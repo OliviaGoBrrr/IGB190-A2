@@ -20,8 +20,8 @@ MonoBehaviour:
   abilityDescription: Final Boss Ability 3
   abilityAnimation: Bow Shoot
   range: 8
-  castTime: 4
-  abilityCooldown: 20
+  castTime: 8
+  abilityCooldown: 18
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -50,6 +50,7 @@ MonoBehaviour:
           - rid: 3279906402145928146
           conditionNodes: []
           actionNodes:
+          - rid: 3279906471666516044
           - rid: 3279906403637264679
           - rid: 3279906403637264697
           - rid: 3279906402145927463
@@ -82,7 +83,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Effect
         allowValue: 1
         allowPreset: 1
@@ -198,7 +199,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Projectile
         allowValue: 1
         allowPreset: 1
@@ -312,7 +313,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Projectile
         allowValue: 1
         allowPreset: 1
@@ -403,7 +404,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Loop
         allowValue: 1
         allowPreset: 1
@@ -425,7 +426,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 7
     - rid: 3279906403637264697
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -440,7 +441,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Variable
         allowValue: 1
         allowPreset: 1
@@ -636,7 +637,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 200
+        value: 100
     - rid: 3279906403637264744
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -668,7 +669,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Effect
         allowValue: 1
         allowPreset: 1
@@ -705,7 +706,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Audio
         allowValue: 1
         allowPreset: 1
@@ -745,7 +746,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 100
+        value: 25
     - rid: 3279906403637264752
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -759,7 +760,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Timer
         allowValue: 1
         allowPreset: 1
@@ -782,3 +783,39 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 2.5
+    - rid: 3279906471666516044
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsXTimes
+        functionDescription: Flow/For Loop
+        functionDynamicDescription: Do actions $ times
+        functionEvaluators:
+        - rid: 3279906471666516049
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 3279906471666516049
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
