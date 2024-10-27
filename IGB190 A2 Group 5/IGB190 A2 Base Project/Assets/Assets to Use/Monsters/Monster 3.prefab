@@ -120,7 +120,7 @@ MonoBehaviour:
   isDead: 0
   spawnEffect: {fileID: -68291847361665647, guid: 221c9f3b6942c2b4ebfaeec8b89bb98a, type: 3}
   goldModifier: 1
-  experienceModifier: 1
+  experienceModifier: 1.3
   corpseDuration: 5
   monsterLabel: 
   isEmpowered: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 2
   spawnLevel: 3
-  spawnLikelihood: 1
+  spawnLikelihood: 2
 --- !u!54 &713987118842626389
 Rigidbody:
   m_ObjectHideFlags: 0

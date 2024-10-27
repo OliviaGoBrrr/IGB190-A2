@@ -83,7 +83,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 1.7
   spawnLevel: 1
-  spawnLikelihood: 2
+  spawnLikelihood: 5
 --- !u!65 &1408620102498460199
 BoxCollider:
   m_ObjectHideFlags: 0

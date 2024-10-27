@@ -151,7 +151,7 @@ MonoBehaviour:
   healthBarType: 0
   uiSize: 1
   uiHeight: 2
-  spawnLevel: 1
+  spawnLevel: 10
   spawnLikelihood: 0
 --- !u!1001 &5150644973011443438
 PrefabInstance:

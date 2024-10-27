@@ -126,7 +126,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 2
   spawnLevel: 2
-  spawnLikelihood: 2
+  spawnLikelihood: 5
 --- !u!54 &3687309128071325144
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -3156,7 +3156,7 @@ MonoBehaviour:
   resource: 0
   baseDamage: 5
   baseAttacksPerSecond: 1
-  baseMaxHealth: 200
+  baseMaxHealth: 120
   baseMaxResource: 100
   baseMovementSpeed: 1
   baseArmor: 0
@@ -3174,7 +3174,7 @@ MonoBehaviour:
   isDead: 0
   spawnEffect: {fileID: 4062287519753572544, guid: 332ddaa5f7738b142ac986212c018770, type: 3}
   goldModifier: 1
-  experienceModifier: 1
+  experienceModifier: 1.5
   corpseDuration: 5
   monsterLabel: 
   isEmpowered: 0
@@ -3182,7 +3182,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 1.7
   spawnLevel: 5
-  spawnLikelihood: 1
+  spawnLikelihood: 2
 --- !u!54 &6968082634827464930
 Rigidbody:
   m_ObjectHideFlags: 0

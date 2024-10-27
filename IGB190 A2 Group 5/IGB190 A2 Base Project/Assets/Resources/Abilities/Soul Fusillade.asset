@@ -609,7 +609,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 10
     - rid: 3279906390535569471
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -978,7 +978,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: -5
+        value: 10
     - rid: 3279906390535569590
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1365,7 +1365,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: -5
+        value: 10
     - rid: 3279906402145927204
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1826,7 +1826,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: -5
+        value: 10
     - rid: 3279906402145927249
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2325,7 +2325,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: -5
+        value: 10
     - rid: 3279906402145927276
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3119,7 +3119,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 10
     - rid: 3279906436413653184
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
