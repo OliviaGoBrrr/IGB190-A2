@@ -499,7 +499,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 10
     - rid: 5729344495085682781
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1048,7 +1048,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 10
     - rid: 5729344495085682915
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1392,7 +1392,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 7
     - rid: 5729344514153513206
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2852,7 +2852,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 4
     - rid: 7043080132712988680
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2908,7 +2908,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 99999
     - rid: 7043080132712988683
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2944,7 +2944,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 4
     - rid: 7043080132712988690
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3076,7 +3076,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 7
     - rid: 7043080132712988736
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3168,7 +3168,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 7
     - rid: 7043080132712988777
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

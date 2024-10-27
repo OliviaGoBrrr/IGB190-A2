@@ -713,7 +713,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0
-  baseAttackRange: 2
+  baseAttackRange: 1
   abilities:
   - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
   - {fileID: 11400000, guid: 477ecf357ba3bde4490513e62b970d9f, type: 2}
