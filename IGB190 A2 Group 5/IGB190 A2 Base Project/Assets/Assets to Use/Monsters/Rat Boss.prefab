@@ -717,6 +717,7 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
   - {fileID: 11400000, guid: 477ecf357ba3bde4490513e62b970d9f, type: 2}
+  - {fileID: 11400000, guid: 65ee810f1d1f2bf4a80b2aaeee5a7047, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 11400000, guid: 0256ddc6b3a273d418c5861d14162aa9, type: 2}
