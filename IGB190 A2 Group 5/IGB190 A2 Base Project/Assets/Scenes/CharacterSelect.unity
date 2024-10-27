@@ -19043,7 +19043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c3f6f85d6217344ac472bcfb3e341d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Demon
+  characterName: Vampire
   characterTitle: {fileID: 614214188}
   characterHide: {fileID: 19858270}
   characterDetails: {fileID: 1446672423}

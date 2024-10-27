@@ -1653,7 +1653,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Demon
+  unitName: Vampire
   health: 500
   resource: 0
   baseDamage: 25
