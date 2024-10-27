@@ -91,10 +91,11 @@ public class Monster : Unit
     /// </summary>
     private void ApplyMonsterScaling()
     {
-        float modifier = Mathf.Pow(GameManager.monsterScalingValues.increasedHealthPerPlayerLevel + 1, GameManager.player.currentLevel);
+        float healthModifier = Mathf.Pow(GameManager.monsterScalingValues.increasedHealthPerPlayerLevel + 1, GameManager.player.currentLevel);
+        float damageModifier = Mathf.Pow(GameManager.monsterScalingValues.increasedDamagePerPlayerLevel +1, GameManager.player.currentLevel);
 
-        baseMaxHealth *= modifier;
-        baseDamage *= modifier;
+        baseMaxHealth *= healthModifier;
+        baseDamage *= damageModifier;
     }
 
     /// <summary>

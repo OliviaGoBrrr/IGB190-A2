@@ -47929,8 +47929,8 @@ MonoBehaviour:
     unempoweredMonsterLegendaryDropChance: 0
   _empoweredMonsterValues:
     empoweredMonsterHealthModifier: 2.5
-    empoweredMonsterDamageModifier: 1.5
-    empoweredMonsterAttackSpeedModifier: 1.25
+    empoweredMonsterDamageModifier: 1.3
+    empoweredMonsterAttackSpeedModifier: 1
     empoweredMonsterXPModifier: 3
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 0.4
@@ -47941,8 +47941,8 @@ MonoBehaviour:
     startingXPPerLevel: 300
     additionalMaxXPPerLevel: 500
   _monsterScalingValues:
-    increasedHealthPerPlayerLevel: 0.4
-    increasedDamagePerPlayerLevel: 0.1
+    increasedHealthPerPlayerLevel: 0.3
+    increasedDamagePerPlayerLevel: 0.2
   _healthGlobeValues:
     baseHealthGlobeChance: 0.2
     reducedChancePerExistingGlobe: 0.05
