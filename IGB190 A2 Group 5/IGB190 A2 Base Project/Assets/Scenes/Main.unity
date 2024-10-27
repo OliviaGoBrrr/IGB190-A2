@@ -47944,13 +47944,13 @@ MonoBehaviour:
     increasedHealthPerPlayerLevel: 0.4
     increasedDamagePerPlayerLevel: 0.1
   _healthGlobeValues:
-    baseHealthGlobeChance: 0.1
+    baseHealthGlobeChance: 0.2
     reducedChancePerExistingGlobe: 0.05
     spawnRadius: 6
     lifetime: 3.5
     healthGlobeHealthRestore: 50
   _inventoryValues:
-    sellItemReturnRate: 0.35
+    sellItemReturnRate: 0.15
   _armorValues:
     maxArmor: 750
     armorDamageReductionCurve:
