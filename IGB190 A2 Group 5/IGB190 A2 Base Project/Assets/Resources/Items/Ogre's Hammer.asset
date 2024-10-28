@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Ogre's Hammer
   itemDescription: A mighty hammer fit for crushing bones and annihilating the puny.
   randomStatCount: 2
-  itemCost: 1800
+  itemCost: 2500
   itemIcon: {fileID: 21300000, guid: 0f5b3d04a5f8cc7429dcee0332eef1b0, type: 3}
   itemType: 2
   itemRarity: 1
@@ -42,8 +42,8 @@ MonoBehaviour:
     maximum: 90
     isPercent: 0
   - stat: 3
-    minimum: -0.15
-    maximum: -0.15
+    minimum: -0.25
+    maximum: -0.25
     isPercent: 1
   randomisableStats:
   - stat: 4

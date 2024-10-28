@@ -39,12 +39,12 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 0
-    minimum: 100
-    maximum: 100
+    minimum: 150
+    maximum: 150
     isPercent: 0
   - stat: 3
-    minimum: 0.3
-    maximum: 0.3
+    minimum: 0.5
+    maximum: 0.5
     isPercent: 1
   - stat: 10
     minimum: 0.2
@@ -52,12 +52,12 @@ MonoBehaviour:
     isPercent: 0
   randomisableStats:
   - stat: 4
-    minimum: 50
-    maximum: 75
+    minimum: 100
+    maximum: 150
     isPercent: 0
   - stat: 5
-    minimum: 20
-    maximum: 40
+    minimum: 25
+    maximum: 50
     isPercent: 0
   - stat: 5
     minimum: 0.1

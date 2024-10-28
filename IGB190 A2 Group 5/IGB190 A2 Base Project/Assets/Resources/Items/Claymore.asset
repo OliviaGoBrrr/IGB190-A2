@@ -42,8 +42,8 @@ MonoBehaviour:
     maximum: 35
     isPercent: 0
   - stat: 3
-    minimum: -0.05
-    maximum: -0.05
+    minimum: -0.1
+    maximum: -0.1
     isPercent: 1
   randomisableStats: []
   canPurchaseInShop: 1

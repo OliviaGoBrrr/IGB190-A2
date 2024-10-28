@@ -19,7 +19,7 @@ MonoBehaviour:
     Armor
     coated in thorns that stabs anyone who tries to harm the wearer.'
   randomStatCount: 3
-  itemCost: 0
+  itemCost: 5000
   itemIcon: {fileID: 21300000, guid: 564236ed3ade15248accfc3079bc884d, type: 3}
   itemType: 3
   itemRarity: 2
@@ -64,12 +64,12 @@ MonoBehaviour:
     maximum: 0.3
     isPercent: 1
   - stat: 7
-    minimum: 0.2
-    maximum: 0.4
+    minimum: 0.15
+    maximum: 0.15
     isPercent: 1
   - stat: 10
-    minimum: 0.05
-    maximum: 0.15
+    minimum: 0.25
+    maximum: 0.25
     isPercent: 0
   - stat: 11
     minimum: 0.4

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Demon's Heart
   m_EditorClassIdentifier: 
   itemName: Demon's Heart
-  itemDescription: 'Gain +50% damage but take 10% Max HP damage every second
+  itemDescription: 'Gain +50% damage but take 7% Max HP damage every second
 
 
     You
     can still hear the evil beating in the gem.'
-  randomStatCount: 0
+  randomStatCount: 2
   itemCost: 3500
   itemIcon: {fileID: 21300000, guid: ec888f7f279932d479dd9d2f3047a4ba, type: 3}
   itemType: 1
@@ -55,7 +55,23 @@ MonoBehaviour:
     minimum: 0.1
     maximum: 0.2
     isPercent: 1
-  randomisableStats: []
+  randomisableStats:
+  - stat: 3
+    minimum: 0.2
+    maximum: 0.25
+    isPercent: 1
+  - stat: 8
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
+  - stat: 1
+    minimum: 0.1
+    maximum: 0.15
+    isPercent: 1
+  - stat: 6
+    minimum: 0.1
+    maximum: 0.15
+    isPercent: 1
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:
@@ -227,7 +243,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.05
+        value: 0.035
     - rid: 790164332097831214
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

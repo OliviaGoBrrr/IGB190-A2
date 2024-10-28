@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: "Armour worn by the elites in the King\u2019s armies. Exudes an
     aura of intimidation and power."
   randomStatCount: 3
-  itemCost: 5000
+  itemCost: 4000
   itemIcon: {fileID: 21300000, guid: 744db98fc1bce394ba0826a0bf55b410, type: 3}
   itemType: 3
   itemRarity: 2

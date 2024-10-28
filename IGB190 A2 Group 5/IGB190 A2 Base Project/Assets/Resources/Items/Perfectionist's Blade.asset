@@ -13,15 +13,12 @@ MonoBehaviour:
   m_Name: Perfectionist's Blade
   m_EditorClassIdentifier: 
   itemName: Perfectionist's Blade
-  itemDescription: 'Passive:
-
-    While above 80% health, increase damage by 30,
-    and attack speed by 30%.
+  itemDescription: 'While above 80% health, increase damage by 30, and attack speed
+    by 30%.
 
 
-    A blade that brings out the full potential of
-    its wielder.'
-  randomStatCount: 4
+    A blade that brings out the full potential of its wielder.'
+  randomStatCount: 3
   itemCost: 5000
   itemIcon: {fileID: 21300000, guid: 09b62cca23038b9438555a6258a5c0ca, type: 3}
   itemType: 2
@@ -55,8 +52,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 0
-    minimum: 70
-    maximum: 90
+    minimum: 40
+    maximum: 40
     isPercent: 0
   - stat: 3
     minimum: 0.2
@@ -331,7 +328,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 30
+        value: 60
     - rid: 790164328317190337
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

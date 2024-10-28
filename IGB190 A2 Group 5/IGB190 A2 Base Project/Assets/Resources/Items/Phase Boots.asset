@@ -44,8 +44,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 1
-    minimum: 5
-    maximum: 10
+    minimum: 20
+    maximum: 35
     isPercent: 0
   - stat: 0
     minimum: 5

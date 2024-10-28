@@ -44,8 +44,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 1
-    minimum: 50
-    maximum: 50
+    minimum: 100
+    maximum: 100
     isPercent: 0
   randomisableStats:
   - stat: 4
@@ -64,6 +64,8 @@ MonoBehaviour:
     minimum: 0.05
     maximum: 0.1
     isPercent: 1
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

@@ -15,8 +15,8 @@ MonoBehaviour:
   itemName: Spirit Visage
   itemDescription: "Heal 5% of your Max HP every second. \n\nThis Armour glows with
     a deathly green glow, forming a mantle or arcane energy."
-  randomStatCount: 1
-  itemCost: 0
+  randomStatCount: 2
+  itemCost: 6000
   itemIcon: {fileID: 21300000, guid: 99b4f8fc34f1c414cbdd9cf4488975bd, type: 3}
   itemType: 3
   itemRarity: 2
@@ -55,18 +55,22 @@ MonoBehaviour:
     maximum: 200
     isPercent: 0
   randomisableStats:
+  - stat: 5
+    minimum: 50
+    maximum: 100
+    isPercent: 0
+  - stat: 9
+    minimum: 0.1
+    maximum: 0.15
+    isPercent: 1
+  - stat: 7
+    minimum: 0.1
+    maximum: 0.15
+    isPercent: 1
   - stat: 0
-    minimum: 0.1
-    maximum: 0.2
-    isPercent: 1
-  - stat: 3
-    minimum: 0.05
-    maximum: 0.1
-    isPercent: 1
-  - stat: 6
-    minimum: 0.1
-    maximum: 0.2
-    isPercent: 1
+    minimum: 10
+    maximum: 20
+    isPercent: 0
   canPurchaseInShop: 0
   canDropOffMonster: 1
   references:

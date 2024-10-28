@@ -47,15 +47,15 @@ MonoBehaviour:
       - rid: 790164332097831405
       conditionNodes:
       - rid: 790164332097831408
-      - rid: 790164332097831410
+      - rid: 5026731389890592768
       actionNodes:
       - rid: 790164332097831443
       - rid: 790164332097831575
   template: {fileID: 0}
   guaranteedStats:
   - stat: 6
-    minimum: 0.35
-    maximum: 0.35
+    minimum: 0.2
+    maximum: 0.25
     isPercent: 1
   randomisableStats:
   - stat: 0
@@ -181,81 +181,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 790164332097831410
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitIsInUnitGroup
-        functionDescription: Unit Group/Unit is in Unit Group
-        functionDynamicDescription: $ is in $
-        functionEvaluators:
-        - rid: 790164332097831411
-        - rid: 790164332097831412
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 790164332097831411
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Damaged Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 790164332097831412
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit Group
-        functionName: GetUnitGroupVariable
-        functionDescription: Unit Group Variable
-        functionDynamicDescription: 'Unit Group: $'
-        functionEvaluators:
-        - rid: 790164332097831439
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 790164332097831439
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Player
-        options: []
     - rid: 790164332097831443
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -449,3 +374,59 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 5026731389890592768
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type matches $
+        functionEvaluators:
+        - rid: 5026731389890592769
+        - rid: 5026731389890592770
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5026731389890592769
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Damaged Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 5560953499317727810, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
+    - rid: 5026731389890592770
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 5560953499317727810, guid: 411e51f8ed4f17b4dbcb6b4886d120ff, type: 3}
