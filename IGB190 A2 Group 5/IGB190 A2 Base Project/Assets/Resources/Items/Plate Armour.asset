@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Plate Armour
+  m_EditorClassIdentifier: 
+  itemName: Plate Armour
+  itemDescription: A suit of heavy armor made from finely worked iron.
+  randomStatCount: 2
+  itemCost: 2000
+  itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
+  itemType: 3
+  itemRarity: 1
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 49589991
+      hasWait: 0
+      eventNodes:
+      - rid: 5729344583004061929
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Item Unequipped
+      scriptUID: 422267715
+      hasWait: 0
+      eventNodes:
+      - rid: 5729344583004061930
+      conditionNodes: []
+      actionNodes: []
+  template: {fileID: 0}
+  guaranteedStats:
+  - stat: 6
+    minimum: -0.2
+    maximum: -0.2
+    isPercent: 1
+  - stat: 1
+    minimum: 75
+    maximum: 75
+    isPercent: 0
+  randomisableStats:
+  - stat: 4
+    minimum: 50
+    maximum: 100
+    isPercent: 0
+  - stat: 5
+<<<<<<< Updated upstream:IGB190 A2 Group 5/IGB190 A2 Base Project/Assets/Resources/Items/Plate Armor.asset
+    minimum: 10
+    maximum: 15
+=======
+    minimum: 25
+    maximum: 50
+>>>>>>> Stashed changes:IGB190 A2 Group 5/IGB190 A2 Base Project/Assets/Resources/Items/Plate Armour.asset
+    isPercent: 0
+  - stat: 9
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
+  - stat: 4
+    minimum: 0.05
+    maximum: 0.1
+    isPercent: 1
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 5729344583004061929
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 5729344583004061930
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
